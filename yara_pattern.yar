@@ -137,7 +137,7 @@ rule python_2 {
         app_name = "python"
         type = "1"
         target = "_ctypes"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+)$"
+        pattern = "(([0-9]+\\.){1,}[0-9]+)"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4})/ 
