@@ -101,7 +101,7 @@ rule strongswan {
         app_name = "strongswan"
         type = "2"
         target = "_copyright"
-        pattern = "_copyright.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "_copyright.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /_copyright.*-([0-9Vv]([-]{1,30}))-/ 
@@ -551,7 +551,7 @@ rule systemd {
         app_name = "systemd"
         type = "2"
         target = "30-systemd-environment-d-generator"
-        pattern = "30-systemd-environment-d-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "30-systemd-environment-d-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /30-systemd-environment-d-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -1235,7 +1235,7 @@ rule util_linux {
         app_name = "util-linux"
         type = "2"
         target = "addpart"
-        pattern = "addpart.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "addpart.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /addpart.*-([0-9Vv]([-]{1,30}))-/ 
@@ -1253,7 +1253,7 @@ rule util_linux_1 {
         app_name = "util-linux"
         type = "2"
         target = "addpart"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -1361,7 +1361,7 @@ rule openssl_1 {
         app_name = "openssl"
         type = "2"
         target = "aesgcmtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -1379,7 +1379,7 @@ rule openssl_2 {
         app_name = "openssl"
         type = "1"
         target = "afalg"
-        pattern = "afalg.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "afalg.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /afalg.*-([0-9Vv]([-]{1,30}))-/ 
@@ -1397,7 +1397,7 @@ rule openssl_3 {
         app_name = "openssl"
         type = "2"
         target = "afalgtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -1415,7 +1415,7 @@ rule util_linux_2 {
         app_name = "util-linux"
         type = "2"
         target = "agetty"
-        pattern = "agetty.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "agetty.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /agetty.*-([0-9Vv]([-]{1,30}))-/ 
@@ -1433,7 +1433,7 @@ rule util_linux_3 {
         app_name = "util-linux"
         type = "2"
         target = "agetty"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -1469,7 +1469,7 @@ rule strace_5 {
         app_name = "strace"
         type = "2"
         target = "aio"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -1505,7 +1505,7 @@ rule openssl_4 {
         app_name = "openssl"
         type = "2"
         target = "algorithmid_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -1523,7 +1523,7 @@ rule lzo {
         app_name = "lzo"
         type = "2"
         target = "align"
-        pattern = "lzo-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "lzo-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /lzo-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -1937,7 +1937,7 @@ rule alsa_8 {
         app_name = "alsa"
         type = "2"
         target = "arecordmidi"
-        pattern = "arecordmidi version (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "arecordmidi version (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /arecordmidi version (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -2261,7 +2261,7 @@ rule openssl_6 {
         app_name = "openssl"
         type = "2"
         target = "asn1_decode_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2279,7 +2279,7 @@ rule openssl_7 {
         app_name = "openssl"
         type = "2"
         target = "asn1_dsa_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2297,7 +2297,7 @@ rule openssl_8 {
         app_name = "openssl"
         type = "2"
         target = "asn1_encode_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2315,7 +2315,7 @@ rule openssl_9 {
         app_name = "openssl"
         type = "2"
         target = "asn1_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2333,7 +2333,7 @@ rule openssl_10 {
         app_name = "openssl"
         type = "2"
         target = "asn1_string_table_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2351,7 +2351,7 @@ rule openssl_11 {
         app_name = "openssl"
         type = "2"
         target = "asn1_time_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2369,7 +2369,7 @@ rule openssl_12 {
         app_name = "openssl"
         type = "2"
         target = "asn1parse-test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2441,7 +2441,7 @@ rule openssl_13 {
         app_name = "openssl"
         type = "2"
         target = "asynciotest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -2495,7 +2495,7 @@ rule strace_7 {
         app_name = "strace"
         type = "2"
         target = "at_fdcwd-pathmax"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -2513,7 +2513,7 @@ rule systemd_2 {
         app_name = "systemd"
         type = "2"
         target = "ata_id"
-        pattern = "ata_id.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ata_id.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ata_id.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2549,7 +2549,7 @@ rule netscape_portable_runtime_2 {
         app_name = "netscape_portable_runtime"
         type = "2"
         target = "attach"
-        pattern = "nspr-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "nspr-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /nspr-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -2585,7 +2585,7 @@ rule strace_9 {
         app_name = "strace"
         type = "2"
         target = "attach-f-p-cmd"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -2603,7 +2603,7 @@ rule strace_10 {
         app_name = "strace"
         type = "2"
         target = "attach-p-cmd-cmd"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -2657,7 +2657,7 @@ rule audit {
         app_name = "audit"
         type = "2"
         target = "audispd"
-        pattern = "audispd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "audispd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /audispd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2693,7 +2693,7 @@ rule audit_1 {
         app_name = "audit"
         type = "2"
         target = "auditctl"
-        pattern = "auditctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "auditctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /auditctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2729,7 +2729,7 @@ rule audit_2 {
         app_name = "audit"
         type = "2"
         target = "auditd"
-        pattern = "auditd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "auditd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /auditd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2765,7 +2765,7 @@ rule audit_3 {
         app_name = "audit"
         type = "2"
         target = "aulast"
-        pattern = "aulast.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "aulast.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /aulast.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2783,7 +2783,7 @@ rule audit_4 {
         app_name = "audit"
         type = "2"
         target = "aulastlog"
-        pattern = "aulastlog.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "aulastlog.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /aulastlog.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2801,7 +2801,7 @@ rule audit_5 {
         app_name = "audit"
         type = "2"
         target = "aureport"
-        pattern = "aureport.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "aureport.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /aureport.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2837,7 +2837,7 @@ rule audit_6 {
         app_name = "audit"
         type = "2"
         target = "ausearch"
-        pattern = "ausearch.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ausearch.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ausearch.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2873,7 +2873,7 @@ rule audit_7 {
         app_name = "audit"
         type = "2"
         target = "ausyscall"
-        pattern = "ausyscall.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ausyscall.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ausyscall.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2927,7 +2927,7 @@ rule audit_8 {
         app_name = "audit"
         type = "2"
         target = "autrace"
-        pattern = "autrace.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "autrace.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /autrace.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2945,7 +2945,7 @@ rule audit_9 {
         app_name = "audit"
         type = "2"
         target = "auvirt"
-        pattern = "auvirt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "auvirt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /auvirt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -2981,7 +2981,7 @@ rule libselinux {
         app_name = "libselinux"
         type = "2"
         target = "avcstat"
-        pattern = "avcstat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "avcstat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /avcstat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3143,7 +3143,7 @@ rule openssl_15 {
         app_name = "openssl"
         type = "2"
         target = "bad_dtls_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3161,7 +3161,7 @@ rule e2fsprogs {
         app_name = "e2fsprogs"
         type = "2"
         target = "badblocks"
-        pattern = "badblocks.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "badblocks.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /badblocks.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3269,7 +3269,7 @@ rule coreutils_6 {
         app_name = "coreutils"
         type = "2"
         target = "base64.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -3449,7 +3449,7 @@ rule openssl_16 {
         app_name = "openssl"
         type = "2"
         target = "bftest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3467,7 +3467,7 @@ rule netscape_portable_runtime_3 {
         app_name = "netscape_portable_runtime"
         type = "2"
         target = "bigfile"
-        pattern = "nspr-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "nspr-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /nspr-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -3539,7 +3539,7 @@ rule openssl_17 {
         app_name = "openssl"
         type = "2"
         target = "bio_callback_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3557,7 +3557,7 @@ rule openssl_18 {
         app_name = "openssl"
         type = "2"
         target = "bio_core_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3575,7 +3575,7 @@ rule openssl_19 {
         app_name = "openssl"
         type = "2"
         target = "bio_enc_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3593,7 +3593,7 @@ rule openssl_20 {
         app_name = "openssl"
         type = "2"
         target = "bio_memleak_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3611,7 +3611,7 @@ rule openssl_21 {
         app_name = "openssl"
         type = "2"
         target = "bio_prefix_text"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3629,7 +3629,7 @@ rule openssl_22 {
         app_name = "openssl"
         type = "2"
         target = "bio_readbuffer_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3647,7 +3647,7 @@ rule openssl_23 {
         app_name = "openssl"
         type = "2"
         target = "bioprinttest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -3683,7 +3683,7 @@ rule util_linux_4 {
         app_name = "util-linux"
         type = "2"
         target = "blkdiscard"
-        pattern = "blkdiscard.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blkdiscard.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blkdiscard.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3701,7 +3701,7 @@ rule util_linux_5 {
         app_name = "util-linux"
         type = "2"
         target = "blkdiscard"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -3719,7 +3719,7 @@ rule util_linux_6 {
         app_name = "util-linux"
         type = "2"
         target = "blkid"
-        pattern = "blkid.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blkid.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blkid.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3791,7 +3791,7 @@ rule util_linux_9 {
         app_name = "util-linux"
         type = "2"
         target = "blkzone"
-        pattern = "blkzone.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blkzone.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blkzone.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3809,7 +3809,7 @@ rule util_linux_10 {
         app_name = "util-linux"
         type = "2"
         target = "blkzone"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -3827,7 +3827,7 @@ rule strace_12 {
         app_name = "strace"
         type = "2"
         target = "block_reset_raise_run"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -3863,7 +3863,7 @@ rule util_linux_11 {
         app_name = "util-linux"
         type = "2"
         target = "blockdev"
-        pattern = "blockdev.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blockdev.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blockdev.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3917,7 +3917,7 @@ rule blog {
         app_name = "blog"
         type = "2"
         target = "blogctl"
-        pattern = "blogctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blogctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blogctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3935,7 +3935,7 @@ rule blog_1 {
         app_name = "blog"
         type = "2"
         target = "blogd"
-        pattern = "blogd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blogd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blogd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -3953,7 +3953,7 @@ rule blog_2 {
         app_name = "blog"
         type = "2"
         target = "blogger"
-        pattern = "blogger.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "blogger.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /blogger.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4061,7 +4061,7 @@ rule openssl_24 {
         app_name = "openssl"
         type = "2"
         target = "bn_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -4079,7 +4079,7 @@ rule openssl_25 {
         app_name = "openssl"
         type = "2"
         target = "bndiv-test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -4151,7 +4151,7 @@ rule systemd_3 {
         app_name = "systemd"
         type = "2"
         target = "bootctl"
-        pattern = "bootctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "bootctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /bootctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4187,7 +4187,7 @@ rule strace_14 {
         app_name = "strace"
         type = "2"
         target = "bpf"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -4277,7 +4277,7 @@ rule strace_19 {
         app_name = "strace"
         type = "1"
         target = "bpf-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -4295,7 +4295,7 @@ rule strace_20 {
         app_name = "strace"
         type = "2"
         target = "bpf-success-long-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -4331,7 +4331,7 @@ rule strace_22 {
         app_name = "strace"
         type = "2"
         target = "bpf-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -4349,7 +4349,7 @@ rule bridge_utils {
         app_name = "bridge-utils"
         type = "2"
         target = "brctl"
-        pattern = "brctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "brctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /brctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4385,7 +4385,7 @@ rule iproute2 {
         app_name = "iproute2"
         type = "2"
         target = "bridge"
-        pattern = "bridge.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "bridge.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /bridge.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4565,7 +4565,7 @@ rule systemd_4 {
         app_name = "systemd"
         type = "2"
         target = "busctl"
-        pattern = "busctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "busctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /busctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4781,7 +4781,7 @@ rule util_linux_14 {
         app_name = "util-linux"
         type = "2"
         target = "cal"
-        pattern = "cal.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "cal.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /cal.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4907,7 +4907,7 @@ rule openssl_27 {
         app_name = "openssl"
         type = "1"
         target = "capi"
-        pattern = "capi.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "capi.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /capi.*-([0-9Vv]([-]{1,30}))-/ 
@@ -4979,7 +4979,7 @@ rule openssl_28 {
         app_name = "openssl"
         type = "2"
         target = "casttest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -5105,7 +5105,7 @@ rule systemd_5 {
         app_name = "systemd"
         type = "2"
         target = "cdrom_id"
-        pattern = "cdrom_id.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "cdrom_id.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /cdrom_id.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5231,7 +5231,7 @@ rule shadow {
         app_name = "shadow"
         type = "2"
         target = "chage"
-        pattern = "chage.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chage.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chage.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5267,7 +5267,7 @@ rule strongswan_2 {
         app_name = "strongswan"
         type = "2"
         target = "charon"
-        pattern = "charon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "charon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /charon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5303,7 +5303,7 @@ rule strongswan_4 {
         app_name = "strongswan"
         type = "2"
         target = "charon-systemd"
-        pattern = "charon-systemd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "charon-systemd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /charon-systemd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5357,7 +5357,7 @@ rule e2fsprogs_1 {
         app_name = "e2fsprogs"
         type = "2"
         target = "chattr"
-        pattern = "chattr.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chattr.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chattr.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5447,7 +5447,7 @@ rule util_linux_18 {
         app_name = "util-linux"
         type = "2"
         target = "chcpu"
-        pattern = "chcpu.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chcpu.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chcpu.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5465,7 +5465,7 @@ rule util_linux_19 {
         app_name = "util-linux"
         type = "2"
         target = "chcpu"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -5483,7 +5483,7 @@ rule strace_25 {
         app_name = "strace"
         type = "2"
         target = "check_sigblock"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -5501,7 +5501,7 @@ rule strace_26 {
         app_name = "strace"
         type = "2"
         target = "check_sigign"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -5519,7 +5519,7 @@ rule sysvinit {
         app_name = "sysvinit"
         type = "2"
         target = "checkproc"
-        pattern = "checkproc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "checkproc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /checkproc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5555,7 +5555,7 @@ rule shadow_2 {
         app_name = "shadow"
         type = "2"
         target = "chfn"
-        pattern = "chfn.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chfn.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chfn.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5645,7 +5645,7 @@ rule permissions {
         app_name = "permissions"
         type = "2"
         target = "chkstat"
-        pattern = "chkstat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chkstat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chkstat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5663,7 +5663,7 @@ rule util_linux_21 {
         app_name = "util-linux"
         type = "2"
         target = "chmem"
-        pattern = "chmem.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chmem.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chmem.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5717,7 +5717,7 @@ rule util_linux_23 {
         app_name = "util-linux"
         type = "2"
         target = "choom"
-        pattern = "choom.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "choom.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /choom.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5735,7 +5735,7 @@ rule util_linux_24 {
         app_name = "util-linux"
         type = "2"
         target = "choom"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -5771,7 +5771,7 @@ rule shadow_5 {
         app_name = "shadow"
         type = "2"
         target = "chpasswd"
-        pattern = "chpasswd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chpasswd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chpasswd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5861,7 +5861,7 @@ rule util_linux_25 {
         app_name = "util-linux"
         type = "2"
         target = "chrp-addnote"
-        pattern = "chrp-addnote.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chrp-addnote.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chrp-addnote.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5879,7 +5879,7 @@ rule util_linux_26 {
         app_name = "util-linux"
         type = "2"
         target = "chrt"
-        pattern = "chrt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chrt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chrt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -5933,7 +5933,7 @@ rule shadow_7 {
         app_name = "shadow"
         type = "2"
         target = "chsh"
-        pattern = "chsh.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "chsh.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /chsh.*-([0-9Vv]([-]{1,30}))-/ 
@@ -6005,7 +6005,7 @@ rule openssl_30 {
         app_name = "openssl"
         type = "2"
         target = "cipher_overhead_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6023,7 +6023,7 @@ rule openssl_31 {
         app_name = "openssl"
         type = "2"
         target = "cipherbytes_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6041,7 +6041,7 @@ rule openssl_32 {
         app_name = "openssl"
         type = "2"
         target = "cipherlist_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6059,7 +6059,7 @@ rule openssl_33 {
         app_name = "openssl"
         type = "2"
         target = "ciphername_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6149,7 +6149,7 @@ rule ncurses {
         app_name = "ncurses"
         type = "2"
         target = "clear"
-        pattern = "clear.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "clear.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /clear.*-([0-9Vv]([-]{1,30}))-/ 
@@ -6167,7 +6167,7 @@ rule openssl_34 {
         app_name = "openssl"
         type = "2"
         target = "clienthellotest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6185,7 +6185,7 @@ rule strace_27 {
         app_name = "strace"
         type = "2"
         target = "clock_adjtime"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6203,7 +6203,7 @@ rule strace_28 {
         app_name = "strace"
         type = "2"
         target = "clock_nanosleep"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6221,7 +6221,7 @@ rule strace_29 {
         app_name = "strace"
         type = "2"
         target = "clock_xettime"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6239,7 +6239,7 @@ rule strace_30 {
         app_name = "strace"
         type = "2"
         target = "clone-flags"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6257,7 +6257,7 @@ rule strace_31 {
         app_name = "strace"
         type = "2"
         target = "clone3"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6275,7 +6275,7 @@ rule strace_32 {
         app_name = "strace"
         type = "2"
         target = "clone3-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6293,7 +6293,7 @@ rule strace_33 {
         app_name = "strace"
         type = "2"
         target = "clone3-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6311,7 +6311,7 @@ rule strace_34 {
         app_name = "strace"
         type = "2"
         target = "clone3-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6329,7 +6329,7 @@ rule strace_35 {
         app_name = "strace"
         type = "2"
         target = "clone3-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6347,7 +6347,7 @@ rule strace_36 {
         app_name = "strace"
         type = "2"
         target = "clone3-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6365,7 +6365,7 @@ rule strace_37 {
         app_name = "strace"
         type = "2"
         target = "clone3-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6383,7 +6383,7 @@ rule strace_38 {
         app_name = "strace"
         type = "2"
         target = "clone3-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6401,7 +6401,7 @@ rule strace_39 {
         app_name = "strace"
         type = "2"
         target = "clone_parent"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6419,7 +6419,7 @@ rule strace_40 {
         app_name = "strace"
         type = "2"
         target = "clone_parent-q"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6437,7 +6437,7 @@ rule strace_41 {
         app_name = "strace"
         type = "2"
         target = "clone_parent-qq"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6455,7 +6455,7 @@ rule strace_42 {
         app_name = "strace"
         type = "2"
         target = "clone_ptrace"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6473,7 +6473,7 @@ rule strace_43 {
         app_name = "strace"
         type = "2"
         target = "clone_ptrace--quiet-attach"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6491,7 +6491,7 @@ rule strace_44 {
         app_name = "strace"
         type = "2"
         target = "clone_ptrace--quiet-exit"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6509,7 +6509,7 @@ rule strace_45 {
         app_name = "strace"
         type = "2"
         target = "clone_ptrace-q"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6527,7 +6527,7 @@ rule strace_46 {
         app_name = "strace"
         type = "2"
         target = "clone_ptrace-qq"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6545,7 +6545,7 @@ rule strace_47 {
         app_name = "strace"
         type = "2"
         target = "close_range"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6599,7 +6599,7 @@ rule netscape_portable_runtime_4 {
         app_name = "netscape_portable_runtime"
         type = "2"
         target = "cltsrv"
-        pattern = "nspr-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "nspr-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /nspr-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -6635,7 +6635,7 @@ rule openssl_35 {
         app_name = "openssl"
         type = "2"
         target = "cmactest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6671,7 +6671,7 @@ rule openssl_36 {
         app_name = "openssl"
         type = "2"
         target = "cmp-test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6707,7 +6707,7 @@ rule openssl_37 {
         app_name = "openssl"
         type = "2"
         target = "cmp_asn_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6725,7 +6725,7 @@ rule openssl_38 {
         app_name = "openssl"
         type = "2"
         target = "cmp_client_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6743,7 +6743,7 @@ rule openssl_39 {
         app_name = "openssl"
         type = "2"
         target = "cmp_ctx_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6761,7 +6761,7 @@ rule openssl_40 {
         app_name = "openssl"
         type = "2"
         target = "cmp_hdr_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6779,7 +6779,7 @@ rule openssl_41 {
         app_name = "openssl"
         type = "2"
         target = "cmp_msg_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6797,7 +6797,7 @@ rule openssl_42 {
         app_name = "openssl"
         type = "2"
         target = "cmp_protect_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6815,7 +6815,7 @@ rule openssl_43 {
         app_name = "openssl"
         type = "2"
         target = "cmp_server_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6833,7 +6833,7 @@ rule openssl_44 {
         app_name = "openssl"
         type = "2"
         target = "cmp_status_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6851,7 +6851,7 @@ rule openssl_45 {
         app_name = "openssl"
         type = "2"
         target = "cmp_vfy_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6869,7 +6869,7 @@ rule openssl_46 {
         app_name = "openssl"
         type = "2"
         target = "cms-test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6887,7 +6887,7 @@ rule openssl_47 {
         app_name = "openssl"
         type = "2"
         target = "cmsapitest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -6941,7 +6941,7 @@ rule util_linux_29 {
         app_name = "util-linux"
         type = "2"
         target = "col"
-        pattern = "col.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "col.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /col.*-([0-9Vv]([-]{1,30}))-/ 
@@ -6977,7 +6977,7 @@ rule util_linux_31 {
         app_name = "util-linux"
         type = "2"
         target = "colcrt"
-        pattern = "colcrt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "colcrt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /colcrt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7049,7 +7049,7 @@ rule systemd_6 {
         app_name = "systemd"
         type = "2"
         target = "collect"
-        pattern = "collect.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "collect.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /collect.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7085,7 +7085,7 @@ rule util_linux_33 {
         app_name = "util-linux"
         type = "2"
         target = "colrm"
-        pattern = "colrm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "colrm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /colrm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7121,7 +7121,7 @@ rule util_linux_35 {
         app_name = "util-linux"
         type = "2"
         target = "column"
-        pattern = "column.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "column.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /column.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7301,7 +7301,7 @@ rule openssl_49 {
         app_name = "openssl"
         type = "2"
         target = "conf_include_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -7409,7 +7409,7 @@ rule openssl_51 {
         app_name = "openssl"
         type = "2"
         target = "context_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -7553,7 +7553,7 @@ rule cracklib {
         app_name = "cracklib"
         type = "2"
         target = "cracklib-check"
-        pattern = "cracklib-check.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "cracklib-check.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /cracklib-check.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7571,7 +7571,7 @@ rule cracklib_1 {
         app_name = "cracklib"
         type = "2"
         target = "cracklib-packer"
-        pattern = "cracklib-packer.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "cracklib-packer.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /cracklib-packer.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7589,7 +7589,7 @@ rule cracklib_2 {
         app_name = "cracklib"
         type = "2"
         target = "cracklib-unpacker"
-        pattern = "cracklib-unpacker.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "cracklib-unpacker.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /cracklib-unpacker.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7643,7 +7643,7 @@ rule openssl_53 {
         app_name = "openssl"
         type = "2"
         target = "crltest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -7769,7 +7769,7 @@ rule openssl_54 {
         app_name = "openssl"
         type = "2"
         target = "ct-test"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -7823,7 +7823,7 @@ rule util_linux_37 {
         app_name = "util-linux"
         type = "2"
         target = "ctrlaltdel"
-        pattern = "ctrlaltdel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ctrlaltdel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ctrlaltdel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -7877,7 +7877,7 @@ rule curl {
         app_name = "curl"
         type = "2"
         target = "curl"
-        pattern = "curl (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "curl (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /curl (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -8057,7 +8057,7 @@ rule openssl_58 {
         app_name = "openssl"
         type = "2"
         target = "d2i_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -8093,7 +8093,7 @@ rule dash_shell {
         app_name = "dash-shell"
         type = "2"
         target = "dash"
-        pattern = "dash.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dash.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dash.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8111,7 +8111,7 @@ rule openssl_60 {
         app_name = "openssl"
         type = "1"
         target = "dasync"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -8273,7 +8273,7 @@ rule dbus {
         app_name = "dbus"
         type = "2"
         target = "dbus-cleanup-sockets"
-        pattern = "dbus-cleanup-sockets.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-cleanup-sockets.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-cleanup-sockets.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8309,7 +8309,7 @@ rule dbus_1 {
         app_name = "dbus"
         type = "2"
         target = "dbus-daemon"
-        pattern = "dbus-daemon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-daemon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-daemon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8345,7 +8345,7 @@ rule dbus_2 {
         app_name = "dbus"
         type = "2"
         target = "dbus-daemon-launch-helper"
-        pattern = "dbus-daemon-launch-helper.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-daemon-launch-helper.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-daemon-launch-helper.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8417,7 +8417,7 @@ rule dbus_5 {
         app_name = "dbus"
         type = "2"
         target = "dbus-launch.nox11"
-        pattern = "dbus-launch.nox11.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-launch.nox11.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-launch.nox11.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8453,7 +8453,7 @@ rule dbus_6 {
         app_name = "dbus"
         type = "2"
         target = "dbus-monitor"
-        pattern = "dbus-monitor.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-monitor.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-monitor.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8489,7 +8489,7 @@ rule dbus_8 {
         app_name = "dbus"
         type = "2"
         target = "dbus-run-session"
-        pattern = "dbus-run-session.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-run-session.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-run-session.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8525,7 +8525,7 @@ rule dbus_10 {
         app_name = "dbus"
         type = "2"
         target = "dbus-send"
-        pattern = "dbus-send.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-send.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-send.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8561,7 +8561,7 @@ rule dbus_12 {
         app_name = "dbus"
         type = "2"
         target = "dbus-test-tool"
-        pattern = "dbus-test-tool.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-test-tool.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-test-tool.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8597,7 +8597,7 @@ rule dbus_14 {
         app_name = "dbus"
         type = "2"
         target = "dbus-update-activation-environment"
-        pattern = "dbus-update-activation-environment.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-update-activation-environment.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-update-activation-environment.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8615,7 +8615,7 @@ rule dbus_15 {
         app_name = "dbus"
         type = "2"
         target = "dbus-uuidgen"
-        pattern = "dbus-uuidgen.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dbus-uuidgen.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dbus-uuidgen.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8723,7 +8723,7 @@ rule rpm {
         app_name = "rpm"
         type = "2"
         target = "debugedit"
-        pattern = "debugedit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "debugedit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /debugedit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8741,7 +8741,7 @@ rule e2fsprogs_4 {
         app_name = "e2fsprogs"
         type = "2"
         target = "debugfs"
-        pattern = "debugfs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "debugfs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /debugfs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8867,7 +8867,7 @@ rule openssl_61 {
         app_name = "openssl"
         type = "2"
         target = "defltfips_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -8903,7 +8903,7 @@ rule strace_51 {
         app_name = "strace"
         type = "2"
         target = "delete_module"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -8939,7 +8939,7 @@ rule util_linux_39 {
         app_name = "util-linux"
         type = "2"
         target = "delpart"
-        pattern = "delpart.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "delpart.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /delpart.*-([0-9Vv]([-]{1,30}))-/ 
@@ -8957,7 +8957,7 @@ rule util_linux_40 {
         app_name = "util-linux"
         type = "2"
         target = "delpart"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -8975,7 +8975,7 @@ rule international_components_for_unicode {
         app_name = "international_components_for_unicode"
         type = "2"
         target = "derb"
-        pattern = "^([0-9]+\\.[0-9]+\\.?[0-9]*)$"
+        pattern = "^([0-9]+\\.[0-9]+\\.[0-9]*)$"
 
     strings:
         $pattern = /([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -9047,7 +9047,7 @@ rule openssl_62 {
         app_name = "openssl"
         type = "2"
         target = "destest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -9065,7 +9065,7 @@ rule strace_52 {
         app_name = "strace"
         type = "2"
         target = "dev--decode-fds-all"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -9083,7 +9083,7 @@ rule strace_53 {
         app_name = "strace"
         type = "2"
         target = "dev--decode-fds-dev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -9101,7 +9101,7 @@ rule strace_54 {
         app_name = "strace"
         type = "2"
         target = "dev--decode-fds-none"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -9119,7 +9119,7 @@ rule strace_55 {
         app_name = "strace"
         type = "2"
         target = "dev--decode-fds-path"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -9137,7 +9137,7 @@ rule strace_56 {
         app_name = "strace"
         type = "2"
         target = "dev--decode-fds-socket"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -9173,7 +9173,7 @@ rule iproute2_1 {
         app_name = "iproute2"
         type = "2"
         target = "devlink"
-        pattern = "devlink.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "devlink.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /devlink.*-([0-9Vv]([-]{1,30}))-/ 
@@ -9245,7 +9245,7 @@ rule dhcp {
         app_name = "dhcp"
         type = "2"
         target = "dhclient"
-        pattern = "(([0-9]+\\.){1,}[0-9]+(-ESV)?)"
+        pattern = "(([0-9]+\\.){1,}[0-9]+(-ESV))"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}(-ESV))/ 
@@ -9353,7 +9353,7 @@ rule openssl_63 {
         app_name = "openssl"
         type = "2"
         target = "dhtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -9443,7 +9443,7 @@ rule coreutils_34 {
         app_name = "coreutils"
         type = "2"
         target = "dircolors.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -9569,7 +9569,7 @@ rule util_linux_41 {
         app_name = "util-linux"
         type = "2"
         target = "dmesg"
-        pattern = "dmesg.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dmesg.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dmesg.*-([0-9Vv]([-]{1,30}))-/ 
@@ -9623,7 +9623,7 @@ rule lvm2 {
         app_name = "lvm2"
         type = "2"
         target = "dmeventd"
-        pattern = "dmeventd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dmeventd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dmeventd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -9659,7 +9659,7 @@ rule lvm2_1 {
         app_name = "lvm2"
         type = "2"
         target = "dmsetup"
-        pattern = "dmsetup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dmsetup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dmsetup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -9713,7 +9713,7 @@ rule mtd_utils {
         app_name = "mtd-utils"
         type = "2"
         target = "doc_loadbios"
-        pattern = "doc_loadbios.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "doc_loadbios.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /doc_loadbios.*-([0-9Vv]([-]{1,30}))-/ 
@@ -9839,7 +9839,7 @@ rule openssl_65 {
         app_name = "openssl"
         type = "2"
         target = "drbgtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -10073,7 +10073,7 @@ rule e2fsprogs_6 {
         app_name = "e2fsprogs"
         type = "2"
         target = "dumpe2fs"
-        pattern = "dumpe2fs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "dumpe2fs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /dumpe2fs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10127,7 +10127,7 @@ rule exfat {
         app_name = "exfat"
         type = "2"
         target = "dumpexfat"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -10163,7 +10163,7 @@ rule strace_58 {
         app_name = "strace"
         type = "2"
         target = "dup"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -10199,7 +10199,7 @@ rule strace_59 {
         app_name = "strace"
         type = "2"
         target = "dup3"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -10217,7 +10217,7 @@ rule strace_60 {
         app_name = "strace"
         type = "2"
         target = "dup3-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -10469,7 +10469,7 @@ rule e2fsprogs_8 {
         app_name = "e2fsprogs"
         type = "2"
         target = "e2freefrag"
-        pattern = "e2freefrag.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "e2freefrag.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /e2freefrag.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10487,7 +10487,7 @@ rule e2fsprogs_9 {
         app_name = "e2fsprogs"
         type = "2"
         target = "e2fsck"
-        pattern = "e2fsck.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "e2fsck.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /e2fsck.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10523,7 +10523,7 @@ rule e2fsprogs_11 {
         app_name = "e2fsprogs"
         type = "2"
         target = "e2image"
-        pattern = "e2image.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "e2image.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /e2image.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10613,7 +10613,7 @@ rule e2fsprogs_16 {
         app_name = "e2fsprogs"
         type = "2"
         target = "e2undo"
-        pattern = "e2undo.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "e2undo.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /e2undo.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10631,7 +10631,7 @@ rule e2fsprogs_17 {
         app_name = "e2fsprogs"
         type = "2"
         target = "e4crypt"
-        pattern = "e4crypt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "e4crypt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /e4crypt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10649,7 +10649,7 @@ rule e2fsprogs_18 {
         app_name = "e2fsprogs"
         type = "2"
         target = "e4defrag"
-        pattern = "e4defrag.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "e4defrag.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /e4defrag.*-([0-9Vv]([-]{1,30}))-/ 
@@ -10721,7 +10721,7 @@ rule ebtables {
         app_name = "ebtables"
         type = "2"
         target = "ebtables-legacy"
-        pattern = "ebtables-legacy.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ebtables-legacy.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ebtables-legacy.*-([0-9Vv]([-]{1,30}))-/ 
@@ -11153,7 +11153,7 @@ rule util_linux_44 {
         app_name = "util-linux"
         type = "2"
         target = "eject"
-        pattern = "eject.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "eject.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /eject.*-([0-9Vv]([-]{1,30}))-/ 
@@ -11585,7 +11585,7 @@ rule rpm_1 {
         app_name = "rpm"
         type = "2"
         target = "elfdeps"
-        pattern = "elfdeps.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "elfdeps.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /elfdeps.*-([0-9Vv]([-]{1,30}))-/ 
@@ -11657,7 +11657,7 @@ rule openssl_75 {
         app_name = "openssl"
         type = "2"
         target = "endecode_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -11675,7 +11675,7 @@ rule openssl_76 {
         app_name = "openssl"
         type = "2"
         target = "endecoder_legacy_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -11747,7 +11747,7 @@ rule coreutils_39 {
         app_name = "coreutils"
         type = "2"
         target = "env.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -11855,7 +11855,7 @@ rule strace_63 {
         app_name = "strace"
         type = "2"
         target = "epoll_pwait"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -11909,7 +11909,7 @@ rule strongswan_6 {
         app_name = "strongswan"
         type = "2"
         target = "error-notify"
-        pattern = "error-notify.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "error-notify.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /error-notify.*-([0-9Vv]([-]{1,30}))-/ 
@@ -11927,7 +11927,7 @@ rule openssl_78 {
         app_name = "openssl"
         type = "2"
         target = "errtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll]-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll]-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12287,7 +12287,7 @@ rule openssl_80 {
         app_name = "openssl"
         type = "2"
         target = "evp_extra_test2"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12305,7 +12305,7 @@ rule openssl_81 {
         app_name = "openssl"
         type = "2"
         target = "evp_fetch_prov_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12323,7 +12323,7 @@ rule openssl_82 {
         app_name = "openssl"
         type = "2"
         target = "evp_kdf_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12341,7 +12341,7 @@ rule openssl_83 {
         app_name = "openssl"
         type = "2"
         target = "evp_libctx_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12359,7 +12359,7 @@ rule openssl_84 {
         app_name = "openssl"
         type = "2"
         target = "evp_pkey_dparams_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12377,7 +12377,7 @@ rule openssl_85 {
         app_name = "openssl"
         type = "2"
         target = "evp_pkey_provided_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -12467,7 +12467,7 @@ rule strace_65 {
         app_name = "strace"
         type = "2"
         target = "execve--secontext"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12485,7 +12485,7 @@ rule strace_66 {
         app_name = "strace"
         type = "2"
         target = "execve--secontext_full"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12503,7 +12503,7 @@ rule strace_67 {
         app_name = "strace"
         type = "2"
         target = "execve--secontext_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12557,7 +12557,7 @@ rule strace_70 {
         app_name = "strace"
         type = "2"
         target = "execveat--secontext_full"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12593,7 +12593,7 @@ rule exfat_1 {
         app_name = "exfat"
         type = "2"
         target = "exfatfsck"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -12611,7 +12611,7 @@ rule exfat_2 {
         app_name = "exfat"
         type = "2"
         target = "exfatlabel"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -12701,7 +12701,7 @@ rule shadow_9 {
         app_name = "shadow"
         type = "2"
         target = "expiry"
-        pattern = "expiry.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "expiry.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /expiry.*-([0-9Vv]([-]{1,30}))-/ 
@@ -12845,7 +12845,7 @@ rule strace_73 {
         app_name = "strace"
         type = "2"
         target = "faccessat--secontext"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12863,7 +12863,7 @@ rule strace_74 {
         app_name = "strace"
         type = "2"
         target = "faccessat--secontext_full"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12881,7 +12881,7 @@ rule strace_75 {
         app_name = "strace"
         type = "2"
         target = "faccessat--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12899,7 +12899,7 @@ rule strace_76 {
         app_name = "strace"
         type = "2"
         target = "faccessat--secontext_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12917,7 +12917,7 @@ rule strace_77 {
         app_name = "strace"
         type = "2"
         target = "faccessat-P"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12935,7 +12935,7 @@ rule strace_78 {
         app_name = "strace"
         type = "2"
         target = "faccessat-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12953,7 +12953,7 @@ rule strace_79 {
         app_name = "strace"
         type = "2"
         target = "faccessat-y--secontext"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12971,7 +12971,7 @@ rule strace_80 {
         app_name = "strace"
         type = "2"
         target = "faccessat-y--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -12989,7 +12989,7 @@ rule strace_81 {
         app_name = "strace"
         type = "2"
         target = "faccessat-yy"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13007,7 +13007,7 @@ rule strace_82 {
         app_name = "strace"
         type = "2"
         target = "faccessat2"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13025,7 +13025,7 @@ rule strace_83 {
         app_name = "strace"
         type = "2"
         target = "faccessat2-P"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13043,7 +13043,7 @@ rule strace_84 {
         app_name = "strace"
         type = "2"
         target = "faccessat2-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13061,7 +13061,7 @@ rule strace_85 {
         app_name = "strace"
         type = "2"
         target = "faccessat2-yy"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13133,7 +13133,7 @@ rule pam {
         app_name = "pam"
         type = "2"
         target = "faillock"
-        pattern = "faillock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "faillock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /faillock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -13205,7 +13205,7 @@ rule util_linux_47 {
         app_name = "util-linux"
         type = "2"
         target = "fallocate"
-        pattern = "fallocate.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fallocate.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fallocate.*-([0-9Vv]([-]{1,30}))-/ 
@@ -13313,7 +13313,7 @@ rule strace_89 {
         app_name = "strace"
         type = "2"
         target = "fanotify_mark"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13331,7 +13331,7 @@ rule strace_90 {
         app_name = "strace"
         type = "2"
         target = "fanotify_mark-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13403,7 +13403,7 @@ rule openssl_89 {
         app_name = "openssl"
         type = "2"
         target = "fatalerrtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -13421,7 +13421,7 @@ rule strace_93 {
         app_name = "strace"
         type = "2"
         target = "fchdir"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13439,7 +13439,7 @@ rule strace_94 {
         app_name = "strace"
         type = "2"
         target = "fchmod"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13457,7 +13457,7 @@ rule strace_95 {
         app_name = "strace"
         type = "2"
         target = "fchmod--secontext_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13475,7 +13475,7 @@ rule strace_96 {
         app_name = "strace"
         type = "2"
         target = "fchmod-y--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13493,7 +13493,7 @@ rule strace_97 {
         app_name = "strace"
         type = "2"
         target = "fchmodat"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13511,7 +13511,7 @@ rule strace_98 {
         app_name = "strace"
         type = "2"
         target = "fchmodat--secontext"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13529,7 +13529,7 @@ rule strace_99 {
         app_name = "strace"
         type = "2"
         target = "fchmodat--secontext_full"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13547,7 +13547,7 @@ rule strace_100 {
         app_name = "strace"
         type = "2"
         target = "fchmodat--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13565,7 +13565,7 @@ rule strace_101 {
         app_name = "strace"
         type = "2"
         target = "fchmodat--secontext_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13583,7 +13583,7 @@ rule strace_102 {
         app_name = "strace"
         type = "2"
         target = "fchown"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13601,7 +13601,7 @@ rule strace_103 {
         app_name = "strace"
         type = "2"
         target = "fchownat"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13619,7 +13619,7 @@ rule strace_104 {
         app_name = "strace"
         type = "2"
         target = "fchownat--secontext"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13637,7 +13637,7 @@ rule strace_105 {
         app_name = "strace"
         type = "2"
         target = "fchownat--secontext_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13673,7 +13673,7 @@ rule strace_106 {
         app_name = "strace"
         type = "2"
         target = "fcntl"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13691,7 +13691,7 @@ rule strace_107 {
         app_name = "strace"
         type = "2"
         target = "fcntl--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13709,7 +13709,7 @@ rule strace_108 {
         app_name = "strace"
         type = "2"
         target = "fdatasync"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13727,7 +13727,7 @@ rule util_linux_50 {
         app_name = "util-linux"
         type = "2"
         target = "fdformat"
-        pattern = "fdformat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fdformat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fdformat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -13745,7 +13745,7 @@ rule util_linux_51 {
         app_name = "util-linux"
         type = "2"
         target = "fdformat"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -13781,7 +13781,7 @@ rule openssl_90 {
         app_name = "openssl"
         type = "2"
         target = "ffc_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -13979,7 +13979,7 @@ rule strace_110 {
         app_name = "strace"
         type = "2"
         target = "file_handle--secontext_full"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -13997,7 +13997,7 @@ rule strace_111 {
         app_name = "strace"
         type = "2"
         target = "file_handle--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -14051,7 +14051,7 @@ rule e2fsprogs_20 {
         app_name = "e2fsprogs"
         type = "2"
         target = "filefrag"
-        pattern = "filefrag.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "filefrag.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /filefrag.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14141,7 +14141,7 @@ rule util_linux_53 {
         app_name = "util-linux"
         type = "2"
         target = "fincore"
-        pattern = "fincore.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fincore.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fincore.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14213,7 +14213,7 @@ rule util_linux_55 {
         app_name = "util-linux"
         type = "2"
         target = "findfs"
-        pattern = "findfs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "findfs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /findfs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14249,7 +14249,7 @@ rule util_linux_57 {
         app_name = "util-linux"
         type = "2"
         target = "findmnt"
-        pattern = "findmnt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "findmnt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /findmnt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14357,7 +14357,7 @@ rule mtd_utils_1 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_erase"
-        pattern = "flash_erase.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_erase.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_erase.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14393,7 +14393,7 @@ rule mtd_utils_3 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_lock"
-        pattern = "flash_lock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_lock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_lock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14429,7 +14429,7 @@ rule mtd_utils_5 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_otp_dump"
-        pattern = "flash_otp_dump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_otp_dump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_otp_dump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14447,7 +14447,7 @@ rule mtd_utils_6 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_otp_info"
-        pattern = "flash_otp_info.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_otp_info.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_otp_info.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14465,7 +14465,7 @@ rule mtd_utils_7 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_otp_lock"
-        pattern = "flash_otp_lock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_otp_lock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_otp_lock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14483,7 +14483,7 @@ rule mtd_utils_8 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_otp_write"
-        pattern = "flash_otp_write.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_otp_write.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_otp_write.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14501,7 +14501,7 @@ rule mtd_utils_9 {
         app_name = "mtd-utils"
         type = "2"
         target = "flash_unlock"
-        pattern = "flash_unlock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flash_unlock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flash_unlock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14537,7 +14537,7 @@ rule mtd_utils_11 {
         app_name = "mtd-utils"
         type = "2"
         target = "flashcp"
-        pattern = "flashcp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flashcp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flashcp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14591,7 +14591,7 @@ rule util_linux_59 {
         app_name = "util-linux"
         type = "2"
         target = "flock"
-        pattern = "flock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "flock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /flock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14663,7 +14663,7 @@ rule coreutils_48 {
         app_name = "coreutils"
         type = "2"
         target = "fmt.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -14789,7 +14789,7 @@ rule procps_ng {
         app_name = "procps-ng"
         type = "2"
         target = "free"
-        pattern = "free.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "free.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /free.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14843,7 +14843,7 @@ rule util_linux_61 {
         app_name = "util-linux"
         type = "2"
         target = "fsck"
-        pattern = "fsck.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fsck.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fsck.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14879,7 +14879,7 @@ rule util_linux_63 {
         app_name = "util-linux"
         type = "2"
         target = "fsck.cramfs"
-        pattern = "fsck.cramfs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fsck.cramfs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fsck.cramfs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -14987,7 +14987,7 @@ rule util_linux_65 {
         app_name = "util-linux"
         type = "2"
         target = "fsck.minix"
-        pattern = "fsck.minix.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fsck.minix.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fsck.minix.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15041,7 +15041,7 @@ rule strace_117 {
         app_name = "strace"
         type = "2"
         target = "fsconfig"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15077,7 +15077,7 @@ rule util_linux_68 {
         app_name = "util-linux"
         type = "2"
         target = "fsfreeze"
-        pattern = "fsfreeze.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fsfreeze.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fsfreeze.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15113,7 +15113,7 @@ rule util_linux_70 {
         app_name = "util-linux"
         type = "2"
         target = "fsfreeze.util-linux"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -15131,7 +15131,7 @@ rule strace_119 {
         app_name = "strace"
         type = "2"
         target = "fsmount"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15167,7 +15167,7 @@ rule strace_121 {
         app_name = "strace"
         type = "2"
         target = "fspick"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15185,7 +15185,7 @@ rule strace_122 {
         app_name = "strace"
         type = "2"
         target = "fspick-P"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15203,7 +15203,7 @@ rule sysvinit_1 {
         app_name = "sysvinit"
         type = "2"
         target = "fstab-decode"
-        pattern = "fstab-decode.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fstab-decode.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fstab-decode.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15221,7 +15221,7 @@ rule strace_123 {
         app_name = "strace"
         type = "2"
         target = "fstat"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15239,7 +15239,7 @@ rule strace_124 {
         app_name = "strace"
         type = "2"
         target = "fstat-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15293,7 +15293,7 @@ rule strace_127 {
         app_name = "strace"
         type = "2"
         target = "fstatfs"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15311,7 +15311,7 @@ rule util_linux_71 {
         app_name = "util-linux"
         type = "2"
         target = "fstrim"
-        pattern = "fstrim.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fstrim.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fstrim.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15365,7 +15365,7 @@ rule sysvinit_2 {
         app_name = "sysvinit"
         type = "2"
         target = "fsync"
-        pattern = "fsync.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "fsync.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /fsync.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15401,7 +15401,7 @@ rule mtd_utils_13 {
         app_name = "mtd-utils"
         type = "2"
         target = "ftl_check"
-        pattern = "ftl_check.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ftl_check.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ftl_check.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15437,7 +15437,7 @@ rule mtd_utils_15 {
         app_name = "mtd-utils"
         type = "2"
         target = "ftl_format"
-        pattern = "ftl_format.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ftl_format.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ftl_format.*-([0-9Vv]([-]{1,30}))-/ 
@@ -15473,7 +15473,7 @@ rule strace_129 {
         app_name = "strace"
         type = "2"
         target = "ftruncate"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15563,7 +15563,7 @@ rule strace_130 {
         app_name = "strace"
         type = "2"
         target = "futex"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -15581,7 +15581,7 @@ rule strace_131 {
         app_name = "strace"
         type = "2"
         target = "futex_waitv"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -16553,7 +16553,7 @@ rule glibc {
         app_name = "glibc"
         type = "2"
         target = "gencat"
-        pattern = "gencat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "gencat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /gencat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -16643,7 +16643,7 @@ rule iproute2_2 {
         app_name = "iproute2"
         type = "2"
         target = "genl"
-        pattern = "genl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "genl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /genl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -16679,7 +16679,7 @@ rule strace_133 {
         app_name = "strace"
         type = "2"
         target = "get_process_reaper"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -16787,7 +16787,7 @@ rule libselinux_1 {
         app_name = "libselinux"
         type = "2"
         target = "getenforce"
-        pattern = "getenforce.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "getenforce.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /getenforce.*-([0-9Vv]([-]{1,30}))-/ 
@@ -16805,7 +16805,7 @@ rule glibc_3 {
         app_name = "glibc"
         type = "2"
         target = "getent"
-        pattern = "getent.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "getent.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /getent.*-([0-9Vv]([-]{1,30}))-/ 
@@ -16949,7 +16949,7 @@ rule util_linux_74 {
         app_name = "util-linux"
         type = "2"
         target = "getopt"
-        pattern = "getopt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "getopt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /getopt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -17039,7 +17039,7 @@ rule strace_142 {
         app_name = "strace"
         type = "2"
         target = "getpid--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -17057,7 +17057,7 @@ rule strace_143 {
         app_name = "strace"
         type = "2"
         target = "getppid"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -17093,7 +17093,7 @@ rule strace_145 {
         app_name = "strace"
         type = "2"
         target = "getresuid"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -17129,7 +17129,7 @@ rule strace_147 {
         app_name = "strace"
         type = "2"
         target = "getrusage"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -17147,7 +17147,7 @@ rule libselinux_2 {
         app_name = "libselinux"
         type = "2"
         target = "getsebool"
-        pattern = "getsebool.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "getsebool.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /getsebool.*-([0-9Vv]([-]{1,30}))-/ 
@@ -17165,7 +17165,7 @@ rule strace_148 {
         app_name = "strace"
         type = "2"
         target = "getsid--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -17183,7 +17183,7 @@ rule strace_149 {
         app_name = "strace"
         type = "2"
         target = "getsockname"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -17363,7 +17363,7 @@ rule glibc_5 {
         app_name = "glibc"
         type = "2"
         target = "glibc_post_upgrade"
-        pattern = "glibc_post_upgrade.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "glibc_post_upgrade.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /glibc_post_upgrade.*-([0-9Vv]([-]{1,30}))-/ 
@@ -17579,7 +17579,7 @@ rule shadow_12 {
         app_name = "shadow"
         type = "2"
         target = "gpasswd"
-        pattern = "gpasswd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "gpasswd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /gpasswd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -17831,7 +17831,7 @@ rule gnupg_13 {
         app_name = "gnupg"
         type = "2"
         target = "gpgconf"
-        pattern = "gnupg-(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "gnupg-(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /gnupg-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -17921,7 +17921,7 @@ rule gpgme_4 {
         app_name = "gpgme"
         type = "2"
         target = "gpgme-tool"
-        pattern = "GPGME-Tool (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "GPGME-Tool (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /GPGME-Tool (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -18227,7 +18227,7 @@ rule shadow_14 {
         app_name = "shadow"
         type = "2"
         target = "groupadd"
-        pattern = "groupadd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "groupadd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /groupadd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -18263,7 +18263,7 @@ rule shadow_16 {
         app_name = "shadow"
         type = "2"
         target = "groupdel"
-        pattern = "groupdel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "groupdel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /groupdel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -18317,7 +18317,7 @@ rule shadow_19 {
         app_name = "shadow"
         type = "2"
         target = "groupmod"
-        pattern = "groupmod.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "groupmod.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /groupmod.*-([0-9Vv]([-]{1,30}))-/ 
@@ -18407,7 +18407,7 @@ rule shadow_22 {
         app_name = "shadow"
         type = "2"
         target = "grpck"
-        pattern = "grpck.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "grpck.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /grpck.*-([0-9Vv]([-]{1,30}))-/ 
@@ -19991,7 +19991,7 @@ rule util_linux_78 {
         app_name = "util-linux"
         type = "2"
         target = "hexdump"
-        pattern = "hexdump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "hexdump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /hexdump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20045,7 +20045,7 @@ rule openssl_93 {
         app_name = "openssl"
         type = "2"
         target = "hexstr_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -20279,7 +20279,7 @@ rule coreutils_58 {
         app_name = "coreutils"
         type = "2"
         target = "hostid.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -20333,7 +20333,7 @@ rule systemd_8 {
         app_name = "systemd"
         type = "2"
         target = "hostnamectl"
-        pattern = "hostnamectl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "hostnamectl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /hostnamectl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20369,7 +20369,7 @@ rule openssl_95 {
         app_name = "openssl"
         type = "2"
         target = "http_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -20387,7 +20387,7 @@ rule util_linux_81 {
         app_name = "util-linux"
         type = "2"
         target = "hwclock"
-        pattern = "hwclock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "hwclock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /hwclock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20639,7 +20639,7 @@ rule glibc_7 {
         app_name = "glibc"
         type = "2"
         target = "iconvconfig"
-        pattern = "iconvconfig.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "iconvconfig.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /iconvconfig.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20765,7 +20765,7 @@ rule iproute2_3 {
         app_name = "iproute2"
         type = "2"
         target = "ifstat"
-        pattern = "ifstat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ifstat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ifstat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20837,7 +20837,7 @@ rule rpm_2 {
         app_name = "rpm"
         type = "1"
         target = "ima"
-        pattern = "ima.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ima.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ima.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20855,7 +20855,7 @@ rule strongswan_7 {
         app_name = "strongswan"
         type = "1"
         target = "imc-scanner"
-        pattern = "imc-scanner.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "imc-scanner.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /imc-scanner.*-([0-9Vv]([-]{1,30}))-/ 
@@ -20873,7 +20873,7 @@ rule strongswan_8 {
         app_name = "strongswan"
         type = "1"
         target = "imc-test"
-        pattern = "imc-test.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "imc-test.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /imc-test.*-([0-9Vv]([-]{1,30}))-/ 
@@ -21053,7 +21053,7 @@ rule strongswan_9 {
         app_name = "strongswan"
         type = "1"
         target = "imv-scanner"
-        pattern = "imv-scanner.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "imv-scanner.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /imv-scanner.*-([0-9Vv]([-]{1,30}))-/ 
@@ -21071,7 +21071,7 @@ rule strongswan_10 {
         app_name = "strongswan"
         type = "1"
         target = "imv-test"
-        pattern = "imv-test.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "imv-test.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /imv-test.*-([0-9Vv]([-]{1,30}))-/ 
@@ -21089,7 +21089,7 @@ rule strongswan_11 {
         app_name = "strongswan"
         type = "2"
         target = "imv_policy_manager"
-        pattern = "imv_policy_manager.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "imv_policy_manager.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /imv_policy_manager.*-([0-9Vv]([-]{1,30}))-/ 
@@ -21197,7 +21197,7 @@ rule ncurses_1 {
         app_name = "ncurses"
         type = "2"
         target = "infocmp"
-        pattern = "infocmp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "infocmp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /infocmp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -21395,7 +21395,7 @@ rule cryptsetup_2 {
         app_name = "cryptsetup"
         type = "2"
         target = "integritysetup"
-        pattern = "integritysetup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "integritysetup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /integritysetup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -21665,7 +21665,7 @@ rule strace_159 {
         app_name = "strace"
         type = "2"
         target = "io_uring_register-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -21683,7 +21683,7 @@ rule strace_160 {
         app_name = "strace"
         type = "2"
         target = "io_uring_register-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -21701,7 +21701,7 @@ rule strace_161 {
         app_name = "strace"
         type = "2"
         target = "io_uring_register-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -21719,7 +21719,7 @@ rule strace_162 {
         app_name = "strace"
         type = "2"
         target = "io_uring_register-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -21737,7 +21737,7 @@ rule strace_163 {
         app_name = "strace"
         type = "2"
         target = "io_uring_register-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -21827,7 +21827,7 @@ rule strace_166 {
         app_name = "strace"
         type = "2"
         target = "ioctl_block--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22169,7 +22169,7 @@ rule strace_185 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22187,7 +22187,7 @@ rule strace_186 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap-success-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22205,7 +22205,7 @@ rule strace_187 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap-success-v-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22223,7 +22223,7 @@ rule strace_188 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22241,7 +22241,7 @@ rule strace_189 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22259,7 +22259,7 @@ rule strace_190 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22277,7 +22277,7 @@ rule strace_191 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fiemap-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22295,7 +22295,7 @@ rule strace_192 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_f-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22313,7 +22313,7 @@ rule strace_193 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_f-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22331,7 +22331,7 @@ rule strace_194 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_x"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22349,7 +22349,7 @@ rule strace_195 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_x-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22367,7 +22367,7 @@ rule strace_196 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_x-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22385,7 +22385,7 @@ rule strace_197 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_x-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22403,7 +22403,7 @@ rule strace_198 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_x-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22421,7 +22421,7 @@ rule strace_199 {
         app_name = "strace"
         type = "2"
         target = "ioctl_fs_x-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22439,7 +22439,7 @@ rule strace_200 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22457,7 +22457,7 @@ rule strace_201 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22475,7 +22475,7 @@ rule strace_202 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-success-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22493,7 +22493,7 @@ rule strace_203 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-success-v-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22511,7 +22511,7 @@ rule strace_204 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-success-v-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22529,7 +22529,7 @@ rule strace_205 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22547,7 +22547,7 @@ rule strace_206 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22565,7 +22565,7 @@ rule strace_207 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-v-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22583,7 +22583,7 @@ rule strace_208 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-v-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22601,7 +22601,7 @@ rule strace_209 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22619,7 +22619,7 @@ rule strace_210 {
         app_name = "strace"
         type = "2"
         target = "ioctl_gpio-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22637,7 +22637,7 @@ rule strace_211 {
         app_name = "strace"
         type = "2"
         target = "ioctl_hdio-success-v-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22655,7 +22655,7 @@ rule strace_212 {
         app_name = "strace"
         type = "2"
         target = "ioctl_hdio-success-v-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22673,7 +22673,7 @@ rule strace_213 {
         app_name = "strace"
         type = "2"
         target = "ioctl_hdio-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22691,7 +22691,7 @@ rule strace_214 {
         app_name = "strace"
         type = "2"
         target = "ioctl_hdio-v-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22709,7 +22709,7 @@ rule strace_215 {
         app_name = "strace"
         type = "2"
         target = "ioctl_hdio-v-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22727,7 +22727,7 @@ rule strace_216 {
         app_name = "strace"
         type = "2"
         target = "ioctl_hdio-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22745,7 +22745,7 @@ rule strace_217 {
         app_name = "strace"
         type = "2"
         target = "ioctl_kd-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22763,7 +22763,7 @@ rule strace_218 {
         app_name = "strace"
         type = "2"
         target = "ioctl_kd-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22781,7 +22781,7 @@ rule strace_219 {
         app_name = "strace"
         type = "2"
         target = "ioctl_kd-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22799,7 +22799,7 @@ rule strace_220 {
         app_name = "strace"
         type = "2"
         target = "ioctl_kd-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22817,7 +22817,7 @@ rule strace_221 {
         app_name = "strace"
         type = "2"
         target = "ioctl_loop"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22835,7 +22835,7 @@ rule strace_222 {
         app_name = "strace"
         type = "2"
         target = "ioctl_loop-nv"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -22889,7 +22889,7 @@ rule strace_225 {
         app_name = "strace"
         type = "2"
         target = "ioctl_mtd-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23051,7 +23051,7 @@ rule strace_234 {
         app_name = "strace"
         type = "2"
         target = "ioctl_seccomp--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23069,7 +23069,7 @@ rule strace_235 {
         app_name = "strace"
         type = "2"
         target = "ioctl_seccomp-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23087,7 +23087,7 @@ rule strace_236 {
         app_name = "strace"
         type = "2"
         target = "ioctl_seccomp-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23105,7 +23105,7 @@ rule strace_237 {
         app_name = "strace"
         type = "2"
         target = "ioctl_seccomp-y-success--pidns-translation-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23123,7 +23123,7 @@ rule strace_238 {
         app_name = "strace"
         type = "2"
         target = "ioctl_seccomp-y-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23141,7 +23141,7 @@ rule strace_239 {
         app_name = "strace"
         type = "2"
         target = "ioctl_seccomp-y-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23213,7 +23213,7 @@ rule strace_243 {
         app_name = "strace"
         type = "2"
         target = "ioctl_ubi"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23231,7 +23231,7 @@ rule strace_244 {
         app_name = "strace"
         type = "2"
         target = "ioctl_ubi-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23285,7 +23285,7 @@ rule strace_247 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23303,7 +23303,7 @@ rule strace_248 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-success-v-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23321,7 +23321,7 @@ rule strace_249 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-success-v-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23339,7 +23339,7 @@ rule strace_250 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23357,7 +23357,7 @@ rule strace_251 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-v-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23375,7 +23375,7 @@ rule strace_252 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-v-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23393,7 +23393,7 @@ rule strace_253 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23411,7 +23411,7 @@ rule strace_254 {
         app_name = "strace"
         type = "2"
         target = "ioctl_v4l2-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23429,7 +23429,7 @@ rule util_linux_84 {
         app_name = "util-linux"
         type = "2"
         target = "ionice"
-        pattern = "ionice.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ionice.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ionice.*-([0-9Vv]([-]{1,30}))-/ 
@@ -23573,7 +23573,7 @@ rule iproute2_4 {
         app_name = "iproute2"
         type = "2"
         target = "ip"
-        pattern = "ip.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ip.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ip.*-([0-9Vv]([-]{1,30}))-/ 
@@ -23609,7 +23609,7 @@ rule iptables_1 {
         app_name = "iptables"
         type = "2"
         target = "ip6tables-legacy-batch"
-        pattern = "ip6tables-legacy-batch.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ip6tables-legacy-batch.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ip6tables-legacy-batch.*-([0-9Vv]([-]{1,30}))-/ 
@@ -23699,7 +23699,7 @@ rule strace_261 {
         app_name = "strace"
         type = "2"
         target = "ipc_msg-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23861,7 +23861,7 @@ rule strace_270 {
         app_name = "strace"
         type = "2"
         target = "ipc_shm-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -23897,7 +23897,7 @@ rule util_linux_87 {
         app_name = "util-linux"
         type = "2"
         target = "ipcmk"
-        pattern = "ipcmk.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ipcmk.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ipcmk.*-([0-9Vv]([-]{1,30}))-/ 
@@ -23933,7 +23933,7 @@ rule util_linux_89 {
         app_name = "util-linux"
         type = "2"
         target = "ipcrm"
-        pattern = "ipcrm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ipcrm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ipcrm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -23969,7 +23969,7 @@ rule util_linux_91 {
         app_name = "util-linux"
         type = "2"
         target = "ipcs"
-        pattern = "ipcs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ipcs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ipcs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24095,7 +24095,7 @@ rule iptables_4 {
         app_name = "iptables"
         type = "2"
         target = "iptables-legacy-batch"
-        pattern = "iptables-legacy-batch.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "iptables-legacy-batch.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /iptables-legacy-batch.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24149,7 +24149,7 @@ rule util_linux_93 {
         app_name = "util-linux"
         type = "2"
         target = "isosize"
-        pattern = "isosize.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "isosize.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /isosize.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24185,7 +24185,7 @@ rule blog_3 {
         app_name = "blog"
         type = "2"
         target = "isserial"
-        pattern = "isserial.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "isserial.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /isserial.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24239,7 +24239,7 @@ rule ixgbe {
         app_name = "ixgbe"
         type = "2"
         target = "ixgbe.ko"
-        pattern = "ixgbe.ko.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ixgbe.ko.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ixgbe.ko.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24275,7 +24275,7 @@ rule mtd_utils_17 {
         app_name = "mtd-utils"
         type = "2"
         target = "jffs2dump"
-        pattern = "jffs2dump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "jffs2dump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /jffs2dump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24311,7 +24311,7 @@ rule mtd_utils_19 {
         app_name = "mtd-utils"
         type = "2"
         target = "jffs2reader"
-        pattern = "jffs2reader.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "jffs2reader.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /jffs2reader.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24365,7 +24365,7 @@ rule systemd_9 {
         app_name = "systemd"
         type = "2"
         target = "journalctl"
-        pattern = "journalctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "journalctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /journalctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24545,7 +24545,7 @@ rule strace_273 {
         app_name = "strace"
         type = "2"
         target = "kcmp-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -24563,7 +24563,7 @@ rule strace_274 {
         app_name = "strace"
         type = "2"
         target = "kcmp-y--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -24653,7 +24653,7 @@ rule kexec_tools {
         app_name = "kexec-tools"
         type = "2"
         target = "kexec"
-        pattern = "kexec.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "kexec.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /kexec.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24725,7 +24725,7 @@ rule keyutils {
         app_name = "keyutils"
         type = "2"
         target = "key.dns_resolver"
-        pattern = "key.dns_resolver.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "key.dns_resolver.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /key.dns_resolver.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24743,7 +24743,7 @@ rule keyutils_1 {
         app_name = "keyutils"
         type = "2"
         target = "keyctl"
-        pattern = "keyctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "keyctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /keyctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24833,7 +24833,7 @@ rule openssl_98 {
         app_name = "openssl"
         type = "2"
         target = "keymgmt_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -24851,7 +24851,7 @@ rule util_linux_95 {
         app_name = "util-linux"
         type = "2"
         target = "kill"
-        pattern = "kill.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "kill.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /kill.*-([0-9Vv]([-]{1,30}))-/ 
@@ -24923,7 +24923,7 @@ rule strace_285 {
         app_name = "strace"
         type = "2"
         target = "kill--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -25013,7 +25013,7 @@ rule sysvinit_3 {
         app_name = "sysvinit"
         type = "2"
         target = "killall5"
-        pattern = "killall5.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "killall5.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /killall5.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25049,7 +25049,7 @@ rule sysvinit_5 {
         app_name = "sysvinit"
         type = "2"
         target = "killproc"
-        pattern = "killproc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "killproc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /killproc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25103,7 +25103,7 @@ rule util_linux_98 {
         app_name = "util-linux"
         type = "2"
         target = "klogconsole"
-        pattern = "klogconsole.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "klogconsole.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /klogconsole.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25139,7 +25139,7 @@ rule kmod {
         app_name = "kmod"
         type = "2"
         target = "kmod"
-        pattern = "kmod.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "kmod.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /kmod.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25283,7 +25283,7 @@ rule strace_287 {
         app_name = "strace"
         type = "2"
         target = "landlock_add_rule"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -25301,7 +25301,7 @@ rule strace_288 {
         app_name = "strace"
         type = "2"
         target = "landlock_add_rule-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -25319,7 +25319,7 @@ rule strace_289 {
         app_name = "strace"
         type = "2"
         target = "landlock_create_ruleset-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -25337,7 +25337,7 @@ rule strace_290 {
         app_name = "strace"
         type = "2"
         target = "landlock_create_ruleset-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -25355,7 +25355,7 @@ rule strace_291 {
         app_name = "strace"
         type = "2"
         target = "landlock_restrict_self"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -25391,7 +25391,7 @@ rule util_linux_99 {
         app_name = "util-linux"
         type = "2"
         target = "last"
-        pattern = "last.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "last.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /last.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25445,7 +25445,7 @@ rule shadow_26 {
         app_name = "shadow"
         type = "2"
         target = "lastlog"
-        pattern = "lastlog.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lastlog.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lastlog.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25553,7 +25553,7 @@ rule glibc_9 {
         app_name = "glibc"
         type = "1"
         target = "ld-2.26"
-        pattern = "ld-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ld-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ld-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25607,7 +25607,7 @@ rule util_linux_102 {
         app_name = "util-linux"
         type = "2"
         target = "ldattach"
-        pattern = "ldattach.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ldattach.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ldattach.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25625,7 +25625,7 @@ rule util_linux_103 {
         app_name = "util-linux"
         type = "2"
         target = "ldattach"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -25643,7 +25643,7 @@ rule glibc_12 {
         app_name = "glibc"
         type = "2"
         target = "ldconfig"
-        pattern = "ldconfig.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ldconfig.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ldconfig.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25679,7 +25679,7 @@ rule openssl_99 {
         app_name = "openssl"
         type = "1"
         target = "legacy"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -25715,7 +25715,7 @@ rule acl_1 {
         app_name = "acl"
         type = "1"
         target = "libacl"
-        pattern = "libacl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libacl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libacl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25733,7 +25733,7 @@ rule libaio {
         app_name = "libaio"
         type = "1"
         target = "libaio"
-        pattern = "libaio.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libaio.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libaio.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25769,7 +25769,7 @@ rule glibc_14 {
         app_name = "glibc"
         type = "1"
         target = "libanl-2.26"
-        pattern = "libanl-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libanl-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libanl-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25805,7 +25805,7 @@ rule libarchive_2 {
         app_name = "libarchive"
         type = "1"
         target = "libarchive"
-        pattern = "libarchive.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libarchive.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libarchive.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25841,7 +25841,7 @@ rule argon2 {
         app_name = "argon2"
         type = "1"
         target = "libargon2"
-        pattern = "libargon2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libargon2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libargon2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -25859,7 +25859,7 @@ rule iptables_6 {
         app_name = "iptables"
         type = "1"
         target = "libarpt_mangle"
-        pattern = "libarpt_mangle.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libarpt_mangle.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libarpt_mangle.*-([0-9Vv]([-]{1,30}))-/ 
@@ -26021,7 +26021,7 @@ rule gcc_14 {
         app_name = "gcc"
         type = "1"
         target = "libatomic"
-        pattern = "libatomic.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libatomic.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libatomic.*-([0-9Vv]([-]{1,30}))-/ 
@@ -26057,7 +26057,7 @@ rule attr_1 {
         app_name = "attr"
         type = "1"
         target = "libattr"
-        pattern = "libattr.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libattr.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libattr.*-([0-9Vv]([-]{1,30}))-/ 
@@ -26075,7 +26075,7 @@ rule audit_10 {
         app_name = "audit"
         type = "1"
         target = "libaudit"
-        pattern = "libaudit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libaudit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libaudit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -26093,7 +26093,7 @@ rule audit_11 {
         app_name = "audit"
         type = "1"
         target = "libauparse"
-        pattern = "libauparse.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libauparse.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libauparse.*-([0-9Vv]([-]{1,30}))-/ 
@@ -26111,7 +26111,7 @@ rule avahi_1 {
         app_name = "avahi"
         type = "1"
         target = "libavahi-client"
-        pattern = "avahi-(([0-9]+\\.){1,}[0-9]+(-[0-9]+)?)"
+        pattern = "avahi-(([0-9]+\\.){1,}[0-9]+(-[0-9]+))"
 
     strings:
         $pattern = /avahi-(([0-9]{1,4}\.){1,}[0-9]{1,4}(-[0-9]{1,4}))/ 
@@ -26291,7 +26291,7 @@ rule binutils_18 {
         app_name = "binutils"
         type = "1"
         target = "libbfd-2.29.1.20180115"
-        pattern = "\\(GNU Binutils\\) ([0-9]\\.[0-9]+(\\.[1-9])?[a-z]?)"
+        pattern = "\\(GNU Binutils\\) ([0-9]\\.[0-9]+(\\.[1-9])[a-z])"
 
     strings:
         $pattern = /\(GNU Binutils\) ([0-9]\.[0-9]{1,4}(\.[1-9])[a-z])/ 
@@ -26309,7 +26309,7 @@ rule binutils_19 {
         app_name = "binutils"
         type = "1"
         target = "libbfd-2.30.0.20180208"
-        pattern = "\\(GNU Binutils\\) ([0-9]\\.[0-9]+(\\.[1-9])?[a-z]?)"
+        pattern = "\\(GNU Binutils\\) ([0-9]\\.[0-9]+(\\.[1-9])[a-z])"
 
     strings:
         $pattern = /\(GNU Binutils\) ([0-9]\.[0-9]{1,4}(\.[1-9])[a-z])/ 
@@ -26327,7 +26327,7 @@ rule binutils_20 {
         app_name = "binutils"
         type = "1"
         target = "libbfd-2.34.0.20200220"
-        pattern = "\\(GNU Binutils\\) ([0-9]\\.[0-9]+(\\.[1-9])?[a-z]?)"
+        pattern = "\\(GNU Binutils\\) ([0-9]\\.[0-9]+(\\.[1-9])[a-z])"
 
     strings:
         $pattern = /\(GNU Binutils\) ([0-9]\.[0-9]{1,4}(\.[1-9])[a-z])/ 
@@ -26381,7 +26381,7 @@ rule blog_4 {
         app_name = "blog"
         type = "1"
         target = "libblogger"
-        pattern = "libblogger.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libblogger.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libblogger.*-([0-9Vv]([-]{1,30}))-/ 
@@ -26957,7 +26957,7 @@ rule glibc_15 {
         app_name = "glibc"
         type = "1"
         target = "libBrokenLocale-2.26"
-        pattern = "libBrokenLocale-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libBrokenLocale-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libBrokenLocale-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27011,7 +27011,7 @@ rule bzip2_3 {
         app_name = "bzip2"
         type = "1"
         target = "libbz2"
-        pattern = "libbz2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libbz2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libbz2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27101,7 +27101,7 @@ rule glibc_18 {
         app_name = "glibc"
         type = "1"
         target = "libc-2.26"
-        pattern = "libc-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libc-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libc-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27227,7 +27227,7 @@ rule libcap {
         app_name = "libcap"
         type = "1"
         target = "libcap"
-        pattern = "libcap.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcap.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcap.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27245,7 +27245,7 @@ rule libcap_ng {
         app_name = "libcap-ng"
         type = "1"
         target = "libcap-ng"
-        pattern = "libcap-ng.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcap-ng.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcap-ng.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27299,7 +27299,7 @@ rule strongswan_12 {
         app_name = "strongswan"
         type = "1"
         target = "libcharon"
-        pattern = "libcharon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcharon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcharon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27317,7 +27317,7 @@ rule glibc_23 {
         app_name = "glibc"
         type = "1"
         target = "libcidn-2.26"
-        pattern = "libcidn-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcidn-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcidn-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27353,7 +27353,7 @@ rule libclockwait {
         app_name = "libclockwait"
         type = "1"
         target = "libclockwait"
-        pattern = "libclockwait.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libclockwait.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libclockwait.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27407,7 +27407,7 @@ rule e2fsprogs_24 {
         app_name = "e2fsprogs"
         type = "1"
         target = "libcom_err"
-        pattern = "libcom_err.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcom_err.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcom_err.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27461,7 +27461,7 @@ rule cracklib_3 {
         app_name = "cracklib"
         type = "1"
         target = "libcrack"
-        pattern = "libcrack.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcrack.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcrack.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27497,7 +27497,7 @@ rule glibc_24 {
         app_name = "glibc"
         type = "1"
         target = "libcrypt-2.26"
-        pattern = "libcrypt-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcrypt-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcrypt-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27515,7 +27515,7 @@ rule openssl_101 {
         app_name = "openssl"
         type = "1"
         target = "libcrypto"
-        pattern = "libcrypto.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcrypto.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcrypto.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27533,7 +27533,7 @@ rule openssl_102 {
         app_name = "openssl"
         type = "1"
         target = "libcrypto"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -27587,7 +27587,7 @@ rule curl_1 {
         app_name = "curl"
         type = "1"
         target = "libcurl"
-        pattern = "libcurl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libcurl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libcurl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27659,7 +27659,7 @@ rule dbus_16 {
         app_name = "dbus"
         type = "1"
         target = "libdbus-1"
-        pattern = "libdbus-1.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libdbus-1.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libdbus-1.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27731,7 +27731,7 @@ rule lvm2_2 {
         app_name = "lvm2"
         type = "1"
         target = "libdevmapper"
-        pattern = "libdevmapper.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libdevmapper.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libdevmapper.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27749,7 +27749,7 @@ rule lvm2_3 {
         app_name = "lvm2"
         type = "1"
         target = "libdevmapper-event"
-        pattern = "libdevmapper-event.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libdevmapper-event.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libdevmapper-event.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27767,7 +27767,7 @@ rule glibc_25 {
         app_name = "glibc"
         type = "1"
         target = "libdl-2.26"
-        pattern = "libdl-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libdl-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libdl-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27821,7 +27821,7 @@ rule elfutils_59 {
         app_name = "elfutils"
         type = "1"
         target = "libdw-0.168"
-        pattern = "libdw-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libdw-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libdw-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27893,7 +27893,7 @@ rule e2fsprogs_25 {
         app_name = "e2fsprogs"
         type = "1"
         target = "libe2p"
-        pattern = "libe2p.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libe2p.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libe2p.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27911,7 +27911,7 @@ rule elfutils_63 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_aarch64-0.168"
-        pattern = "libebl_aarch64-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_aarch64-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_aarch64-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27947,7 +27947,7 @@ rule elfutils_65 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_alpha-0.168"
-        pattern = "libebl_alpha-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_alpha-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_alpha-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -27983,7 +27983,7 @@ rule elfutils_67 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_arm-0.168"
-        pattern = "libebl_arm-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_arm-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_arm-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28019,7 +28019,7 @@ rule elfutils_69 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_bpf-0.168"
-        pattern = "libebl_bpf-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_bpf-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_bpf-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28055,7 +28055,7 @@ rule elfutils_71 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_i386-0.168"
-        pattern = "libebl_i386-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_i386-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_i386-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28091,7 +28091,7 @@ rule elfutils_73 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_ia64-0.168"
-        pattern = "libebl_ia64-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_ia64-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_ia64-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28127,7 +28127,7 @@ rule elfutils_75 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_m68k-0.168"
-        pattern = "libebl_m68k-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_m68k-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_m68k-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28199,7 +28199,7 @@ rule elfutils_79 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_ppc-0.168"
-        pattern = "libebl_ppc-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_ppc-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_ppc-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28235,7 +28235,7 @@ rule elfutils_81 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_ppc64-0.168"
-        pattern = "libebl_ppc64-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_ppc64-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_ppc64-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28271,7 +28271,7 @@ rule elfutils_83 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_s390-0.168"
-        pattern = "libebl_s390-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_s390-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_s390-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28307,7 +28307,7 @@ rule elfutils_85 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_sh-0.168"
-        pattern = "libebl_sh-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_sh-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_sh-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28343,7 +28343,7 @@ rule elfutils_87 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_sparc-0.168"
-        pattern = "libebl_sparc-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_sparc-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_sparc-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28379,7 +28379,7 @@ rule elfutils_89 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_tilegx-0.168"
-        pattern = "libebl_tilegx-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_tilegx-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_tilegx-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28415,7 +28415,7 @@ rule elfutils_91 {
         app_name = "elfutils"
         type = "1"
         target = "libebl_x86_64-0.168"
-        pattern = "libebl_x86_64-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebl_x86_64-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebl_x86_64-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28451,7 +28451,7 @@ rule ebtables_1 {
         app_name = "ebtables"
         type = "1"
         target = "libebt_among"
-        pattern = "libebt_among.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_among.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_among.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28469,7 +28469,7 @@ rule ebtables_2 {
         app_name = "ebtables"
         type = "1"
         target = "libebt_AUDIT"
-        pattern = "libebt_AUDIT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_AUDIT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_AUDIT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28487,7 +28487,7 @@ rule iptables_7 {
         app_name = "iptables"
         type = "1"
         target = "libebt_dnat"
-        pattern = "libebt_dnat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_dnat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_dnat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28505,7 +28505,7 @@ rule ebtables_3 {
         app_name = "ebtables"
         type = "1"
         target = "libebt_limit"
-        pattern = "libebt_limit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_limit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_limit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28523,7 +28523,7 @@ rule ebtables_4 {
         app_name = "ebtables"
         type = "1"
         target = "libebt_nat"
-        pattern = "libebt_nat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_nat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_nat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28541,7 +28541,7 @@ rule iptables_8 {
         app_name = "iptables"
         type = "1"
         target = "libebt_snat"
-        pattern = "libebt_snat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_snat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_snat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28559,7 +28559,7 @@ rule ebtables_5 {
         app_name = "ebtables"
         type = "1"
         target = "libebt_standard"
-        pattern = "libebt_standard.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_standard.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_standard.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28577,7 +28577,7 @@ rule ebtables_6 {
         app_name = "ebtables"
         type = "1"
         target = "libebt_ulog"
-        pattern = "libebt_ulog.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebt_ulog.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebt_ulog.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28595,7 +28595,7 @@ rule ebtables_7 {
         app_name = "ebtables"
         type = "1"
         target = "libebtable_broute"
-        pattern = "libebtable_broute.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebtable_broute.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebtable_broute.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28613,7 +28613,7 @@ rule ebtables_8 {
         app_name = "ebtables"
         type = "1"
         target = "libebtable_filter"
-        pattern = "libebtable_filter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebtable_filter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebtable_filter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28631,7 +28631,7 @@ rule ebtables_9 {
         app_name = "ebtables"
         type = "1"
         target = "libebtable_nat"
-        pattern = "libebtable_nat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebtable_nat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebtable_nat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28649,7 +28649,7 @@ rule ebtables_10 {
         app_name = "ebtables"
         type = "1"
         target = "libebtc"
-        pattern = "libebtc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libebtc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libebtc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28667,7 +28667,7 @@ rule ebtables_11 {
         app_name = "ebtables"
         type = "1"
         target = "libebtc"
-        pattern = "ebtables v(([0-9]+\\.){1,}[0-9]+(-[0-9])?)"
+        pattern = "ebtables v(([0-9]+\\.){1,}[0-9]+(-[0-9]))"
 
     strings:
         $pattern = /ebtables v(([0-9]{1,4}\.){1,}[0-9]{1,4}(-[0-9]))/ 
@@ -28685,7 +28685,7 @@ rule libedit {
         app_name = "libedit"
         type = "1"
         target = "libedit"
-        pattern = "libedit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libedit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libedit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28757,7 +28757,7 @@ rule elfutils_95 {
         app_name = "elfutils"
         type = "1"
         target = "libelf-0.168"
-        pattern = "libelf-0.168.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libelf-0.168.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libelf-0.168.*-([0-9Vv]([-]{1,30}))-/ 
@@ -28973,7 +28973,7 @@ rule expat {
         app_name = "expat"
         type = "1"
         target = "libexpat"
-        pattern = "libexpat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libexpat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libexpat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -29027,7 +29027,7 @@ rule e2fsprogs_26 {
         app_name = "e2fsprogs"
         type = "1"
         target = "libext2fs"
-        pattern = "libext2fs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libext2fs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libext2fs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -29045,7 +29045,7 @@ rule e2fsprogs_27 {
         app_name = "e2fsprogs"
         type = "1"
         target = "libext2fs"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -29063,7 +29063,7 @@ rule e2fsprogs_28 {
         app_name = "e2fsprogs"
         type = "1"
         target = "libext2fs"
-        pattern = "EXT2FS Library version (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "EXT2FS Library version (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /EXT2FS Library version (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -29081,7 +29081,7 @@ rule libfastjson {
         app_name = "libfastjson"
         type = "1"
         target = "libfastjson"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -29117,7 +29117,7 @@ rule x_server {
         app_name = "x_server"
         type = "1"
         target = "libfb"
-        pattern = "xorg-server-(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "xorg-server-(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /xorg-server-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -29135,7 +29135,7 @@ rule util_linux_105 {
         app_name = "util-linux"
         type = "1"
         target = "libfdisk"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -29189,7 +29189,7 @@ rule ncurses_2 {
         app_name = "ncurses"
         type = "1"
         target = "libform"
-        pattern = "libform.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libform.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libform.*-([0-9Vv]([-]{1,30}))-/ 
@@ -29207,7 +29207,7 @@ rule ncurses_3 {
         app_name = "ncurses"
         type = "1"
         target = "libformw"
-        pattern = "libformw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libformw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libformw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -29243,7 +29243,7 @@ rule libjpeg {
         app_name = "libjpeg"
         type = "1"
         target = "libfreeimage-3.17.0"
-        pattern = "([0-9]+(\\.[0-9]+)*[a-z]?)  [0-9]{2}-[A-Z][a-z][a-z]-[0-9]+"
+        pattern = "([0-9]+(\\.[0-9]+)*[a-z])  [0-9]{2}-[A-Z][a-z][a-z]-[0-9]+"
 
     strings:
         $pattern = /([0-9]{1,4}(\.[0-9]{1,4})*[a-z])  [0-9]{2}-[A-Z][a-z][a-z]-[0-9]{1,4}/ 
@@ -29333,7 +29333,7 @@ rule gcc_17 {
         app_name = "gcc"
         type = "1"
         target = "libgcc_s"
-        pattern = "libgcc_s.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libgcc_s.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libgcc_s.*-([0-9Vv]([-]{1,30}))-/ 
@@ -29351,7 +29351,7 @@ rule libgcrypt {
         app_name = "libgcrypt"
         type = "1"
         target = "libgcrypt"
-        pattern = "libgcrypt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libgcrypt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libgcrypt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -29621,7 +29621,7 @@ rule libgpg_error_1 {
         app_name = "libgpg-error"
         type = "1"
         target = "libgpg-error"
-        pattern = "libgpg-error.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libgpg-error.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libgpg-error.*-([0-9Vv]([-]{1,30}))-/ 
@@ -33833,7 +33833,7 @@ rule openssl_103 {
         app_name = "openssl"
         type = "1"
         target = "libhe6"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -33977,7 +33977,7 @@ rule international_components_for_unicode_3 {
         app_name = "international_components_for_unicode"
         type = "1"
         target = "libicuuc"
-        pattern = "^([0-9]+\\.[0-9]+\\.?[0-9]*)$"
+        pattern = "^([0-9]+\\.[0-9]+\\.[0-9]*)$"
 
     strings:
         $pattern = /([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -33995,7 +33995,7 @@ rule mad_libmad {
         app_name = "mad_libmad"
         type = "1"
         target = "libid3tag"
-        pattern = "libid3tag-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "libid3tag-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /libid3tag-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -34049,7 +34049,7 @@ rule strongswan_13 {
         app_name = "strongswan"
         type = "1"
         target = "libimcv"
-        pattern = "libimcv.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libimcv.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libimcv.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34229,7 +34229,7 @@ rule iptables_9 {
         app_name = "iptables"
         type = "1"
         target = "libip4tc"
-        pattern = "libip4tc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip4tc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip4tc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34247,7 +34247,7 @@ rule iptables_10 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_ah"
-        pattern = "libip6t_ah.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_ah.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_ah.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34265,7 +34265,7 @@ rule iptables_11 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_DNAT"
-        pattern = "libip6t_DNAT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_DNAT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_DNAT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34283,7 +34283,7 @@ rule iptables_12 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_DNPT"
-        pattern = "libip6t_DNPT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_DNPT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_DNPT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34301,7 +34301,7 @@ rule iptables_13 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_dst"
-        pattern = "libip6t_dst.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_dst.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_dst.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34319,7 +34319,7 @@ rule iptables_14 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_eui64"
-        pattern = "libip6t_eui64.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_eui64.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_eui64.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34337,7 +34337,7 @@ rule iptables_15 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_frag"
-        pattern = "libip6t_frag.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_frag.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_frag.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34355,7 +34355,7 @@ rule iptables_16 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_hbh"
-        pattern = "libip6t_hbh.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_hbh.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_hbh.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34373,7 +34373,7 @@ rule iptables_17 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_HL"
-        pattern = "libip6t_HL.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_HL.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_HL.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34391,7 +34391,7 @@ rule iptables_18 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_icmp6"
-        pattern = "libip6t_icmp6.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_icmp6.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_icmp6.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34409,7 +34409,7 @@ rule iptables_19 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_ipv6header"
-        pattern = "libip6t_ipv6header.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_ipv6header.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_ipv6header.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34427,7 +34427,7 @@ rule iptables_20 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_LOG"
-        pattern = "libip6t_LOG.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_LOG.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_LOG.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34445,7 +34445,7 @@ rule iptables_21 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_MASQUERADE"
-        pattern = "libip6t_MASQUERADE.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_MASQUERADE.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_MASQUERADE.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34463,7 +34463,7 @@ rule iptables_22 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_mh"
-        pattern = "libip6t_mh.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_mh.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_mh.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34481,7 +34481,7 @@ rule iptables_23 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_NETMAP"
-        pattern = "libip6t_NETMAP.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_NETMAP.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_NETMAP.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34499,7 +34499,7 @@ rule iptables_24 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_REDIRECT"
-        pattern = "libip6t_REDIRECT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_REDIRECT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_REDIRECT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34517,7 +34517,7 @@ rule iptables_25 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_REJECT"
-        pattern = "libip6t_REJECT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_REJECT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_REJECT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34535,7 +34535,7 @@ rule iptables_26 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_rt"
-        pattern = "libip6t_rt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_rt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_rt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34553,7 +34553,7 @@ rule iptables_27 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_SNAT"
-        pattern = "libip6t_SNAT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_SNAT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_SNAT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34571,7 +34571,7 @@ rule iptables_28 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_SNPT"
-        pattern = "libip6t_SNPT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_SNPT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_SNPT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34589,7 +34589,7 @@ rule iptables_29 {
         app_name = "iptables"
         type = "1"
         target = "libip6t_srh"
-        pattern = "libip6t_srh.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6t_srh.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6t_srh.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34607,7 +34607,7 @@ rule iptables_30 {
         app_name = "iptables"
         type = "1"
         target = "libip6tc"
-        pattern = "libip6tc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libip6tc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libip6tc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34643,7 +34643,7 @@ rule iptables_31 {
         app_name = "iptables"
         type = "1"
         target = "libipt_ah"
-        pattern = "libipt_ah.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_ah.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_ah.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34661,7 +34661,7 @@ rule iptables_32 {
         app_name = "iptables"
         type = "1"
         target = "libipt_CLUSTERIP"
-        pattern = "libipt_CLUSTERIP.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_CLUSTERIP.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_CLUSTERIP.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34679,7 +34679,7 @@ rule iptables_33 {
         app_name = "iptables"
         type = "1"
         target = "libipt_DNAT"
-        pattern = "libipt_DNAT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_DNAT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_DNAT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34697,7 +34697,7 @@ rule iptables_34 {
         app_name = "iptables"
         type = "1"
         target = "libipt_ECN"
-        pattern = "libipt_ECN.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_ECN.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_ECN.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34715,7 +34715,7 @@ rule iptables_35 {
         app_name = "iptables"
         type = "1"
         target = "libipt_icmp"
-        pattern = "libipt_icmp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_icmp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_icmp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34733,7 +34733,7 @@ rule iptables_36 {
         app_name = "iptables"
         type = "1"
         target = "libipt_LOG"
-        pattern = "libipt_LOG.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_LOG.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_LOG.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34751,7 +34751,7 @@ rule iptables_37 {
         app_name = "iptables"
         type = "1"
         target = "libipt_MASQUERADE"
-        pattern = "libipt_MASQUERADE.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_MASQUERADE.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_MASQUERADE.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34769,7 +34769,7 @@ rule iptables_38 {
         app_name = "iptables"
         type = "1"
         target = "libipt_NETMAP"
-        pattern = "libipt_NETMAP.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_NETMAP.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_NETMAP.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34787,7 +34787,7 @@ rule iptables_39 {
         app_name = "iptables"
         type = "1"
         target = "libipt_realm"
-        pattern = "libipt_realm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_realm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_realm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34805,7 +34805,7 @@ rule iptables_40 {
         app_name = "iptables"
         type = "1"
         target = "libipt_REDIRECT"
-        pattern = "libipt_REDIRECT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_REDIRECT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_REDIRECT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34823,7 +34823,7 @@ rule iptables_41 {
         app_name = "iptables"
         type = "1"
         target = "libipt_REJECT"
-        pattern = "libipt_REJECT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_REJECT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_REJECT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34841,7 +34841,7 @@ rule iptables_42 {
         app_name = "iptables"
         type = "1"
         target = "libipt_SNAT"
-        pattern = "libipt_SNAT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_SNAT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_SNAT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34859,7 +34859,7 @@ rule iptables_43 {
         app_name = "iptables"
         type = "1"
         target = "libipt_TTL"
-        pattern = "libipt_TTL.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_TTL.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_TTL.*-([0-9Vv]([-]{1,30}))-/ 
@@ -34877,7 +34877,7 @@ rule iptables_44 {
         app_name = "iptables"
         type = "1"
         target = "libipt_ULOG"
-        pattern = "libipt_ULOG.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libipt_ULOG.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libipt_ULOG.*-([0-9Vv]([-]{1,30}))-/ 
@@ -35003,7 +35003,7 @@ rule jemalloc {
         app_name = "jemalloc"
         type = "1"
         target = "libjemalloc"
-        pattern = "libjemalloc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libjemalloc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libjemalloc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -35075,7 +35075,7 @@ rule json_c {
         app_name = "json-c"
         type = "1"
         target = "libjson-c"
-        pattern = "libjson-c.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libjson-c.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libjson-c.*-([0-9Vv]([-]{1,30}))-/ 
@@ -35723,7 +35723,7 @@ rule keyutils_2 {
         app_name = "keyutils"
         type = "1"
         target = "libkeyutils"
-        pattern = "libkeyutils.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libkeyutils.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libkeyutils.*-([0-9Vv]([-]{1,30}))-/ 
@@ -35759,7 +35759,7 @@ rule kmod_2 {
         app_name = "kmod"
         type = "1"
         target = "libkmod"
-        pattern = "libkmod.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libkmod.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libkmod.*-([0-9Vv]([-]{1,30}))-/ 
@@ -35777,7 +35777,7 @@ rule kerberos {
         app_name = "kerberos"
         type = "1"
         target = "libkrb5"
-        pattern = "KRB5_BRAND: [ 0-9a-z/-]+([0-9]+\\.[0-9]+\\.?[0-9]*)"
+        pattern = "KRB5_BRAND: [ 0-9a-z/-]+([0-9]+\\.[0-9]+\\.[0-9]*)"
 
     strings:
         $pattern = /KRB5_BRAND: [ 0-9a-z\/-]+([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -36065,7 +36065,7 @@ rule lua_1 {
         app_name = "lua"
         type = "1"
         target = "liblua5.3"
-        pattern = "liblua5.3.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "liblua5.3.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /liblua5.3.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36137,7 +36137,7 @@ rule lz4 {
         app_name = "lz4"
         type = "1"
         target = "liblz4"
-        pattern = "liblz4.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "liblz4.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /liblz4.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36173,7 +36173,7 @@ rule xz {
         app_name = "xz"
         type = "1"
         target = "liblzma"
-        pattern = "liblzma.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "liblzma.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /liblzma.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36209,7 +36209,7 @@ rule lzo_1 {
         app_name = "lzo"
         type = "1"
         target = "liblzo2"
-        pattern = "liblzo2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "liblzo2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /liblzo2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36245,7 +36245,7 @@ rule glibc_26 {
         app_name = "glibc"
         type = "1"
         target = "libm-2.26"
-        pattern = "libm-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libm-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libm-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36263,7 +36263,7 @@ rule file_2 {
         app_name = "file"
         type = "1"
         target = "libmagic"
-        pattern = "libmagic.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libmagic.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libmagic.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36299,7 +36299,7 @@ rule mbedtls {
         app_name = "mbedtls"
         type = "1"
         target = "libmbedcrypto"
-        pattern = "libmbedcrypto.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libmbedcrypto.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libmbedcrypto.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36353,7 +36353,7 @@ rule ncurses_4 {
         app_name = "ncurses"
         type = "1"
         target = "libmenu"
-        pattern = "libmenu.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libmenu.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libmenu.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36371,7 +36371,7 @@ rule ncurses_5 {
         app_name = "ncurses"
         type = "1"
         target = "libmenuw"
-        pattern = "libmenuw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libmenuw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libmenuw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36425,7 +36425,7 @@ rule libmnl {
         app_name = "libmnl"
         type = "1"
         target = "libmnl"
-        pattern = "libmnl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libmnl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libmnl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36443,7 +36443,7 @@ rule util_linux_106 {
         app_name = "util-linux"
         type = "1"
         target = "libmount"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -36551,7 +36551,7 @@ rule glibc_27 {
         app_name = "glibc"
         type = "1"
         target = "libmvec-2.26"
-        pattern = "libmvec-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libmvec-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libmvec-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36569,7 +36569,7 @@ rule ncurses_6 {
         app_name = "ncurses"
         type = "1"
         target = "libncurses"
-        pattern = "libncurses.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libncurses.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libncurses.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36587,7 +36587,7 @@ rule ncurses_7 {
         app_name = "ncurses"
         type = "1"
         target = "libncurses++"
-        pattern = "libncurses\\+\\+.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libncurses\\+\\+.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libncurses\+\+.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36605,7 +36605,7 @@ rule ncurses_8 {
         app_name = "ncurses"
         type = "1"
         target = "libncursesw"
-        pattern = "libncursesw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libncursesw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libncursesw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36659,7 +36659,7 @@ rule libnetfilter_conntrack {
         app_name = "libnetfilter_conntrack"
         type = "1"
         target = "libnetfilter_conntrack"
-        pattern = "libnetfilter_conntrack.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnetfilter_conntrack.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnetfilter_conntrack.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36713,7 +36713,7 @@ rule libnfnetlink {
         app_name = "libnfnetlink"
         type = "1"
         target = "libnfnetlink"
-        pattern = "libnfnetlink.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnfnetlink.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnfnetlink.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36749,7 +36749,7 @@ rule libnftnl {
         app_name = "libnftnl"
         type = "1"
         target = "libnftnl"
-        pattern = "libnftnl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnftnl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnftnl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36929,7 +36929,7 @@ rule libnsl {
         app_name = "libnsl"
         type = "1"
         target = "libnsl"
-        pattern = "libnsl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnsl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnsl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -36947,7 +36947,7 @@ rule glibc_28 {
         app_name = "glibc"
         type = "1"
         target = "libnsl-2.26"
-        pattern = "libnsl-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnsl-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnsl-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37019,7 +37019,7 @@ rule glibc_29 {
         app_name = "glibc"
         type = "1"
         target = "libnss_compat-2.26"
-        pattern = "libnss_compat-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnss_compat-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnss_compat-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37037,7 +37037,7 @@ rule glibc_30 {
         app_name = "glibc"
         type = "1"
         target = "libnss_db-2.26"
-        pattern = "libnss_db-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnss_db-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnss_db-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37055,7 +37055,7 @@ rule glibc_31 {
         app_name = "glibc"
         type = "1"
         target = "libnss_dns-2.26"
-        pattern = "libnss_dns-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnss_dns-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnss_dns-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37073,7 +37073,7 @@ rule glibc_32 {
         app_name = "glibc"
         type = "1"
         target = "libnss_files-2.26"
-        pattern = "libnss_files-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnss_files-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnss_files-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37091,7 +37091,7 @@ rule glibc_33 {
         app_name = "glibc"
         type = "1"
         target = "libnss_hesiod-2.26"
-        pattern = "libnss_hesiod-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libnss_hesiod-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libnss_hesiod-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37199,7 +37199,7 @@ rule glibc_34 {
         app_name = "glibc"
         type = "1"
         target = "libowcrypt-2.26"
-        pattern = "libowcrypt-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libowcrypt-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libowcrypt-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37217,7 +37217,7 @@ rule pam_1 {
         app_name = "pam"
         type = "1"
         target = "libpam"
-        pattern = "libpam.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpam.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpam.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37235,7 +37235,7 @@ rule pam_2 {
         app_name = "pam"
         type = "1"
         target = "libpam_misc"
-        pattern = "libpam_misc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpam_misc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpam_misc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37271,7 +37271,7 @@ rule pam_3 {
         app_name = "pam"
         type = "1"
         target = "libpamc"
-        pattern = "libpamc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpamc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpamc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37307,7 +37307,7 @@ rule ncurses_10 {
         app_name = "ncurses"
         type = "1"
         target = "libpanel"
-        pattern = "libpanel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpanel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpanel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37325,7 +37325,7 @@ rule ncurses_11 {
         app_name = "ncurses"
         type = "1"
         target = "libpanelw"
-        pattern = "libpanelw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpanelw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpanelw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37487,7 +37487,7 @@ rule pcre {
         app_name = "pcre"
         type = "1"
         target = "libpcre"
-        pattern = "libpcre.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpcre.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpcre.*-([0-9Vv]([-]{1,30}))-/ 
@@ -37919,7 +37919,7 @@ rule libpng_2 {
         app_name = "libpng"
         type = "1"
         target = "libpng16"
-        pattern = "libpng version (([0-9]+\\.){1,}[0-9]+([a-z]?|(-[0-9]+)?))"
+        pattern = "libpng version (([0-9]+\\.){1,}[0-9]+([a-z]|(-[0-9]+)))"
 
     strings:
         $pattern = /libpng version (([0-9]{1,4}\.){1,}[0-9]{1,4}([a-z]|(-[0-9]{1,4})))/ 
@@ -38009,7 +38009,7 @@ rule popt {
         app_name = "popt"
         type = "1"
         target = "libpopt"
-        pattern = "libpopt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpopt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpopt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38045,7 +38045,7 @@ rule procps_ng_3 {
         app_name = "procps-ng"
         type = "1"
         target = "libprocps"
-        pattern = "libprocps.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libprocps.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libprocps.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38063,7 +38063,7 @@ rule proj {
         app_name = "proj"
         type = "1"
         target = "libproj"
-        pattern = "libproj.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libproj.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libproj.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38189,7 +38189,7 @@ rule glibc_35 {
         app_name = "glibc"
         type = "1"
         target = "libpthread-2.26"
-        pattern = "libpthread-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpthread-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpthread-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38315,7 +38315,7 @@ rule pulseaudio_6 {
         app_name = "pulseaudio"
         type = "1"
         target = "libpulsecore"
-        pattern = "pulseaudio-([0-9]+\\.[0-9]+\\.?[0-9]*)"
+        pattern = "pulseaudio-([0-9]+\\.[0-9]+\\.[0-9]*)"
 
     strings:
         $pattern = /pulseaudio-([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -38423,7 +38423,7 @@ rule libpwquality {
         app_name = "libpwquality"
         type = "1"
         target = "libpwquality"
-        pattern = "libpwquality.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libpwquality.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libpwquality.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38531,7 +38531,7 @@ rule qrencode {
         app_name = "qrencode"
         type = "1"
         target = "libqrencode"
-        pattern = "libqrencode.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libqrencode.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libqrencode.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38837,7 +38837,7 @@ rule glibc_40 {
         app_name = "glibc"
         type = "1"
         target = "libresolv-2.26"
-        pattern = "libresolv-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libresolv-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libresolv-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38855,7 +38855,7 @@ rule rpm_3 {
         app_name = "rpm"
         type = "1"
         target = "librpm"
-        pattern = "librpm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "librpm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /librpm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38909,7 +38909,7 @@ rule rpm_6 {
         app_name = "rpm"
         type = "1"
         target = "librpmio"
-        pattern = "librpmio.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "librpmio.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /librpmio.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38945,7 +38945,7 @@ rule rpm_8 {
         app_name = "rpm"
         type = "1"
         target = "librpmsign"
-        pattern = "librpmsign.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "librpmsign.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /librpmsign.*-([0-9Vv]([-]{1,30}))-/ 
@@ -38981,7 +38981,7 @@ rule glibc_41 {
         app_name = "glibc"
         type = "1"
         target = "librt-2.26"
-        pattern = "librt-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "librt-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /librt-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39485,7 +39485,7 @@ rule libseccomp {
         app_name = "libseccomp"
         type = "1"
         target = "libseccomp"
-        pattern = "libseccomp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libseccomp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libseccomp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39503,7 +39503,7 @@ rule glibc_42 {
         app_name = "glibc"
         type = "1"
         target = "libSegFault"
-        pattern = "libSegFault.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libSegFault.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libSegFault.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39521,7 +39521,7 @@ rule libselinux_3 {
         app_name = "libselinux"
         type = "1"
         target = "libselinux"
-        pattern = "libselinux.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libselinux.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libselinux.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39539,7 +39539,7 @@ rule libsemanage {
         app_name = "libsemanage"
         type = "1"
         target = "libsemanage"
-        pattern = "libsemanage.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libsemanage.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libsemanage.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39557,7 +39557,7 @@ rule libsepol {
         app_name = "libsepol"
         type = "1"
         target = "libsepol"
-        pattern = "libsepol.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libsepol.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libsepol.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39611,7 +39611,7 @@ rule util_linux_107 {
         app_name = "util-linux"
         type = "1"
         target = "libsmartcols"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -39827,7 +39827,7 @@ rule sqlite_4 {
         app_name = "sqlite"
         type = "1"
         target = "libsqlite3"
-        pattern = "libsqlite3.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libsqlite3.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libsqlite3.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39863,7 +39863,7 @@ rule e2fsprogs_29 {
         app_name = "e2fsprogs"
         type = "1"
         target = "libss"
-        pattern = "libss.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libss.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libss.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39899,7 +39899,7 @@ rule openssl_104 {
         app_name = "openssl"
         type = "1"
         target = "libssl"
-        pattern = "libssl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libssl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libssl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -39917,7 +39917,7 @@ rule openssl_105 {
         app_name = "openssl"
         type = "1"
         target = "libssl"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -39989,7 +39989,7 @@ rule gcc_22 {
         app_name = "gcc"
         type = "1"
         target = "libstdc++"
-        pattern = "libstdc++.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstdc++.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstdc++.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40025,7 +40025,7 @@ rule strongswan_14 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan"
-        pattern = "libstrongswan.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40043,7 +40043,7 @@ rule strongswan_15 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-addrblock"
-        pattern = "libstrongswan-addrblock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-addrblock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-addrblock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40061,7 +40061,7 @@ rule strongswan_16 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-aes"
-        pattern = "libstrongswan-aes.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-aes.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-aes.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40079,7 +40079,7 @@ rule strongswan_17 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-af-alg"
-        pattern = "libstrongswan-af-alg.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-af-alg.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-af-alg.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40097,7 +40097,7 @@ rule strongswan_18 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-attr"
-        pattern = "libstrongswan-attr.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-attr.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-attr.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40115,7 +40115,7 @@ rule strongswan_19 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-ccm"
-        pattern = "libstrongswan-ccm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-ccm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-ccm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40133,7 +40133,7 @@ rule strongswan_20 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-certexpire"
-        pattern = "libstrongswan-certexpire.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-certexpire.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-certexpire.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40151,7 +40151,7 @@ rule strongswan_21 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-cmac"
-        pattern = "libstrongswan-cmac.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-cmac.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-cmac.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40169,7 +40169,7 @@ rule strongswan_22 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-constraints"
-        pattern = "libstrongswan-constraints.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-constraints.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-constraints.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40187,7 +40187,7 @@ rule strongswan_23 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-counters"
-        pattern = "libstrongswan-counters.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-counters.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-counters.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40205,7 +40205,7 @@ rule strongswan_24 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-ctr"
-        pattern = "libstrongswan-ctr.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-ctr.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-ctr.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40223,7 +40223,7 @@ rule strongswan_25 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-curve25519"
-        pattern = "libstrongswan-curve25519.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-curve25519.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-curve25519.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40241,7 +40241,7 @@ rule strongswan_26 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-dnskey"
-        pattern = "libstrongswan-dnskey.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-dnskey.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-dnskey.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40259,7 +40259,7 @@ rule strongswan_27 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-error-notify"
-        pattern = "libstrongswan-error-notify.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-error-notify.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-error-notify.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40277,7 +40277,7 @@ rule strongswan_28 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-fips-prf"
-        pattern = "libstrongswan-fips-prf.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-fips-prf.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-fips-prf.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40295,7 +40295,7 @@ rule strongswan_29 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-gcm"
-        pattern = "libstrongswan-gcm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-gcm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-gcm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40313,7 +40313,7 @@ rule strongswan_30 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-hmac"
-        pattern = "libstrongswan-hmac.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-hmac.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-hmac.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40331,7 +40331,7 @@ rule strongswan_31 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-kernel-netlink"
-        pattern = "libstrongswan-kernel-netlink.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-kernel-netlink.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-kernel-netlink.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40349,7 +40349,7 @@ rule strongswan_32 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-nonce"
-        pattern = "libstrongswan-nonce.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-nonce.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-nonce.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40367,7 +40367,7 @@ rule strongswan_33 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-openssl"
-        pattern = "libstrongswan-openssl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-openssl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-openssl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40385,7 +40385,7 @@ rule strongswan_34 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pem"
-        pattern = "libstrongswan-pem.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pem.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pem.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40403,7 +40403,7 @@ rule strongswan_35 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pgp"
-        pattern = "libstrongswan-pgp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pgp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pgp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40421,7 +40421,7 @@ rule strongswan_36 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pkcs1"
-        pattern = "libstrongswan-pkcs1.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pkcs1.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pkcs1.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40439,7 +40439,7 @@ rule strongswan_37 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pkcs11"
-        pattern = "libstrongswan-pkcs11.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pkcs11.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pkcs11.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40457,7 +40457,7 @@ rule strongswan_38 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pkcs12"
-        pattern = "libstrongswan-pkcs12.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pkcs12.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pkcs12.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40475,7 +40475,7 @@ rule strongswan_39 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pkcs7"
-        pattern = "libstrongswan-pkcs7.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pkcs7.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pkcs7.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40493,7 +40493,7 @@ rule strongswan_40 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pkcs8"
-        pattern = "libstrongswan-pkcs8.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pkcs8.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pkcs8.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40511,7 +40511,7 @@ rule strongswan_41 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-pubkey"
-        pattern = "libstrongswan-pubkey.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-pubkey.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-pubkey.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40529,7 +40529,7 @@ rule strongswan_42 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-random"
-        pattern = "libstrongswan-random.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-random.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-random.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40547,7 +40547,7 @@ rule strongswan_43 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-rc2"
-        pattern = "libstrongswan-rc2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-rc2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-rc2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40565,7 +40565,7 @@ rule strongswan_44 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-resolve"
-        pattern = "libstrongswan-resolve.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-resolve.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-resolve.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40583,7 +40583,7 @@ rule strongswan_45 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-revocation"
-        pattern = "libstrongswan-revocation.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-revocation.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-revocation.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40601,7 +40601,7 @@ rule strongswan_46 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-sha2"
-        pattern = "libstrongswan-sha2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-sha2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-sha2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40619,7 +40619,7 @@ rule strongswan_47 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-sha3"
-        pattern = "libstrongswan-sha3.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-sha3.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-sha3.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40637,7 +40637,7 @@ rule strongswan_48 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-socket-default"
-        pattern = "libstrongswan-socket-default.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-socket-default.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-socket-default.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40655,7 +40655,7 @@ rule strongswan_49 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-sshkey"
-        pattern = "libstrongswan-sshkey.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-sshkey.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-sshkey.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40673,7 +40673,7 @@ rule strongswan_50 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-stroke"
-        pattern = "libstrongswan-stroke.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-stroke.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-stroke.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40709,7 +40709,7 @@ rule strongswan_52 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-updown"
-        pattern = "libstrongswan-updown.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-updown.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-updown.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40727,7 +40727,7 @@ rule strongswan_53 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-vici"
-        pattern = "libstrongswan-vici.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-vici.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-vici.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40763,7 +40763,7 @@ rule strongswan_55 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-x509"
-        pattern = "libstrongswan-x509.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-x509.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-x509.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40781,7 +40781,7 @@ rule strongswan_56 {
         app_name = "strongswan"
         type = "1"
         target = "libstrongswan-xauth-generic"
-        pattern = "libstrongswan-xauth-generic.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libstrongswan-xauth-generic.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libstrongswan-xauth-generic.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40853,7 +40853,7 @@ rule systemd_11 {
         app_name = "systemd"
         type = "1"
         target = "libsystemd"
-        pattern = "libsystemd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libsystemd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libsystemd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -40871,7 +40871,7 @@ rule systemd_12 {
         app_name = "systemd"
         type = "1"
         target = "libsystemd-shared-234"
-        pattern = "libsystemd-shared-234.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libsystemd-shared-234.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libsystemd-shared-234.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41069,7 +41069,7 @@ rule glibc_44 {
         app_name = "glibc"
         type = "1"
         target = "libthread_db-1.0"
-        pattern = "libthread_db-1.0.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libthread_db-1.0.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libthread_db-1.0.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41105,7 +41105,7 @@ rule ncurses_12 {
         app_name = "ncurses"
         type = "1"
         target = "libtic"
-        pattern = "libtic.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libtic.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libtic.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41123,7 +41123,7 @@ rule ncurses_13 {
         app_name = "ncurses"
         type = "1"
         target = "libticw"
-        pattern = "libticw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libticw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libticw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41159,7 +41159,7 @@ rule ncurses_14 {
         app_name = "ncurses"
         type = "1"
         target = "libtinfo"
-        pattern = "libtinfo.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libtinfo.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libtinfo.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41195,7 +41195,7 @@ rule ncurses_16 {
         app_name = "ncurses"
         type = "1"
         target = "libtinfow"
-        pattern = "libtinfow.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libtinfow.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libtinfow.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41213,7 +41213,7 @@ rule libtirpc {
         app_name = "libtirpc"
         type = "1"
         target = "libtirpc"
-        pattern = "libtirpc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libtirpc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libtirpc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41249,7 +41249,7 @@ rule strongswan_57 {
         app_name = "strongswan"
         type = "1"
         target = "libtpmtss"
-        pattern = "libtpmtss.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libtpmtss.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libtpmtss.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41321,7 +41321,7 @@ rule systemd_19 {
         app_name = "systemd"
         type = "1"
         target = "libudev"
-        pattern = "libudev.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libudev.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libudev.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41411,7 +41411,7 @@ rule utempter {
         app_name = "utempter"
         type = "1"
         target = "libutempter"
-        pattern = "libutempter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libutempter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libutempter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41429,7 +41429,7 @@ rule glibc_46 {
         app_name = "glibc"
         type = "1"
         target = "libutil-2.26"
-        pattern = "libutil-2.26.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libutil-2.26.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libutil-2.26.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41447,7 +41447,7 @@ rule util_linux_108 {
         app_name = "util-linux"
         type = "1"
         target = "libuuid"
-        pattern = "libuuid.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libuuid.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libuuid.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41537,7 +41537,7 @@ rule strongswan_58 {
         app_name = "strongswan"
         type = "1"
         target = "libvici"
-        pattern = "libvici.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libvici.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libvici.*-([0-9Vv]([-]{1,30}))-/ 
@@ -41861,7 +41861,7 @@ rule tcpd {
         app_name = "tcpd"
         type = "1"
         target = "libwrap"
-        pattern = "libwrap.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libwrap.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libwrap.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42005,7 +42005,7 @@ rule iptables_45 {
         app_name = "iptables"
         type = "1"
         target = "libxt_addrtype"
-        pattern = "libxt_addrtype.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_addrtype.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_addrtype.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42023,7 +42023,7 @@ rule iptables_46 {
         app_name = "iptables"
         type = "1"
         target = "libxt_AUDIT"
-        pattern = "libxt_AUDIT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_AUDIT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_AUDIT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42041,7 +42041,7 @@ rule iptables_47 {
         app_name = "iptables"
         type = "1"
         target = "libxt_bpf"
-        pattern = "libxt_bpf.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_bpf.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_bpf.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42059,7 +42059,7 @@ rule iptables_48 {
         app_name = "iptables"
         type = "1"
         target = "libxt_cgroup"
-        pattern = "libxt_cgroup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_cgroup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_cgroup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42077,7 +42077,7 @@ rule iptables_49 {
         app_name = "iptables"
         type = "1"
         target = "libxt_CHECKSUM"
-        pattern = "libxt_CHECKSUM.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_CHECKSUM.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_CHECKSUM.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42095,7 +42095,7 @@ rule iptables_50 {
         app_name = "iptables"
         type = "1"
         target = "libxt_CLASSIFY"
-        pattern = "libxt_CLASSIFY.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_CLASSIFY.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_CLASSIFY.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42113,7 +42113,7 @@ rule iptables_51 {
         app_name = "iptables"
         type = "1"
         target = "libxt_cluster"
-        pattern = "libxt_cluster.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_cluster.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_cluster.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42131,7 +42131,7 @@ rule iptables_52 {
         app_name = "iptables"
         type = "1"
         target = "libxt_comment"
-        pattern = "libxt_comment.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_comment.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_comment.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42149,7 +42149,7 @@ rule iptables_53 {
         app_name = "iptables"
         type = "1"
         target = "libxt_connbytes"
-        pattern = "libxt_connbytes.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_connbytes.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_connbytes.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42167,7 +42167,7 @@ rule iptables_54 {
         app_name = "iptables"
         type = "1"
         target = "libxt_connlabel"
-        pattern = "libxt_connlabel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_connlabel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_connlabel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42185,7 +42185,7 @@ rule iptables_55 {
         app_name = "iptables"
         type = "1"
         target = "libxt_connlimit"
-        pattern = "libxt_connlimit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_connlimit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_connlimit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42203,7 +42203,7 @@ rule iptables_56 {
         app_name = "iptables"
         type = "1"
         target = "libxt_CONNMARK"
-        pattern = "libxt_CONNMARK.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_CONNMARK.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_CONNMARK.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42221,7 +42221,7 @@ rule iptables_57 {
         app_name = "iptables"
         type = "1"
         target = "libxt_CONNSECMARK"
-        pattern = "libxt_CONNSECMARK.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_CONNSECMARK.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_CONNSECMARK.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42239,7 +42239,7 @@ rule iptables_58 {
         app_name = "iptables"
         type = "1"
         target = "libxt_conntrack"
-        pattern = "libxt_conntrack.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_conntrack.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_conntrack.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42257,7 +42257,7 @@ rule iptables_59 {
         app_name = "iptables"
         type = "1"
         target = "libxt_cpu"
-        pattern = "libxt_cpu.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_cpu.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_cpu.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42275,7 +42275,7 @@ rule iptables_60 {
         app_name = "iptables"
         type = "1"
         target = "libxt_CT"
-        pattern = "libxt_CT.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_CT.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_CT.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42293,7 +42293,7 @@ rule iptables_61 {
         app_name = "iptables"
         type = "1"
         target = "libxt_dccp"
-        pattern = "libxt_dccp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_dccp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_dccp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42311,7 +42311,7 @@ rule iptables_62 {
         app_name = "iptables"
         type = "1"
         target = "libxt_devgroup"
-        pattern = "libxt_devgroup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_devgroup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_devgroup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42329,7 +42329,7 @@ rule iptables_63 {
         app_name = "iptables"
         type = "1"
         target = "libxt_DSCP"
-        pattern = "libxt_DSCP.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_DSCP.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_DSCP.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42347,7 +42347,7 @@ rule iptables_64 {
         app_name = "iptables"
         type = "1"
         target = "libxt_ecn"
-        pattern = "libxt_ecn.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_ecn.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_ecn.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42365,7 +42365,7 @@ rule iptables_65 {
         app_name = "iptables"
         type = "1"
         target = "libxt_esp"
-        pattern = "libxt_esp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_esp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_esp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42383,7 +42383,7 @@ rule iptables_66 {
         app_name = "iptables"
         type = "1"
         target = "libxt_hashlimit"
-        pattern = "libxt_hashlimit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_hashlimit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_hashlimit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42401,7 +42401,7 @@ rule iptables_67 {
         app_name = "iptables"
         type = "1"
         target = "libxt_helper"
-        pattern = "libxt_helper.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_helper.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_helper.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42419,7 +42419,7 @@ rule iptables_68 {
         app_name = "iptables"
         type = "1"
         target = "libxt_HMARK"
-        pattern = "libxt_HMARK.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_HMARK.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_HMARK.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42437,7 +42437,7 @@ rule iptables_69 {
         app_name = "iptables"
         type = "1"
         target = "libxt_IDLETIMER"
-        pattern = "libxt_IDLETIMER.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_IDLETIMER.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_IDLETIMER.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42455,7 +42455,7 @@ rule iptables_70 {
         app_name = "iptables"
         type = "1"
         target = "libxt_ipcomp"
-        pattern = "libxt_ipcomp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_ipcomp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_ipcomp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42473,7 +42473,7 @@ rule iptables_71 {
         app_name = "iptables"
         type = "1"
         target = "libxt_iprange"
-        pattern = "libxt_iprange.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_iprange.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_iprange.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42491,7 +42491,7 @@ rule iptables_72 {
         app_name = "iptables"
         type = "1"
         target = "libxt_ipvs"
-        pattern = "libxt_ipvs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_ipvs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_ipvs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42509,7 +42509,7 @@ rule iptables_73 {
         app_name = "iptables"
         type = "1"
         target = "libxt_LED"
-        pattern = "libxt_LED.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_LED.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_LED.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42527,7 +42527,7 @@ rule iptables_74 {
         app_name = "iptables"
         type = "1"
         target = "libxt_length"
-        pattern = "libxt_length.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_length.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_length.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42545,7 +42545,7 @@ rule iptables_75 {
         app_name = "iptables"
         type = "1"
         target = "libxt_limit"
-        pattern = "libxt_limit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_limit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_limit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42563,7 +42563,7 @@ rule iptables_76 {
         app_name = "iptables"
         type = "1"
         target = "libxt_mac"
-        pattern = "libxt_mac.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_mac.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_mac.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42581,7 +42581,7 @@ rule iptables_77 {
         app_name = "iptables"
         type = "1"
         target = "libxt_MARK"
-        pattern = "libxt_MARK.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_MARK.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_MARK.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42599,7 +42599,7 @@ rule iptables_78 {
         app_name = "iptables"
         type = "1"
         target = "libxt_multiport"
-        pattern = "libxt_multiport.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_multiport.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_multiport.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42617,7 +42617,7 @@ rule iptables_79 {
         app_name = "iptables"
         type = "1"
         target = "libxt_nfacct"
-        pattern = "libxt_nfacct.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_nfacct.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_nfacct.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42635,7 +42635,7 @@ rule iptables_80 {
         app_name = "iptables"
         type = "1"
         target = "libxt_NFLOG"
-        pattern = "libxt_NFLOG.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_NFLOG.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_NFLOG.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42653,7 +42653,7 @@ rule iptables_81 {
         app_name = "iptables"
         type = "1"
         target = "libxt_NFQUEUE"
-        pattern = "libxt_NFQUEUE.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_NFQUEUE.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_NFQUEUE.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42671,7 +42671,7 @@ rule iptables_82 {
         app_name = "iptables"
         type = "1"
         target = "libxt_osf"
-        pattern = "libxt_osf.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_osf.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_osf.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42689,7 +42689,7 @@ rule iptables_83 {
         app_name = "iptables"
         type = "1"
         target = "libxt_owner"
-        pattern = "libxt_owner.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_owner.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_owner.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42707,7 +42707,7 @@ rule iptables_84 {
         app_name = "iptables"
         type = "1"
         target = "libxt_physdev"
-        pattern = "libxt_physdev.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_physdev.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_physdev.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42725,7 +42725,7 @@ rule iptables_85 {
         app_name = "iptables"
         type = "1"
         target = "libxt_pkttype"
-        pattern = "libxt_pkttype.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_pkttype.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_pkttype.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42743,7 +42743,7 @@ rule iptables_86 {
         app_name = "iptables"
         type = "1"
         target = "libxt_policy"
-        pattern = "libxt_policy.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_policy.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_policy.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42761,7 +42761,7 @@ rule iptables_87 {
         app_name = "iptables"
         type = "1"
         target = "libxt_quota"
-        pattern = "libxt_quota.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_quota.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_quota.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42779,7 +42779,7 @@ rule iptables_88 {
         app_name = "iptables"
         type = "1"
         target = "libxt_RATEEST"
-        pattern = "libxt_RATEEST.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_RATEEST.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_RATEEST.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42797,7 +42797,7 @@ rule iptables_89 {
         app_name = "iptables"
         type = "1"
         target = "libxt_recent"
-        pattern = "libxt_recent.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_recent.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_recent.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42815,7 +42815,7 @@ rule iptables_90 {
         app_name = "iptables"
         type = "1"
         target = "libxt_rpfilter"
-        pattern = "libxt_rpfilter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_rpfilter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_rpfilter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42833,7 +42833,7 @@ rule iptables_91 {
         app_name = "iptables"
         type = "1"
         target = "libxt_sctp"
-        pattern = "libxt_sctp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_sctp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_sctp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42851,7 +42851,7 @@ rule iptables_92 {
         app_name = "iptables"
         type = "1"
         target = "libxt_SECMARK"
-        pattern = "libxt_SECMARK.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_SECMARK.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_SECMARK.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42869,7 +42869,7 @@ rule iptables_93 {
         app_name = "iptables"
         type = "1"
         target = "libxt_SET"
-        pattern = "libxt_SET.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_SET.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_SET.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42887,7 +42887,7 @@ rule iptables_94 {
         app_name = "iptables"
         type = "1"
         target = "libxt_socket"
-        pattern = "libxt_socket.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_socket.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_socket.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42905,7 +42905,7 @@ rule iptables_95 {
         app_name = "iptables"
         type = "1"
         target = "libxt_standard"
-        pattern = "libxt_standard.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_standard.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_standard.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42923,7 +42923,7 @@ rule iptables_96 {
         app_name = "iptables"
         type = "1"
         target = "libxt_statistic"
-        pattern = "libxt_statistic.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_statistic.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_statistic.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42941,7 +42941,7 @@ rule iptables_97 {
         app_name = "iptables"
         type = "1"
         target = "libxt_string"
-        pattern = "libxt_string.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_string.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_string.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42959,7 +42959,7 @@ rule iptables_98 {
         app_name = "iptables"
         type = "1"
         target = "libxt_SYNPROXY"
-        pattern = "libxt_SYNPROXY.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_SYNPROXY.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_SYNPROXY.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42977,7 +42977,7 @@ rule iptables_99 {
         app_name = "iptables"
         type = "1"
         target = "libxt_tcp"
-        pattern = "libxt_tcp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_tcp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_tcp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -42995,7 +42995,7 @@ rule iptables_100 {
         app_name = "iptables"
         type = "1"
         target = "libxt_TCPMSS"
-        pattern = "libxt_TCPMSS.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_TCPMSS.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_TCPMSS.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43013,7 +43013,7 @@ rule iptables_101 {
         app_name = "iptables"
         type = "1"
         target = "libxt_TCPOPTSTRIP"
-        pattern = "libxt_TCPOPTSTRIP.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_TCPOPTSTRIP.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_TCPOPTSTRIP.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43031,7 +43031,7 @@ rule iptables_102 {
         app_name = "iptables"
         type = "1"
         target = "libxt_TEE"
-        pattern = "libxt_TEE.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_TEE.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_TEE.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43049,7 +43049,7 @@ rule iptables_103 {
         app_name = "iptables"
         type = "1"
         target = "libxt_time"
-        pattern = "libxt_time.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_time.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_time.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43067,7 +43067,7 @@ rule iptables_104 {
         app_name = "iptables"
         type = "1"
         target = "libxt_TOS"
-        pattern = "libxt_TOS.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_TOS.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_TOS.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43085,7 +43085,7 @@ rule iptables_105 {
         app_name = "iptables"
         type = "1"
         target = "libxt_TPROXY"
-        pattern = "libxt_TPROXY.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_TPROXY.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_TPROXY.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43103,7 +43103,7 @@ rule iptables_106 {
         app_name = "iptables"
         type = "1"
         target = "libxt_TRACE"
-        pattern = "libxt_TRACE.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_TRACE.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_TRACE.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43121,7 +43121,7 @@ rule iptables_107 {
         app_name = "iptables"
         type = "1"
         target = "libxt_u32"
-        pattern = "libxt_u32.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_u32.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_u32.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43139,7 +43139,7 @@ rule iptables_108 {
         app_name = "iptables"
         type = "1"
         target = "libxt_udp"
-        pattern = "libxt_udp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxt_udp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxt_udp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43157,7 +43157,7 @@ rule iptables_109 {
         app_name = "iptables"
         type = "1"
         target = "libxtables"
-        pattern = "libxtables.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libxtables.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libxtables.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43211,7 +43211,7 @@ rule zlib_3 {
         app_name = "zlib"
         type = "1"
         target = "libz"
-        pattern = "libz.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libz.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libz.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43229,7 +43229,7 @@ rule zlib_4 {
         app_name = "zlib"
         type = "1"
         target = "libz"
-        pattern = "^([0-9]+\\.[0-9]+\\.[0-9]+\\.?[0-9]*)$"
+        pattern = "^([0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]*)$"
 
     strings:
         $pattern = /([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -43247,7 +43247,7 @@ rule quagga {
         app_name = "quagga"
         type = "1"
         target = "libzebra"
-        pattern = "version ([0-9]+\\.[0-9]+\\.[0-9]+\\.?[0-9]*)"
+        pattern = "version ([0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]*)"
 
     strings:
         $pattern = /version ([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -43265,7 +43265,7 @@ rule libzio {
         app_name = "libzio"
         type = "1"
         target = "libzio"
-        pattern = "libzio.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libzio.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libzio.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43301,7 +43301,7 @@ rule zstd {
         app_name = "zstd"
         type = "1"
         target = "libzstd"
-        pattern = "libzstd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "libzstd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /libzstd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43373,7 +43373,7 @@ rule util_linux_109 {
         app_name = "util-linux"
         type = "2"
         target = "line"
-        pattern = "line.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "line.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /line.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43409,7 +43409,7 @@ rule coreutils_66 {
         app_name = "coreutils"
         type = "2"
         target = "link.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -43445,7 +43445,7 @@ rule strace_293 {
         app_name = "strace"
         type = "2"
         target = "linkat--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -43463,7 +43463,7 @@ rule strace_294 {
         app_name = "strace"
         type = "2"
         target = "linkat--secontext_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -43481,7 +43481,7 @@ rule little_cms {
         app_name = "little_cms"
         type = "2"
         target = "linkicc"
-        pattern = "little cms ICC device link generator - v(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "little cms ICC device link generator - v(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /little cms ICC device link generator - v(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -43769,7 +43769,7 @@ rule iproute2_5 {
         app_name = "iproute2"
         type = "2"
         target = "lnstat"
-        pattern = "lnstat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lnstat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lnstat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43787,7 +43787,7 @@ rule openssl_106 {
         app_name = "openssl"
         type = "1"
         target = "loader_attic"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -43823,7 +43823,7 @@ rule kbd_43 {
         app_name = "kbd"
         type = "2"
         target = "loadunimap"
-        pattern = "kbd (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "kbd (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /kbd (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -43841,7 +43841,7 @@ rule glibc_47 {
         app_name = "glibc"
         type = "2"
         target = "locale"
-        pattern = "locale.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "locale.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /locale.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43877,7 +43877,7 @@ rule systemd_20 {
         app_name = "systemd"
         type = "2"
         target = "localectl"
-        pattern = "localectl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "localectl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /localectl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43895,7 +43895,7 @@ rule glibc_49 {
         app_name = "glibc"
         type = "2"
         target = "localedef"
-        pattern = "localedef.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "localedef.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /localedef.*-([0-9Vv]([-]{1,30}))-/ 
@@ -43931,7 +43931,7 @@ rule openssl_107 {
         app_name = "openssl"
         type = "2"
         target = "localetest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -43949,7 +43949,7 @@ rule strace_295 {
         app_name = "strace"
         type = "2"
         target = "localtime"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -44021,7 +44021,7 @@ rule util_linux_110 {
         app_name = "util-linux"
         type = "2"
         target = "logger"
-        pattern = "logger.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "logger.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /logger.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44093,7 +44093,7 @@ rule util_linux_113 {
         app_name = "util-linux"
         type = "2"
         target = "login"
-        pattern = "login.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "login.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /login.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44147,7 +44147,7 @@ rule systemd_21 {
         app_name = "systemd"
         type = "2"
         target = "loginctl"
-        pattern = "loginctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "loginctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /loginctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44183,7 +44183,7 @@ rule systemd_23 {
         app_name = "systemd"
         type = "2"
         target = "logind-compat-tasks-max-generator"
-        pattern = "logind-compat-tasks-max-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "logind-compat-tasks-max-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /logind-compat-tasks-max-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44255,7 +44255,7 @@ rule e2fsprogs_30 {
         app_name = "e2fsprogs"
         type = "2"
         target = "logsave"
-        pattern = "logsave.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "logsave.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /logsave.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44273,7 +44273,7 @@ rule util_linux_115 {
         app_name = "util-linux"
         type = "2"
         target = "look"
-        pattern = "look.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "look.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /look.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44345,7 +44345,7 @@ rule util_linux_117 {
         app_name = "util-linux"
         type = "2"
         target = "losetup"
-        pattern = "losetup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "losetup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /losetup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44471,7 +44471,7 @@ rule e2fsprogs_31 {
         app_name = "e2fsprogs"
         type = "2"
         target = "lsattr"
-        pattern = "lsattr.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lsattr.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lsattr.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44507,7 +44507,7 @@ rule e2fsprogs_33 {
         app_name = "e2fsprogs"
         type = "2"
         target = "lsattr.e2fsprogs"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -44525,7 +44525,7 @@ rule util_linux_120 {
         app_name = "util-linux"
         type = "2"
         target = "lsblk"
-        pattern = "lsblk.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lsblk.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lsblk.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44561,7 +44561,7 @@ rule util_linux_122 {
         app_name = "util-linux"
         type = "2"
         target = "lscpu"
-        pattern = "lscpu.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lscpu.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lscpu.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44615,7 +44615,7 @@ rule util_linux_124 {
         app_name = "util-linux"
         type = "2"
         target = "lsipc"
-        pattern = "lsipc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lsipc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lsipc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44669,7 +44669,7 @@ rule util_linux_127 {
         app_name = "util-linux"
         type = "2"
         target = "lslocks"
-        pattern = "lslocks.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lslocks.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lslocks.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44705,7 +44705,7 @@ rule util_linux_129 {
         app_name = "util-linux"
         type = "2"
         target = "lslogins"
-        pattern = "lslogins.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lslogins.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lslogins.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44741,7 +44741,7 @@ rule util_linux_131 {
         app_name = "util-linux"
         type = "2"
         target = "lsmem"
-        pattern = "lsmem.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lsmem.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lsmem.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44777,7 +44777,7 @@ rule mtd_utils_21 {
         app_name = "mtd-utils"
         type = "2"
         target = "lsmtd"
-        pattern = "lsmtd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lsmtd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lsmtd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -44813,7 +44813,7 @@ rule util_linux_133 {
         app_name = "util-linux"
         type = "2"
         target = "lsns"
-        pattern = "lsns.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "lsns.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /lsns.*-([0-9Vv]([-]{1,30}))-/ 
@@ -45155,7 +45155,7 @@ rule iproute2_6 {
         app_name = "iproute2"
         type = "1"
         target = "m_xt"
-        pattern = "m_xt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "m_xt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /m_xt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -45191,7 +45191,7 @@ rule strace_299 {
         app_name = "strace"
         type = "2"
         target = "madvise"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -45587,7 +45587,7 @@ rule libselinux_4 {
         app_name = "libselinux"
         type = "2"
         target = "matchpathcon"
-        pattern = "matchpathcon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "matchpathcon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /matchpathcon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -45623,7 +45623,7 @@ rule strace_301 {
         app_name = "strace"
         type = "2"
         target = "maybe_switch_current_tcp--quiet-thread-execve"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -45803,7 +45803,7 @@ rule util_linux_135 {
         app_name = "util-linux"
         type = "2"
         target = "mcookie"
-        pattern = "mcookie.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mcookie.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mcookie.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46199,7 +46199,7 @@ rule strace_310 {
         app_name = "strace"
         type = "2"
         target = "memfd_secret-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -46217,7 +46217,7 @@ rule strace_311 {
         app_name = "strace"
         type = "2"
         target = "memfd_secret-success-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -46307,7 +46307,7 @@ rule util_linux_138 {
         app_name = "util-linux"
         type = "2"
         target = "mesg"
-        pattern = "mesg.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mesg.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mesg.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46613,7 +46613,7 @@ rule e2fsprogs_34 {
         app_name = "e2fsprogs"
         type = "2"
         target = "mke2fs"
-        pattern = "mke2fs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mke2fs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mke2fs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46685,7 +46685,7 @@ rule exfat_3 {
         app_name = "exfat"
         type = "2"
         target = "mkexfatfs"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -46739,7 +46739,7 @@ rule util_linux_141 {
         app_name = "util-linux"
         type = "2"
         target = "mkfs"
-        pattern = "mkfs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkfs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkfs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46757,7 +46757,7 @@ rule util_linux_142 {
         app_name = "util-linux"
         type = "2"
         target = "mkfs"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -46775,7 +46775,7 @@ rule util_linux_143 {
         app_name = "util-linux"
         type = "2"
         target = "mkfs.bfs"
-        pattern = "mkfs.bfs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkfs.bfs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkfs.bfs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46811,7 +46811,7 @@ rule util_linux_145 {
         app_name = "util-linux"
         type = "2"
         target = "mkfs.cramfs"
-        pattern = "mkfs.cramfs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkfs.cramfs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkfs.cramfs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46919,7 +46919,7 @@ rule mtd_utils_23 {
         app_name = "mtd-utils"
         type = "2"
         target = "mkfs.jffs2"
-        pattern = "mkfs.jffs2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkfs.jffs2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkfs.jffs2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -46955,7 +46955,7 @@ rule util_linux_147 {
         app_name = "util-linux"
         type = "2"
         target = "mkfs.minix"
-        pattern = "mkfs.minix.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkfs.minix.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkfs.minix.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47009,7 +47009,7 @@ rule mtd_utils_25 {
         app_name = "mtd-utils"
         type = "2"
         target = "mkfs.ubifs"
-        pattern = "mkfs.ubifs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkfs.ubifs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkfs.ubifs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47045,7 +47045,7 @@ rule pam_4 {
         app_name = "pam"
         type = "2"
         target = "mkhomedir_helper"
-        pattern = "mkhomedir_helper.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkhomedir_helper.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkhomedir_helper.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47063,7 +47063,7 @@ rule sysvinit_6 {
         app_name = "sysvinit"
         type = "2"
         target = "mkill"
-        pattern = "mkill.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkill.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkill.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47081,7 +47081,7 @@ rule e2fsprogs_42 {
         app_name = "e2fsprogs"
         type = "2"
         target = "mklost+found"
-        pattern = "mklost\\+found.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mklost\\+found.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mklost\+found.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47135,7 +47135,7 @@ rule strace_315 {
         app_name = "strace"
         type = "2"
         target = "mknodat"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -47153,7 +47153,7 @@ rule util_linux_149 {
         app_name = "util-linux"
         type = "2"
         target = "mkswap"
-        pattern = "mkswap.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkswap.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkswap.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47243,7 +47243,7 @@ rule util_linux_152 {
         app_name = "util-linux"
         type = "2"
         target = "mkzimage_cmdline"
-        pattern = "mkzimage_cmdline.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mkzimage_cmdline.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mkzimage_cmdline.*-([0-9Vv]([-]{1,30}))-/ 
@@ -47351,7 +47351,7 @@ rule strace_320 {
         app_name = "strace"
         type = "2"
         target = "mmap-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -47459,7 +47459,7 @@ rule strace_326 {
         app_name = "strace"
         type = "2"
         target = "mmap64-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -47549,7 +47549,7 @@ rule openssl_111 {
         app_name = "openssl"
         type = "2"
         target = "modes_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -48017,7 +48017,7 @@ rule util_linux_153 {
         app_name = "util-linux"
         type = "2"
         target = "more"
-        pattern = "more.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "more.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /more.*-([0-9Vv]([-]{1,30}))-/ 
@@ -48107,7 +48107,7 @@ rule util_linux_156 {
         app_name = "util-linux"
         type = "2"
         target = "mount"
-        pattern = "mount.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mount.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mount.*-([0-9Vv]([-]{1,30}))-/ 
@@ -48305,7 +48305,7 @@ rule util_linux_159 {
         app_name = "util-linux"
         type = "2"
         target = "mountpoint"
-        pattern = "mountpoint.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mountpoint.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mountpoint.*-([0-9Vv]([-]{1,30}))-/ 
@@ -48413,7 +48413,7 @@ rule strace_337 {
         app_name = "strace"
         type = "2"
         target = "move_pages--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -48629,7 +48629,7 @@ rule strace_343 {
         app_name = "strace"
         type = "2"
         target = "mq_sendrecv-write"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -48953,7 +48953,7 @@ rule mtd_utils_27 {
         app_name = "mtd-utils"
         type = "2"
         target = "mtd_debug"
-        pattern = "mtd_debug.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mtd_debug.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mtd_debug.*-([0-9Vv]([-]{1,30}))-/ 
@@ -48971,7 +48971,7 @@ rule systemd_25 {
         app_name = "systemd"
         type = "2"
         target = "mtd_probe"
-        pattern = "mtd_probe.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mtd_probe.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mtd_probe.*-([0-9Vv]([-]{1,30}))-/ 
@@ -48989,7 +48989,7 @@ rule mtd_utils_28 {
         app_name = "mtd-utils"
         type = "2"
         target = "mtdinfo"
-        pattern = "mtdinfo.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mtdinfo.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mtdinfo.*-([0-9Vv]([-]{1,30}))-/ 
@@ -49025,7 +49025,7 @@ rule mtd_utils_30 {
         app_name = "mtd-utils"
         type = "2"
         target = "mtdpart"
-        pattern = "mtdpart.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "mtdpart.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /mtdpart.*-([0-9Vv]([-]{1,30}))-/ 
@@ -49313,7 +49313,7 @@ rule strace_347 {
         app_name = "strace"
         type = "2"
         target = "munlockall"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49403,7 +49403,7 @@ rule util_linux_162 {
         app_name = "util-linux"
         type = "2"
         target = "namei"
-        pattern = "namei.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "namei.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /namei.*-([0-9Vv]([-]{1,30}))-/ 
@@ -49439,7 +49439,7 @@ rule openssl_112 {
         app_name = "openssl"
         type = "2"
         target = "namemap_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -49475,7 +49475,7 @@ rule mtd_utils_32 {
         app_name = "mtd-utils"
         type = "2"
         target = "nanddump"
-        pattern = "nanddump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nanddump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nanddump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -49529,7 +49529,7 @@ rule mtd_utils_35 {
         app_name = "mtd-utils"
         type = "2"
         target = "nandtest"
-        pattern = "nandtest.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nandtest.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nandtest.*-([0-9Vv]([-]{1,30}))-/ 
@@ -49565,7 +49565,7 @@ rule mtd_utils_37 {
         app_name = "mtd-utils"
         type = "2"
         target = "nandwrite"
-        pattern = "nandwrite.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nandwrite.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nandwrite.*-([0-9Vv]([-]{1,30}))-/ 
@@ -49619,7 +49619,7 @@ rule strace_348 {
         app_name = "strace"
         type = "2"
         target = "nanosleep"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49691,7 +49691,7 @@ rule strace_349 {
         app_name = "strace"
         type = "2"
         target = "net--decode-fds-all-netlink"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49709,7 +49709,7 @@ rule strace_350 {
         app_name = "strace"
         type = "2"
         target = "net--decode-fds-dev-netlink"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49727,7 +49727,7 @@ rule strace_351 {
         app_name = "strace"
         type = "2"
         target = "net--decode-fds-none-netlink"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49745,7 +49745,7 @@ rule strace_352 {
         app_name = "strace"
         type = "2"
         target = "net--decode-fds-path-netlink"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49763,7 +49763,7 @@ rule strace_353 {
         app_name = "strace"
         type = "2"
         target = "net--decode-fds-socket-netlink"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49781,7 +49781,7 @@ rule strace_354 {
         app_name = "strace"
         type = "2"
         target = "net-accept-connect"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -49853,7 +49853,7 @@ rule strace_358 {
         app_name = "strace"
         type = "2"
         target = "net-packet_mreq-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50105,7 +50105,7 @@ rule strace_371 {
         app_name = "strace"
         type = "2"
         target = "netlink_audit--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50141,7 +50141,7 @@ rule strace_373 {
         app_name = "strace"
         type = "2"
         target = "netlink_generic"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50177,7 +50177,7 @@ rule strace_375 {
         app_name = "strace"
         type = "2"
         target = "netlink_netfilter"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50195,7 +50195,7 @@ rule strace_376 {
         app_name = "strace"
         type = "2"
         target = "netlink_protocol"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50231,7 +50231,7 @@ rule strace_378 {
         app_name = "strace"
         type = "2"
         target = "netlink_selinux"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50447,7 +50447,7 @@ rule shadow_29 {
         app_name = "shadow"
         type = "2"
         target = "newgidmap"
-        pattern = "newgidmap.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "newgidmap.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /newgidmap.*-([0-9Vv]([-]{1,30}))-/ 
@@ -50483,7 +50483,7 @@ rule shadow_31 {
         app_name = "shadow"
         type = "2"
         target = "newgrp"
-        pattern = "newgrp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "newgrp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /newgrp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -50555,7 +50555,7 @@ rule shadow_33 {
         app_name = "shadow"
         type = "2"
         target = "newuidmap"
-        pattern = "newuidmap.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "newuidmap.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /newuidmap.*-([0-9Vv]([-]{1,30}))-/ 
@@ -50591,7 +50591,7 @@ rule shadow_35 {
         app_name = "shadow"
         type = "2"
         target = "newusers"
-        pattern = "newusers.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "newusers.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /newusers.*-([0-9Vv]([-]{1,30}))-/ 
@@ -50807,7 +50807,7 @@ rule strace_393 {
         app_name = "strace"
         type = "2"
         target = "nfnetlink_ulog"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -50825,7 +50825,7 @@ rule iptables_110 {
         app_name = "iptables"
         type = "2"
         target = "nfnl_osf"
-        pattern = "nfnl_osf.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nfnl_osf.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nfnl_osf.*-([0-9Vv]([-]{1,30}))-/ 
@@ -50843,7 +50843,7 @@ rule mtd_utils_40 {
         app_name = "mtd-utils"
         type = "2"
         target = "nftl_format"
-        pattern = "nftl_format.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nftl_format.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nftl_format.*-([0-9Vv]([-]{1,30}))-/ 
@@ -50879,7 +50879,7 @@ rule mtd_utils_42 {
         app_name = "mtd-utils"
         type = "2"
         target = "nftldump"
-        pattern = "nftldump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nftldump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nftldump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -51149,7 +51149,7 @@ rule strace_398 {
         app_name = "strace"
         type = "2"
         target = "nlattr_fib_rule_hdr"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51167,7 +51167,7 @@ rule strace_399 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifaddrlblmsg"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51203,7 +51203,7 @@ rule strace_401 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifinfomsg"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51257,7 +51257,7 @@ rule strace_404 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_brport-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51311,7 +51311,7 @@ rule strace_407 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_protinfo-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51329,7 +51329,7 @@ rule strace_408 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_protinfo-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51347,7 +51347,7 @@ rule strace_409 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_protinfo-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51365,7 +51365,7 @@ rule strace_410 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_vfinfo-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51383,7 +51383,7 @@ rule strace_411 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_vfinfo-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51401,7 +51401,7 @@ rule strace_412 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifla_xdp"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51419,7 +51419,7 @@ rule strace_413 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifstats"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51437,7 +51437,7 @@ rule strace_414 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifstats-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51455,7 +51455,7 @@ rule strace_415 {
         app_name = "strace"
         type = "2"
         target = "nlattr_ifstats-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51635,7 +51635,7 @@ rule strace_425 {
         app_name = "strace"
         type = "2"
         target = "nlattr_nhmsg-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51653,7 +51653,7 @@ rule strace_426 {
         app_name = "strace"
         type = "2"
         target = "nlattr_nhmsg-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51761,7 +51761,7 @@ rule strace_432 {
         app_name = "strace"
         type = "2"
         target = "nlattr_tc_stats"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -51941,7 +51941,7 @@ rule util_linux_164 {
         app_name = "util-linux"
         type = "2"
         target = "nologin"
-        pattern = "nologin.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nologin.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nologin.*-([0-9Vv]([-]{1,30}))-/ 
@@ -52085,7 +52085,7 @@ rule util_linux_167 {
         app_name = "util-linux"
         type = "2"
         target = "nsenter"
-        pattern = "nsenter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nsenter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nsenter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -52139,7 +52139,7 @@ rule iproute2_7 {
         app_name = "iproute2"
         type = "2"
         target = "nstat"
-        pattern = "nstat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "nstat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /nstat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -52319,7 +52319,7 @@ rule ntp_5 {
         app_name = "ntp"
         type = "2"
         target = "ntptime"
-        pattern = "ntp-(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "ntp-(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /ntp-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -52571,7 +52571,7 @@ rule strace_439 {
         app_name = "strace"
         type = "2"
         target = "open_tree"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52625,7 +52625,7 @@ rule strace_442 {
         app_name = "strace"
         type = "2"
         target = "openat--secontext"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52643,7 +52643,7 @@ rule strace_443 {
         app_name = "strace"
         type = "2"
         target = "openat--secontext_full_mismatch"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52661,7 +52661,7 @@ rule strace_444 {
         app_name = "strace"
         type = "2"
         target = "openat2"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52679,7 +52679,7 @@ rule strace_445 {
         app_name = "strace"
         type = "2"
         target = "openat2-v-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52697,7 +52697,7 @@ rule strace_446 {
         app_name = "strace"
         type = "2"
         target = "openat2-v-y-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52715,7 +52715,7 @@ rule strace_447 {
         app_name = "strace"
         type = "2"
         target = "openat2-v-y-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52733,7 +52733,7 @@ rule strace_448 {
         app_name = "strace"
         type = "2"
         target = "openat2-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52751,7 +52751,7 @@ rule strace_449 {
         app_name = "strace"
         type = "2"
         target = "openat2-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52769,7 +52769,7 @@ rule strace_450 {
         app_name = "strace"
         type = "2"
         target = "openat2-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52787,7 +52787,7 @@ rule strace_451 {
         app_name = "strace"
         type = "2"
         target = "openat2-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -52805,7 +52805,7 @@ rule openssl_114 {
         app_name = "openssl"
         type = "2"
         target = "openssl"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -52985,7 +52985,7 @@ rule openssl_115 {
         app_name = "openssl"
         type = "2"
         target = "ossl_store_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -53111,7 +53111,7 @@ rule openssl_117 {
         app_name = "openssl"
         type = "1"
         target = "p_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -53147,7 +53147,7 @@ rule openssl_118 {
         app_name = "openssl"
         type = "2"
         target = "packettest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -53201,7 +53201,7 @@ rule openssl_119 {
         app_name = "openssl"
         type = "1"
         target = "padlock"
-        pattern = "padlock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "padlock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /padlock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53219,7 +53219,7 @@ rule pam_config_suse {
         app_name = "pam-config-suse"
         type = "2"
         target = "pam-config"
-        pattern = "pam-config.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam-config.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam-config.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53255,7 +53255,7 @@ rule pam_5 {
         app_name = "pam"
         type = "1"
         target = "pam_access"
-        pattern = "pam_access.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_access.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_access.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53273,7 +53273,7 @@ rule pam_6 {
         app_name = "pam"
         type = "1"
         target = "pam_cracklib"
-        pattern = "pam_cracklib.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_cracklib.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_cracklib.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53291,7 +53291,7 @@ rule pam_7 {
         app_name = "pam"
         type = "1"
         target = "pam_debug"
-        pattern = "pam_debug.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_debug.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_debug.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53309,7 +53309,7 @@ rule pam_8 {
         app_name = "pam"
         type = "1"
         target = "pam_deny"
-        pattern = "pam_deny.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_deny.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_deny.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53327,7 +53327,7 @@ rule pam_9 {
         app_name = "pam"
         type = "1"
         target = "pam_echo"
-        pattern = "pam_echo.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_echo.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_echo.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53345,7 +53345,7 @@ rule pam_10 {
         app_name = "pam"
         type = "1"
         target = "pam_env"
-        pattern = "pam_env.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_env.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_env.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53363,7 +53363,7 @@ rule pam_11 {
         app_name = "pam"
         type = "1"
         target = "pam_exec"
-        pattern = "pam_exec.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_exec.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_exec.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53381,7 +53381,7 @@ rule pam_12 {
         app_name = "pam"
         type = "1"
         target = "pam_faildelay"
-        pattern = "pam_faildelay.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_faildelay.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_faildelay.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53399,7 +53399,7 @@ rule pam_13 {
         app_name = "pam"
         type = "1"
         target = "pam_faillock"
-        pattern = "pam_faillock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_faillock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_faillock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53417,7 +53417,7 @@ rule pam_14 {
         app_name = "pam"
         type = "1"
         target = "pam_filter"
-        pattern = "pam_filter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_filter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_filter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53435,7 +53435,7 @@ rule pam_15 {
         app_name = "pam"
         type = "1"
         target = "pam_ftp"
-        pattern = "pam_ftp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_ftp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_ftp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53453,7 +53453,7 @@ rule pam_16 {
         app_name = "pam"
         type = "1"
         target = "pam_group"
-        pattern = "pam_group.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_group.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_group.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53489,7 +53489,7 @@ rule pam_17 {
         app_name = "pam"
         type = "1"
         target = "pam_issue"
-        pattern = "pam_issue.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_issue.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_issue.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53507,7 +53507,7 @@ rule pam_18 {
         app_name = "pam"
         type = "1"
         target = "pam_keyinit"
-        pattern = "pam_keyinit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_keyinit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_keyinit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53525,7 +53525,7 @@ rule pam_19 {
         app_name = "pam"
         type = "1"
         target = "pam_lastlog"
-        pattern = "pam_lastlog.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_lastlog.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_lastlog.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53543,7 +53543,7 @@ rule pam_20 {
         app_name = "pam"
         type = "1"
         target = "pam_limits"
-        pattern = "pam_limits.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_limits.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_limits.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53561,7 +53561,7 @@ rule pam_21 {
         app_name = "pam"
         type = "1"
         target = "pam_listfile"
-        pattern = "pam_listfile.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_listfile.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_listfile.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53579,7 +53579,7 @@ rule pam_22 {
         app_name = "pam"
         type = "1"
         target = "pam_localuser"
-        pattern = "pam_localuser.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_localuser.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_localuser.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53597,7 +53597,7 @@ rule pam_23 {
         app_name = "pam"
         type = "1"
         target = "pam_loginuid"
-        pattern = "pam_loginuid.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_loginuid.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_loginuid.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53615,7 +53615,7 @@ rule pam_24 {
         app_name = "pam"
         type = "1"
         target = "pam_mail"
-        pattern = "pam_mail.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_mail.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_mail.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53633,7 +53633,7 @@ rule pam_25 {
         app_name = "pam"
         type = "1"
         target = "pam_mkhomedir"
-        pattern = "pam_mkhomedir.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_mkhomedir.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_mkhomedir.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53651,7 +53651,7 @@ rule pam_26 {
         app_name = "pam"
         type = "1"
         target = "pam_motd"
-        pattern = "pam_motd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_motd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_motd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53669,7 +53669,7 @@ rule pam_27 {
         app_name = "pam"
         type = "1"
         target = "pam_namespace"
-        pattern = "pam_namespace.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_namespace.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_namespace.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53687,7 +53687,7 @@ rule pam_28 {
         app_name = "pam"
         type = "1"
         target = "pam_nologin"
-        pattern = "pam_nologin.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_nologin.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_nologin.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53705,7 +53705,7 @@ rule pam_29 {
         app_name = "pam"
         type = "1"
         target = "pam_permit"
-        pattern = "pam_permit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_permit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_permit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53723,7 +53723,7 @@ rule pam_30 {
         app_name = "pam"
         type = "1"
         target = "pam_pwhistory"
-        pattern = "pam_pwhistory.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_pwhistory.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_pwhistory.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53741,7 +53741,7 @@ rule pam_31 {
         app_name = "pam"
         type = "1"
         target = "pam_rhosts"
-        pattern = "pam_rhosts.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_rhosts.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_rhosts.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53759,7 +53759,7 @@ rule pam_32 {
         app_name = "pam"
         type = "1"
         target = "pam_rootok"
-        pattern = "pam_rootok.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_rootok.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_rootok.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53777,7 +53777,7 @@ rule pam_33 {
         app_name = "pam"
         type = "1"
         target = "pam_securetty"
-        pattern = "pam_securetty.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_securetty.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_securetty.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53795,7 +53795,7 @@ rule pam_34 {
         app_name = "pam"
         type = "1"
         target = "pam_selinux"
-        pattern = "pam_selinux.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_selinux.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_selinux.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53813,7 +53813,7 @@ rule pam_35 {
         app_name = "pam"
         type = "1"
         target = "pam_sepermit"
-        pattern = "pam_sepermit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_sepermit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_sepermit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53831,7 +53831,7 @@ rule pam_36 {
         app_name = "pam"
         type = "1"
         target = "pam_shells"
-        pattern = "pam_shells.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_shells.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_shells.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53849,7 +53849,7 @@ rule pam_37 {
         app_name = "pam"
         type = "1"
         target = "pam_stress"
-        pattern = "pam_stress.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_stress.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_stress.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53867,7 +53867,7 @@ rule pam_38 {
         app_name = "pam"
         type = "1"
         target = "pam_succeed_if"
-        pattern = "pam_succeed_if.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_succeed_if.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_succeed_if.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53885,7 +53885,7 @@ rule systemd_27 {
         app_name = "systemd"
         type = "1"
         target = "pam_systemd"
-        pattern = "pam_systemd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_systemd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_systemd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53903,7 +53903,7 @@ rule pam_39 {
         app_name = "pam"
         type = "1"
         target = "pam_tally2"
-        pattern = "pam_tally2.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_tally2.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_tally2.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53921,7 +53921,7 @@ rule pam_40 {
         app_name = "pam"
         type = "1"
         target = "pam_time"
-        pattern = "pam_time.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_time.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_time.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53939,7 +53939,7 @@ rule pam_41 {
         app_name = "pam"
         type = "1"
         target = "pam_timestamp"
-        pattern = "pam_timestamp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_timestamp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_timestamp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53957,7 +53957,7 @@ rule pam_42 {
         app_name = "pam"
         type = "2"
         target = "pam_timestamp_check"
-        pattern = "pam_timestamp_check.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_timestamp_check.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_timestamp_check.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53975,7 +53975,7 @@ rule pam_43 {
         app_name = "pam"
         type = "1"
         target = "pam_tty_audit"
-        pattern = "pam_tty_audit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_tty_audit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_tty_audit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -53993,7 +53993,7 @@ rule pam_44 {
         app_name = "pam"
         type = "1"
         target = "pam_umask"
-        pattern = "pam_umask.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_umask.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_umask.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54011,7 +54011,7 @@ rule pam_45 {
         app_name = "pam"
         type = "1"
         target = "pam_unix"
-        pattern = "pam_unix.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_unix.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_unix.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54029,7 +54029,7 @@ rule pam_46 {
         app_name = "pam"
         type = "1"
         target = "pam_warn"
-        pattern = "pam_warn.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_warn.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_warn.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54047,7 +54047,7 @@ rule pam_47 {
         app_name = "pam"
         type = "1"
         target = "pam_wheel"
-        pattern = "pam_wheel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_wheel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_wheel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54065,7 +54065,7 @@ rule pam_48 {
         app_name = "pam"
         type = "1"
         target = "pam_xauth"
-        pattern = "pam_xauth.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pam_xauth.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pam_xauth.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54101,7 +54101,7 @@ rule panic {
         app_name = "panic"
         type = "2"
         target = "panic.ko"
-        pattern = "panic.ko.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "panic.ko.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /panic.ko.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54137,7 +54137,7 @@ rule openssl_120 {
         app_name = "openssl"
         type = "2"
         target = "param_build_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -54155,7 +54155,7 @@ rule openssl_121 {
         app_name = "openssl"
         type = "2"
         target = "params_api_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -54173,7 +54173,7 @@ rule openssl_122 {
         app_name = "openssl"
         type = "2"
         target = "params_conversion_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -54191,7 +54191,7 @@ rule openssl_123 {
         app_name = "openssl"
         type = "2"
         target = "params_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -54317,7 +54317,7 @@ rule util_linux_170 {
         app_name = "util-linux"
         type = "2"
         target = "partx"
-        pattern = "partx.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "partx.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /partx.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54335,7 +54335,7 @@ rule util_linux_171 {
         app_name = "util-linux"
         type = "2"
         target = "partx"
-        pattern = "util-linux-(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux-(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -54353,7 +54353,7 @@ rule shadow_37 {
         app_name = "shadow"
         type = "2"
         target = "passwd"
-        pattern = "passwd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "passwd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /passwd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54461,7 +54461,7 @@ rule systemd_28 {
         app_name = "systemd"
         type = "2"
         target = "path_id_compat"
-        pattern = "path_id_compat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "path_id_compat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /path_id_compat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54497,7 +54497,7 @@ rule coreutils_95 {
         app_name = "coreutils"
         type = "2"
         target = "pathchk.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -54551,7 +54551,7 @@ rule openssl_125 {
         app_name = "openssl"
         type = "2"
         target = "pbetest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -54695,7 +54695,7 @@ rule openssl_126 {
         app_name = "openssl"
         type = "2"
         target = "pem_read_depr_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -54839,7 +54839,7 @@ rule procps_ng_4 {
         app_name = "procps-ng"
         type = "2"
         target = "pgrep"
-        pattern = "pgrep.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pgrep.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pgrep.*-([0-9Vv]([-]{1,30}))-/ 
@@ -54893,7 +54893,7 @@ rule strace_457 {
         app_name = "strace"
         type = "2"
         target = "pidfd_getfd"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -54911,7 +54911,7 @@ rule strace_458 {
         app_name = "strace"
         type = "2"
         target = "pidfd_getfd-yy"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -54947,7 +54947,7 @@ rule strace_460 {
         app_name = "strace"
         type = "2"
         target = "pidfd_open--decode-fd-none"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -54965,7 +54965,7 @@ rule strace_461 {
         app_name = "strace"
         type = "2"
         target = "pidfd_open--decode-fd-path"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -54983,7 +54983,7 @@ rule strace_462 {
         app_name = "strace"
         type = "2"
         target = "pidfd_open--decode-fd-pidfd"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -55001,7 +55001,7 @@ rule strace_463 {
         app_name = "strace"
         type = "2"
         target = "pidfd_open--decode-fd-socket"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -55019,7 +55019,7 @@ rule strace_464 {
         app_name = "strace"
         type = "2"
         target = "pidfd_open--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -55073,7 +55073,7 @@ rule strace_467 {
         app_name = "strace"
         type = "2"
         target = "pidfd_open-yy"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -55109,7 +55109,7 @@ rule strace_469 {
         app_name = "strace"
         type = "2"
         target = "pidfd_send_signal--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -55199,7 +55199,7 @@ rule coreutils_97 {
         app_name = "coreutils"
         type = "2"
         target = "pinky.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -55343,7 +55343,7 @@ rule util_linux_172 {
         app_name = "util-linux"
         type = "2"
         target = "pivot_root"
-        pattern = "pivot_root.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pivot_root.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pivot_root.*-([0-9Vv]([-]{1,30}))-/ 
@@ -55829,7 +55829,7 @@ rule nettle_64 {
         app_name = "nettle"
         type = "2"
         target = "pkcs1-conv"
-        pattern = "nettle (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "nettle (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /nettle (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -55883,7 +55883,7 @@ rule openssl_129 {
         app_name = "openssl"
         type = "2"
         target = "pkcs12_format_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -55901,7 +55901,7 @@ rule openssl_130 {
         app_name = "openssl"
         type = "2"
         target = "pkcs7_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -55955,7 +55955,7 @@ rule strace_472 {
         app_name = "strace"
         type = "2"
         target = "pkey_free"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56027,7 +56027,7 @@ rule strongswan_59 {
         app_name = "strongswan"
         type = "2"
         target = "pki"
-        pattern = "pki.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pki.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pki.*-([0-9Vv]([-]{1,30}))-/ 
@@ -56117,7 +56117,7 @@ rule procps_ng_8 {
         app_name = "procps-ng"
         type = "2"
         target = "pmap"
-        pattern = "pmap.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pmap.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pmap.*-([0-9Vv]([-]{1,30}))-/ 
@@ -56279,7 +56279,7 @@ rule glibc_54 {
         app_name = "glibc"
         type = "2"
         target = "POSIX_V6_LP64_OFF64"
-        pattern = "POSIX_V6_LP64_OFF64.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "POSIX_V6_LP64_OFF64.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /POSIX_V6_LP64_OFF64.*-([0-9Vv]([-]{1,30}))-/ 
@@ -56495,7 +56495,7 @@ rule strace_478 {
         app_name = "strace"
         type = "2"
         target = "prctl-cap-ambient"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56513,7 +56513,7 @@ rule strace_479 {
         app_name = "strace"
         type = "2"
         target = "prctl-capbset"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56549,7 +56549,7 @@ rule strace_481 {
         app_name = "strace"
         type = "2"
         target = "prctl-fp-mode"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56567,7 +56567,7 @@ rule strace_482 {
         app_name = "strace"
         type = "2"
         target = "prctl-mce-kill"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56621,7 +56621,7 @@ rule strace_485 {
         app_name = "strace"
         type = "2"
         target = "prctl-pac-enabled-keys-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56639,7 +56639,7 @@ rule strace_486 {
         app_name = "strace"
         type = "2"
         target = "prctl-pac-enabled-keys-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56675,7 +56675,7 @@ rule strace_488 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56693,7 +56693,7 @@ rule strace_489 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core--pidns-translation-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56711,7 +56711,7 @@ rule strace_490 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core--pidns-translation-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56729,7 +56729,7 @@ rule strace_491 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core--pidns-translation-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56747,7 +56747,7 @@ rule strace_492 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56765,7 +56765,7 @@ rule strace_493 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-success--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56783,7 +56783,7 @@ rule strace_494 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-success--pidns-translation-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56801,7 +56801,7 @@ rule strace_495 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-success--pidns-translation-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56819,7 +56819,7 @@ rule strace_496 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56837,7 +56837,7 @@ rule strace_497 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56855,7 +56855,7 @@ rule strace_498 {
         app_name = "strace"
         type = "2"
         target = "prctl-sched-core-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56927,7 +56927,7 @@ rule strace_502 {
         app_name = "strace"
         type = "2"
         target = "prctl-securebits-success-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56945,7 +56945,7 @@ rule strace_503 {
         app_name = "strace"
         type = "2"
         target = "prctl-securebits-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56963,7 +56963,7 @@ rule strace_504 {
         app_name = "strace"
         type = "2"
         target = "prctl-securebits-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56981,7 +56981,7 @@ rule strace_505 {
         app_name = "strace"
         type = "2"
         target = "prctl-set-ptracer-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -56999,7 +56999,7 @@ rule strace_506 {
         app_name = "strace"
         type = "2"
         target = "prctl-set-ptracer-success-Xraw--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57035,7 +57035,7 @@ rule strace_508 {
         app_name = "strace"
         type = "2"
         target = "prctl-tagged-addr-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57053,7 +57053,7 @@ rule strace_509 {
         app_name = "strace"
         type = "2"
         target = "prctl-tagged-addr-success-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57071,7 +57071,7 @@ rule strace_510 {
         app_name = "strace"
         type = "2"
         target = "prctl-tagged-addr-success-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57089,7 +57089,7 @@ rule strace_511 {
         app_name = "strace"
         type = "2"
         target = "prctl-tagged-addr-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57107,7 +57107,7 @@ rule strace_512 {
         app_name = "strace"
         type = "2"
         target = "prctl-tagged-addr-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57251,7 +57251,7 @@ rule strace_520 {
         app_name = "strace"
         type = "2"
         target = "print_ppid_tracerpid"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57269,7 +57269,7 @@ rule coreutils_100 {
         app_name = "coreutils"
         type = "2"
         target = "printenv.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -57305,7 +57305,7 @@ rule coreutils_102 {
         app_name = "coreutils"
         type = "2"
         target = "printf.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -57359,7 +57359,7 @@ rule strace_523 {
         app_name = "strace"
         type = "2"
         target = "printpath-umovestr-undumpable"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57503,7 +57503,7 @@ rule rpm_9 {
         app_name = "rpm"
         type = "1"
         target = "prioreset"
-        pattern = "prioreset.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "prioreset.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /prioreset.*-([0-9Vv]([-]{1,30}))-/ 
@@ -57521,7 +57521,7 @@ rule glib_160 {
         app_name = "glib"
         type = "2"
         target = "private"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57539,7 +57539,7 @@ rule util_linux_175 {
         app_name = "util-linux"
         type = "2"
         target = "prlimit"
-        pattern = "prlimit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "prlimit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /prlimit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -57575,7 +57575,7 @@ rule util_linux_177 {
         app_name = "util-linux"
         type = "2"
         target = "prlimit.util-linux"
-        pattern = "util-linux-(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux-(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -57611,7 +57611,7 @@ rule strace_532 {
         app_name = "strace"
         type = "2"
         target = "prlimit64--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57629,7 +57629,7 @@ rule strace_533 {
         app_name = "strace"
         type = "2"
         target = "prlimit64-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57647,7 +57647,7 @@ rule strace_534 {
         app_name = "strace"
         type = "2"
         target = "process_madvise-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57665,7 +57665,7 @@ rule strace_535 {
         app_name = "strace"
         type = "2"
         target = "process_madvise-yy"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57683,7 +57683,7 @@ rule strace_536 {
         app_name = "strace"
         type = "2"
         target = "process_mrelease-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57737,7 +57737,7 @@ rule glib_161 {
         app_name = "glib"
         type = "2"
         target = "properties"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57755,7 +57755,7 @@ rule glib_162 {
         app_name = "glib"
         type = "2"
         target = "properties2"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57773,7 +57773,7 @@ rule glib_163 {
         app_name = "glib"
         type = "2"
         target = "properties3"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57791,7 +57791,7 @@ rule glib_164 {
         app_name = "glib"
         type = "2"
         target = "properties4"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57809,7 +57809,7 @@ rule openssl_134 {
         app_name = "openssl"
         type = "2"
         target = "property_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57827,7 +57827,7 @@ rule glib_165 {
         app_name = "glib"
         type = "2"
         target = "protocol"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -57863,7 +57863,7 @@ rule openssl_135 {
         app_name = "openssl"
         type = "2"
         target = "prov_config_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57881,7 +57881,7 @@ rule openssl_136 {
         app_name = "openssl"
         type = "2"
         target = "provfetchtest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57917,7 +57917,7 @@ rule openssl_137 {
         app_name = "openssl"
         type = "2"
         target = "provider_fallback_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57935,7 +57935,7 @@ rule openssl_138 {
         app_name = "openssl"
         type = "2"
         target = "provider_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57953,7 +57953,7 @@ rule openssl_139 {
         app_name = "openssl"
         type = "2"
         target = "provider_pkey_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57971,7 +57971,7 @@ rule openssl_140 {
         app_name = "openssl"
         type = "2"
         target = "provider_status_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -57989,7 +57989,7 @@ rule openssl_141 {
         app_name = "openssl"
         type = "2"
         target = "provider_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -58025,7 +58025,7 @@ rule procps_ng_11 {
         app_name = "procps-ng"
         type = "2"
         target = "ps"
-        pattern = "ps.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ps.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ps.*-([0-9Vv]([-]{1,30}))-/ 
@@ -58115,7 +58115,7 @@ rule little_cms_1 {
         app_name = "little_cms"
         type = "2"
         target = "psicc"
-        pattern = "little CMS ICC PostScript generator - v(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "little CMS ICC PostScript generator - v(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /little CMS ICC PostScript generator - v(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -58187,7 +58187,7 @@ rule strace_541 {
         app_name = "strace"
         type = "2"
         target = "ptrace-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -58205,7 +58205,7 @@ rule strace_542 {
         app_name = "strace"
         type = "2"
         target = "ptrace-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -58223,7 +58223,7 @@ rule strace_543 {
         app_name = "strace"
         type = "2"
         target = "ptrace-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -58259,7 +58259,7 @@ rule strace_545 {
         app_name = "strace"
         type = "2"
         target = "ptrace_syscall_info-Xabbrev"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -58277,7 +58277,7 @@ rule strace_546 {
         app_name = "strace"
         type = "2"
         target = "ptrace_syscall_info-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -58349,7 +58349,7 @@ rule shadow_39 {
         app_name = "shadow"
         type = "2"
         target = "pwck"
-        pattern = "pwck.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pwck.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pwck.*-([0-9Vv]([-]{1,30}))-/ 
@@ -58385,7 +58385,7 @@ rule shadow_41 {
         app_name = "shadow"
         type = "2"
         target = "pwconv"
-        pattern = "pwconv.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pwconv.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pwconv.*-([0-9Vv]([-]{1,30}))-/ 
@@ -58439,7 +58439,7 @@ rule procps_ng_13 {
         app_name = "procps-ng"
         type = "2"
         target = "pwdx"
-        pattern = "pwdx.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pwdx.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pwdx.*-([0-9Vv]([-]{1,30}))-/ 
@@ -58511,7 +58511,7 @@ rule shadow_43 {
         app_name = "shadow"
         type = "2"
         target = "pwunconv"
-        pattern = "pwunconv.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "pwunconv.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /pwunconv.*-([0-9Vv]([-]{1,30}))-/ 
@@ -58979,7 +58979,7 @@ rule strace_548 {
         app_name = "strace"
         type = "2"
         target = "qual_fault"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59123,7 +59123,7 @@ rule strace_554 {
         app_name = "strace"
         type = "2"
         target = "quotactl-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59231,7 +59231,7 @@ rule strace_560 {
         app_name = "strace"
         type = "2"
         target = "quotactl-xfs-success-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59249,7 +59249,7 @@ rule strace_561 {
         app_name = "strace"
         type = "2"
         target = "quotactl-xfs-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59267,7 +59267,7 @@ rule strace_562 {
         app_name = "strace"
         type = "2"
         target = "quotactl-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59285,7 +59285,7 @@ rule strace_563 {
         app_name = "strace"
         type = "2"
         target = "quotactl-Xverbose"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59303,7 +59303,7 @@ rule strace_564 {
         app_name = "strace"
         type = "2"
         target = "quotactl_fd-P"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59321,7 +59321,7 @@ rule qtbase_14 {
         app_name = "qtbase"
         type = "2"
         target = "qvkgen"
-        pattern = "^([0-9]\\.[0-9]+(\\.[0-9]+)?)$"
+        pattern = "^([0-9]\\.[0-9]+(\\.[0-9]+))$"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59339,7 +59339,7 @@ rule glib_170 {
         app_name = "glib"
         type = "2"
         target = "rand"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59357,7 +59357,7 @@ rule openssl_142 {
         app_name = "openssl"
         type = "2"
         target = "rand_status_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -59375,7 +59375,7 @@ rule openssl_143 {
         app_name = "openssl"
         type = "2"
         target = "rand_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -59411,7 +59411,7 @@ rule nettle_70 {
         app_name = "nettle"
         type = "2"
         target = "random-prime-test"
-        pattern = "nettle-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "nettle-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /nettle-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59429,7 +59429,7 @@ rule tcl {
         app_name = "tcl"
         type = "2"
         target = "randseed"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59447,7 +59447,7 @@ rule util_linux_178 {
         app_name = "util-linux"
         type = "2"
         target = "raw"
-        pattern = "raw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "raw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /raw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -59465,7 +59465,7 @@ rule util_linux_179 {
         app_name = "util-linux"
         type = "2"
         target = "raw"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -59483,7 +59483,7 @@ rule openssl_144 {
         app_name = "openssl"
         type = "2"
         target = "rc2test"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59501,7 +59501,7 @@ rule openssl_145 {
         app_name = "openssl"
         type = "2"
         target = "rc4test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -59519,7 +59519,7 @@ rule openssl_146 {
         app_name = "openssl"
         type = "2"
         target = "rc5test"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59573,7 +59573,7 @@ rule qtbase_15 {
         app_name = "qtbase"
         type = "2"
         target = "rcc"
-        pattern = "^([0-9]\\.[0-9]+(\\.[0-9]+)?)$"
+        pattern = "^([0-9]\\.[0-9]+(\\.[0-9]+))$"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59591,7 +59591,7 @@ rule iproute2_8 {
         app_name = "iproute2"
         type = "2"
         target = "rdma"
-        pattern = "rdma.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rdma.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rdma.*-([0-9Vv]([-]{1,30}))-/ 
@@ -59609,7 +59609,7 @@ rule openssl_147 {
         app_name = "openssl"
         type = "2"
         target = "rdrand_sanitytest"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59627,7 +59627,7 @@ rule strace_565 {
         app_name = "strace"
         type = "2"
         target = "read-write"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59663,7 +59663,7 @@ rule strace_566 {
         app_name = "strace"
         type = "2"
         target = "readahead"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59717,7 +59717,7 @@ rule strace_567 {
         app_name = "strace"
         type = "2"
         target = "readlinkat"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59735,7 +59735,7 @@ rule util_linux_180 {
         app_name = "util-linux"
         type = "2"
         target = "readprofile"
-        pattern = "readprofile.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "readprofile.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /readprofile.*-([0-9Vv]([-]{1,30}))-/ 
@@ -59753,7 +59753,7 @@ rule util_linux_181 {
         app_name = "util-linux"
         type = "2"
         target = "readprofile"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -59771,7 +59771,7 @@ rule util_linux_182 {
         app_name = "util-linux"
         type = "2"
         target = "readprofile.util-linux"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -59789,7 +59789,7 @@ rule strace_568 {
         app_name = "strace"
         type = "2"
         target = "readv"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59807,7 +59807,7 @@ rule glib_172 {
         app_name = "glib"
         type = "2"
         target = "readwrite"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59861,7 +59861,7 @@ rule glib_173 {
         app_name = "glib"
         type = "2"
         target = "rec-mutex"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59879,7 +59879,7 @@ rule openssl_148 {
         app_name = "openssl"
         type = "2"
         target = "recordlentest"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -59915,7 +59915,7 @@ rule mtd_utils_43 {
         app_name = "mtd-utils"
         type = "2"
         target = "recv_image"
-        pattern = "recv_image.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "recv_image.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /recv_image.*-([0-9Vv]([-]{1,30}))-/ 
@@ -59933,7 +59933,7 @@ rule strace_570 {
         app_name = "strace"
         type = "2"
         target = "recvfrom"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60023,7 +60023,7 @@ rule glib_174 {
         app_name = "glib"
         type = "2"
         target = "refcount"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60041,7 +60041,7 @@ rule glib_175 {
         app_name = "glib"
         type = "2"
         target = "refcount-macro"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60059,7 +60059,7 @@ rule glib_176 {
         app_name = "glib"
         type = "2"
         target = "reference"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60077,7 +60077,7 @@ rule glib_177 {
         app_name = "glib"
         type = "2"
         target = "references"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60095,7 +60095,7 @@ rule glib_178 {
         app_name = "glib"
         type = "2"
         target = "refstring"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60239,7 +60239,7 @@ rule util_linux_183 {
         app_name = "util-linux"
         type = "2"
         target = "rename"
-        pattern = "rename.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rename.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rename.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60311,7 +60311,7 @@ rule util_linux_185 {
         app_name = "util-linux"
         type = "2"
         target = "renice"
-        pattern = "renice.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "renice.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /renice.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60383,7 +60383,7 @@ rule keyutils_4 {
         app_name = "keyutils"
         type = "2"
         target = "request-key"
-        pattern = "request-key.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "request-key.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /request-key.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60419,7 +60419,7 @@ rule elfutils_107 {
         app_name = "elfutils"
         type = "2"
         target = "rerequest_tag"
-        pattern = "elfutils-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "elfutils-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /elfutils-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60437,7 +60437,7 @@ rule e2fsprogs_44 {
         app_name = "e2fsprogs"
         type = "2"
         target = "resize2fs"
-        pattern = "resize2fs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "resize2fs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /resize2fs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60473,7 +60473,7 @@ rule util_linux_188 {
         app_name = "util-linux"
         type = "2"
         target = "resizepart"
-        pattern = "resizepart.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "resizepart.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /resizepart.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60491,7 +60491,7 @@ rule util_linux_189 {
         app_name = "util-linux"
         type = "2"
         target = "resizepart"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -60581,7 +60581,7 @@ rule strace_582 {
         app_name = "strace"
         type = "2"
         target = "restart_syscall"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -60599,7 +60599,7 @@ rule util_linux_190 {
         app_name = "util-linux"
         type = "2"
         target = "rev"
-        pattern = "rev.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rev.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rev.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60671,7 +60671,7 @@ rule mtd_utils_44 {
         app_name = "mtd-utils"
         type = "2"
         target = "rfddump"
-        pattern = "rfddump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rfddump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rfddump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60707,7 +60707,7 @@ rule mtd_utils_46 {
         app_name = "mtd-utils"
         type = "2"
         target = "rfdformat"
-        pattern = "rfdformat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rfdformat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rfdformat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60743,7 +60743,7 @@ rule util_linux_193 {
         app_name = "util-linux"
         type = "2"
         target = "rfkill"
-        pattern = "rfkill.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rfkill.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rfkill.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60923,7 +60923,7 @@ rule rpm_10 {
         app_name = "rpm"
         type = "2"
         target = "rpm"
-        pattern = "rpm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60941,7 +60941,7 @@ rule rpm_11 {
         app_name = "rpm"
         type = "2"
         target = "rpm2cpio"
-        pattern = "rpm2cpio.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpm2cpio.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpm2cpio.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60959,7 +60959,7 @@ rule rpm_12 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb"
-        pattern = "rpmdb.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60977,7 +60977,7 @@ rule rpm_13 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb_dump"
-        pattern = "rpmdb_dump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb_dump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb_dump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -60995,7 +60995,7 @@ rule rpm_14 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb_load"
-        pattern = "rpmdb_load.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb_load.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb_load.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61013,7 +61013,7 @@ rule rpm_15 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb_recover"
-        pattern = "rpmdb_recover.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb_recover.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb_recover.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61031,7 +61031,7 @@ rule rpm_16 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb_stat"
-        pattern = "rpmdb_stat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb_stat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb_stat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61049,7 +61049,7 @@ rule rpm_17 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb_upgrade"
-        pattern = "rpmdb_upgrade.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb_upgrade.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb_upgrade.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61067,7 +61067,7 @@ rule rpm_18 {
         app_name = "rpm"
         type = "2"
         target = "rpmdb_verify"
-        pattern = "rpmdb_verify.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdb_verify.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdb_verify.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61085,7 +61085,7 @@ rule rpm_19 {
         app_name = "rpm"
         type = "2"
         target = "rpmdeps"
-        pattern = "rpmdeps.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmdeps.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmdeps.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61103,7 +61103,7 @@ rule rpm_20 {
         app_name = "rpm"
         type = "2"
         target = "rpmgraph"
-        pattern = "rpmgraph.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmgraph.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmgraph.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61121,7 +61121,7 @@ rule rpm_21 {
         app_name = "rpm"
         type = "2"
         target = "rpmkeys"
-        pattern = "rpmkeys.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmkeys.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmkeys.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61139,7 +61139,7 @@ rule rpm_22 {
         app_name = "rpm"
         type = "2"
         target = "rpmqpack"
-        pattern = "rpmqpack.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmqpack.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmqpack.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61157,7 +61157,7 @@ rule rpm_23 {
         app_name = "rpm"
         type = "2"
         target = "rpmsign"
-        pattern = "rpmsign.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmsign.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmsign.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61175,7 +61175,7 @@ rule rpm_24 {
         app_name = "rpm"
         type = "2"
         target = "rpmspec"
-        pattern = "rpmspec.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rpmspec.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rpmspec.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61355,7 +61355,7 @@ rule openssl_150 {
         app_name = "openssl"
         type = "2"
         target = "rsa_sp800_56b_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -61373,7 +61373,7 @@ rule openssl_151 {
         app_name = "openssl"
         type = "2"
         target = "rsa_test"
-        pattern = "openssl-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "openssl-(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /openssl-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -61517,7 +61517,7 @@ rule strace_586 {
         app_name = "strace"
         type = "2"
         target = "rt_sigqueueinfo"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61535,7 +61535,7 @@ rule strace_587 {
         app_name = "strace"
         type = "2"
         target = "rt_sigqueueinfo--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61571,7 +61571,7 @@ rule strace_589 {
         app_name = "strace"
         type = "2"
         target = "rt_sigsuspend"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61589,7 +61589,7 @@ rule strace_590 {
         app_name = "strace"
         type = "2"
         target = "rt_sigtimedwait"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61607,7 +61607,7 @@ rule strace_591 {
         app_name = "strace"
         type = "2"
         target = "rt_tgsigqueueinfo"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61625,7 +61625,7 @@ rule iproute2_9 {
         app_name = "iproute2"
         type = "2"
         target = "rtacct"
-        pattern = "rtacct.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rtacct.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rtacct.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61643,7 +61643,7 @@ rule util_linux_196 {
         app_name = "util-linux"
         type = "2"
         target = "rtcwake"
-        pattern = "rtcwake.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rtcwake.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rtcwake.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61661,7 +61661,7 @@ rule util_linux_197 {
         app_name = "util-linux"
         type = "2"
         target = "rtcwake"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -61697,7 +61697,7 @@ rule iproute2_10 {
         app_name = "iproute2"
         type = "2"
         target = "rtmon"
-        pattern = "rtmon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rtmon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rtmon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61715,7 +61715,7 @@ rule strace_592 {
         app_name = "strace"
         type = "2"
         target = "run_expect_termsig"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61733,7 +61733,7 @@ rule coreutils_111 {
         app_name = "coreutils"
         type = "2"
         target = "runcon"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61751,7 +61751,7 @@ rule coreutils_112 {
         app_name = "coreutils"
         type = "2"
         target = "runcon.coreutils"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -61769,7 +61769,7 @@ rule util_linux_199 {
         app_name = "util-linux"
         type = "2"
         target = "runuser"
-        pattern = "runuser.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "runuser.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /runuser.*-([0-9Vv]([-]{1,30}))-/ 
@@ -61787,7 +61787,7 @@ rule util_linux_200 {
         app_name = "util-linux"
         type = "2"
         target = "runuser"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -61805,7 +61805,7 @@ rule sysvinit_7 {
         app_name = "sysvinit"
         type = "2"
         target = "rvmtab"
-        pattern = "rvmtab.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "rvmtab.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /rvmtab.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62057,7 +62057,7 @@ rule glib_185 {
         app_name = "glib"
         type = "2"
         target = "scannerapi"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62075,7 +62075,7 @@ rule gnupg_25 {
         app_name = "gnupg"
         type = "2"
         target = "scdaemon"
-        pattern = "gnupg-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "gnupg-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /gnupg-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62093,7 +62093,7 @@ rule strongswan_60 {
         app_name = "strongswan"
         type = "2"
         target = "scepclient"
-        pattern = "scepclient.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "scepclient.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /scepclient.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62111,7 +62111,7 @@ rule strace_593 {
         app_name = "strace"
         type = "2"
         target = "sched_rr_get_interval"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62129,7 +62129,7 @@ rule strace_594 {
         app_name = "strace"
         type = "2"
         target = "sched_xetaffinity"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62147,7 +62147,7 @@ rule strace_595 {
         app_name = "strace"
         type = "2"
         target = "sched_xetaffinity--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62183,7 +62183,7 @@ rule strace_597 {
         app_name = "strace"
         type = "2"
         target = "sched_xetattr--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62255,7 +62255,7 @@ rule strace_600 {
         app_name = "strace"
         type = "2"
         target = "scm_rights"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62273,7 +62273,7 @@ rule openssh {
         app_name = "openssh"
         type = "2"
         target = "scp"
-        pattern = "scp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "scp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /scp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62291,7 +62291,7 @@ rule openssh_1 {
         app_name = "openssh"
         type = "2"
         target = "scp"
-        pattern = "OpenSSH_(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "OpenSSH_(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /OpenSSH_(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -62309,7 +62309,7 @@ rule util_linux_204 {
         app_name = "util-linux"
         type = "2"
         target = "script"
-        pattern = "script.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "script.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /script.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62363,7 +62363,7 @@ rule util_linux_207 {
         app_name = "util-linux"
         type = "2"
         target = "scriptreplay"
-        pattern = "scriptreplay.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "scriptreplay.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /scriptreplay.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62399,7 +62399,7 @@ rule systemd_29 {
         app_name = "systemd"
         type = "2"
         target = "scsi_id"
-        pattern = "scsi_id.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "scsi_id.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /scsi_id.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62489,7 +62489,7 @@ rule glib_186 {
         app_name = "glib"
         type = "2"
         target = "search-utils"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62579,7 +62579,7 @@ rule strace_605 {
         app_name = "strace"
         type = "2"
         target = "seccomp_get_notif_sizes"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62597,7 +62597,7 @@ rule strace_606 {
         app_name = "strace"
         type = "2"
         target = "seccomp_get_notif_sizes-success"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62651,7 +62651,7 @@ rule tomcat {
         app_name = "tomcat"
         type = "2"
         target = "security-manager"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62669,7 +62669,7 @@ rule tomcat_1 {
         app_name = "tomcat"
         type = "2"
         target = "security-manager-cmd"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62723,7 +62723,7 @@ rule libselinux_5 {
         app_name = "libselinux"
         type = "2"
         target = "sefcontext_compile"
-        pattern = "sefcontext_compile.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sefcontext_compile.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sefcontext_compile.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62759,7 +62759,7 @@ rule libselinux_6 {
         app_name = "libselinux"
         type = "2"
         target = "selabel_digest"
-        pattern = "selabel_digest.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selabel_digest.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selabel_digest.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62777,7 +62777,7 @@ rule libselinux_7 {
         app_name = "libselinux"
         type = "2"
         target = "selabel_lookup"
-        pattern = "selabel_lookup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selabel_lookup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selabel_lookup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62795,7 +62795,7 @@ rule libselinux_8 {
         app_name = "libselinux"
         type = "2"
         target = "selabel_lookup_best_match"
-        pattern = "selabel_lookup_best_match.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selabel_lookup_best_match.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selabel_lookup_best_match.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62813,7 +62813,7 @@ rule libselinux_9 {
         app_name = "libselinux"
         type = "2"
         target = "selabel_partial_match"
-        pattern = "selabel_partial_match.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selabel_partial_match.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selabel_partial_match.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62849,7 +62849,7 @@ rule rpm_25 {
         app_name = "rpm"
         type = "1"
         target = "selinux"
-        pattern = "selinux.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selinux.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selinux.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62867,7 +62867,7 @@ rule libselinux_10 {
         app_name = "libselinux"
         type = "2"
         target = "selinux_check_access"
-        pattern = "selinux_check_access.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selinux_check_access.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selinux_check_access.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62885,7 +62885,7 @@ rule libselinux_11 {
         app_name = "libselinux"
         type = "2"
         target = "selinuxconlist"
-        pattern = "selinuxconlist.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selinuxconlist.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selinuxconlist.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62903,7 +62903,7 @@ rule libselinux_12 {
         app_name = "libselinux"
         type = "2"
         target = "selinuxdefcon"
-        pattern = "selinuxdefcon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selinuxdefcon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selinuxdefcon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62921,7 +62921,7 @@ rule libselinux_13 {
         app_name = "libselinux"
         type = "2"
         target = "selinuxenabled"
-        pattern = "selinuxenabled.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selinuxenabled.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selinuxenabled.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62939,7 +62939,7 @@ rule libselinux_14 {
         app_name = "libselinux"
         type = "2"
         target = "selinuxexeccon"
-        pattern = "selinuxexeccon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "selinuxexeccon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /selinuxexeccon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -62957,7 +62957,7 @@ rule strace_607 {
         app_name = "strace"
         type = "2"
         target = "semop"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -62975,7 +62975,7 @@ rule strace_608 {
         app_name = "strace"
         type = "2"
         target = "semtimedop"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -63011,7 +63011,7 @@ rule rpm_26 {
         app_name = "rpm"
         type = "2"
         target = "sepdebugcrcfix"
-        pattern = "sepdebugcrcfix.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sepdebugcrcfix.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sepdebugcrcfix.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63047,7 +63047,7 @@ rule coreutils_114 {
         app_name = "coreutils"
         type = "2"
         target = "seq.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -63101,7 +63101,7 @@ rule mtd_utils_48 {
         app_name = "mtd-utils"
         type = "2"
         target = "serve_image"
-        pattern = "serve_image.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "serve_image.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /serve_image.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63119,7 +63119,7 @@ rule openssl_154 {
         app_name = "openssl"
         type = "2"
         target = "server-test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -63299,7 +63299,7 @@ rule util_linux_209 {
         app_name = "util-linux"
         type = "2"
         target = "setarch"
-        pattern = "setarch.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "setarch.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /setarch.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63335,7 +63335,7 @@ rule util_linux_211 {
         app_name = "util-linux"
         type = "2"
         target = "setctsid"
-        pattern = "setctsid.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "setctsid.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /setctsid.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63371,7 +63371,7 @@ rule libselinux_15 {
         app_name = "libselinux"
         type = "2"
         target = "setenforce"
-        pattern = "setenforce.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "setenforce.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /setenforce.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63533,7 +63533,7 @@ rule kbd_50 {
         app_name = "kbd"
         type = "2"
         target = "setmetamode"
-        pattern = "kbd (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "kbd (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /kbd (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -63569,7 +63569,7 @@ rule strace_621 {
         app_name = "strace"
         type = "2"
         target = "setpgrp-exec"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -63587,7 +63587,7 @@ rule util_linux_212 {
         app_name = "util-linux"
         type = "2"
         target = "setpriv"
-        pattern = "setpriv.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "setpriv.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /setpriv.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63785,7 +63785,7 @@ rule util_linux_215 {
         app_name = "util-linux"
         type = "2"
         target = "setsid"
-        pattern = "setsid.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "setsid.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /setsid.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63839,7 +63839,7 @@ rule util_linux_218 {
         app_name = "util-linux"
         type = "2"
         target = "setterm"
-        pattern = "setterm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "setterm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /setterm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -63983,7 +63983,7 @@ rule util_linux_220 {
         app_name = "util-linux"
         type = "2"
         target = "sfdisk"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -64001,7 +64001,7 @@ rule openssh_2 {
         app_name = "openssh"
         type = "2"
         target = "sftp"
-        pattern = "sftp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sftp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sftp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -64037,7 +64037,7 @@ rule openssh_4 {
         app_name = "openssh"
         type = "2"
         target = "sftp-server"
-        pattern = "sftp-server.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sftp-server.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sftp-server.*-([0-9Vv]([-]{1,30}))-/ 
@@ -64505,7 +64505,7 @@ rule openssl_156 {
         app_name = "openssl"
         type = "2"
         target = "sha_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -64577,7 +64577,7 @@ rule strace_631 {
         app_name = "strace"
         type = "2"
         target = "shmxt"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -64595,7 +64595,7 @@ rule blog_5 {
         app_name = "blog"
         type = "2"
         target = "showconsole"
-        pattern = "showconsole.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "showconsole.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /showconsole.*-([0-9Vv]([-]{1,30}))-/ 
@@ -64685,7 +64685,7 @@ rule coreutils_126 {
         app_name = "coreutils"
         type = "2"
         target = "shred.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -64721,7 +64721,7 @@ rule coreutils_128 {
         app_name = "coreutils"
         type = "2"
         target = "shuf.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -64847,7 +64847,7 @@ rule strace_634 {
         app_name = "strace"
         type = "2"
         target = "signal_receive--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -64919,7 +64919,7 @@ rule nss_12 {
         app_name = "nss"
         type = "2"
         target = "signtool"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -65045,7 +65045,7 @@ rule procps_ng_16 {
         app_name = "procps-ng"
         type = "2"
         target = "skill"
-        pattern = "skill.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "skill.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /skill.*-([0-9Vv]([-]{1,30}))-/ 
@@ -65099,7 +65099,7 @@ rule procps_ng_18 {
         app_name = "procps-ng"
         type = "2"
         target = "slabtop"
-        pattern = "slabtop.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "slabtop.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /slabtop.*-([0-9Vv]([-]{1,30}))-/ 
@@ -65297,7 +65297,7 @@ rule openssl_159 {
         app_name = "openssl"
         type = "2"
         target = "sm3_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -65315,7 +65315,7 @@ rule openssl_160 {
         app_name = "openssl"
         type = "2"
         target = "sm4_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -65369,7 +65369,7 @@ rule strace_636 {
         app_name = "strace"
         type = "2"
         target = "so_linger"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -65567,7 +65567,7 @@ rule strace_646 {
         app_name = "strace"
         type = "2"
         target = "sockaddr_xlat-Xabbrev-y"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -65747,7 +65747,7 @@ rule coreutils_130 {
         app_name = "coreutils"
         type = "2"
         target = "sort.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -65783,7 +65783,7 @@ rule openssl_161 {
         app_name = "openssl"
         type = "2"
         target = "sparse_array_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -65927,7 +65927,7 @@ rule coreutils_132 {
         app_name = "coreutils"
         type = "2"
         target = "split.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -65999,7 +65999,7 @@ rule openssl_162 {
         app_name = "openssl"
         type = "2"
         target = "srptest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66035,7 +66035,7 @@ rule iproute2_11 {
         app_name = "iproute2"
         type = "2"
         target = "ss"
-        pattern = "ss.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ss.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ss.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66053,7 +66053,7 @@ rule openssh_6 {
         app_name = "openssh"
         type = "2"
         target = "ssh"
-        pattern = "ssh.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66089,7 +66089,7 @@ rule openssh_8 {
         app_name = "openssh"
         type = "2"
         target = "ssh-add"
-        pattern = "ssh-add.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh-add.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh-add.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66125,7 +66125,7 @@ rule openssh_10 {
         app_name = "openssh"
         type = "2"
         target = "ssh-agent"
-        pattern = "ssh-agent.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh-agent.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh-agent.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66161,7 +66161,7 @@ rule openssh_12 {
         app_name = "openssh"
         type = "2"
         target = "ssh-keygen"
-        pattern = "ssh-keygen.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh-keygen.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh-keygen.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66197,7 +66197,7 @@ rule openssh_14 {
         app_name = "openssh"
         type = "2"
         target = "ssh-keyscan"
-        pattern = "ssh-keyscan.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh-keyscan.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh-keyscan.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66233,7 +66233,7 @@ rule openssh_16 {
         app_name = "openssh"
         type = "2"
         target = "ssh-keysign"
-        pattern = "ssh-keysign.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh-keysign.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh-keysign.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66269,7 +66269,7 @@ rule openssh_18 {
         app_name = "openssh"
         type = "2"
         target = "ssh-pkcs11-helper"
-        pattern = "ssh-pkcs11-helper.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ssh-pkcs11-helper.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ssh-pkcs11-helper.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66323,7 +66323,7 @@ rule openssh_21 {
         app_name = "openssh"
         type = "2"
         target = "sshd"
-        pattern = "sshd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sshd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sshd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66359,7 +66359,7 @@ rule openssl_163 {
         app_name = "openssl"
         type = "2"
         target = "ssl_cert_table_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66377,7 +66377,7 @@ rule openssl_164 {
         app_name = "openssl"
         type = "2"
         target = "ssl_ctx_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66395,7 +66395,7 @@ rule openssl_165 {
         app_name = "openssl"
         type = "2"
         target = "ssl_old_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66413,7 +66413,7 @@ rule openssl_166 {
         app_name = "openssl"
         type = "2"
         target = "ssl_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66431,7 +66431,7 @@ rule openssl_167 {
         app_name = "openssl"
         type = "2"
         target = "ssl_test_ctx_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66449,7 +66449,7 @@ rule openssl_168 {
         app_name = "openssl"
         type = "2"
         target = "sslapitest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66467,7 +66467,7 @@ rule openssl_169 {
         app_name = "openssl"
         type = "2"
         target = "sslbuffertest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66485,7 +66485,7 @@ rule openssl_170 {
         app_name = "openssl"
         type = "2"
         target = "sslcorrupttest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -66719,7 +66719,7 @@ rule strongswan_61 {
         app_name = "strongswan"
         type = "2"
         target = "starter"
-        pattern = "starter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "starter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /starter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66755,7 +66755,7 @@ rule sysvinit_8 {
         app_name = "sysvinit"
         type = "2"
         target = "startpar"
-        pattern = "startpar.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "startpar.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /startpar.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66773,7 +66773,7 @@ rule sysvinit_9 {
         app_name = "sysvinit"
         type = "2"
         target = "startproc"
-        pattern = "startproc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "startproc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /startproc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -66863,7 +66863,7 @@ rule strace_656 {
         app_name = "strace"
         type = "2"
         target = "status-failed-long"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -66881,7 +66881,7 @@ rule strace_657 {
         app_name = "strace"
         type = "2"
         target = "status-failed-status"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -66935,7 +66935,7 @@ rule strace_660 {
         app_name = "strace"
         type = "2"
         target = "status-successful-long"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -66953,7 +66953,7 @@ rule strace_661 {
         app_name = "strace"
         type = "2"
         target = "status-successful-status"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67115,7 +67115,7 @@ rule strace_665 {
         app_name = "strace"
         type = "2"
         target = "strace--decode-pids-comm"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67133,7 +67133,7 @@ rule strace_666 {
         app_name = "strace"
         type = "2"
         target = "strace--strings-in-hex-all"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67151,7 +67151,7 @@ rule strace_667 {
         app_name = "strace"
         type = "2"
         target = "strace--strings-in-hex-none"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67169,7 +67169,7 @@ rule strace_668 {
         app_name = "strace"
         type = "2"
         target = "strace-n"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67187,7 +67187,7 @@ rule strace_669 {
         app_name = "strace"
         type = "2"
         target = "strace-no-x"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67205,7 +67205,7 @@ rule strace_670 {
         app_name = "strace"
         type = "2"
         target = "strace-Y-0123456789"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -67295,7 +67295,7 @@ rule strongswan_63 {
         app_name = "strongswan"
         type = "2"
         target = "stroke"
-        pattern = "stroke.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "stroke.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /stroke.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67349,7 +67349,7 @@ rule util_linux_221 {
         app_name = "util-linux"
         type = "2"
         target = "su"
-        pattern = "su.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "su.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /su.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67493,7 +67493,7 @@ rule util_linux_224 {
         app_name = "util-linux"
         type = "2"
         target = "sulogin"
-        pattern = "sulogin.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sulogin.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sulogin.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67583,7 +67583,7 @@ rule mtd_utils_49 {
         app_name = "mtd-utils"
         type = "2"
         target = "sumtool"
-        pattern = "sumtool.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sumtool.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sumtool.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67637,7 +67637,7 @@ rule strongswan_64 {
         app_name = "strongswan"
         type = "2"
         target = "swanctl"
-        pattern = "swanctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "swanctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /swanctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67691,7 +67691,7 @@ rule util_linux_227 {
         app_name = "util-linux"
         type = "2"
         target = "swaplabel"
-        pattern = "swaplabel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "swaplabel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /swaplabel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67709,7 +67709,7 @@ rule util_linux_228 {
         app_name = "util-linux"
         type = "2"
         target = "swaplabel"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -67727,7 +67727,7 @@ rule util_linux_229 {
         app_name = "util-linux"
         type = "2"
         target = "swapoff"
-        pattern = "swapoff.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "swapoff.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /swapoff.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67781,7 +67781,7 @@ rule util_linux_232 {
         app_name = "util-linux"
         type = "2"
         target = "swapon"
-        pattern = "swapon.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "swapon.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /swapon.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67853,7 +67853,7 @@ rule util_linux_235 {
         app_name = "util-linux"
         type = "2"
         target = "switch_root"
-        pattern = "switch_root.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "switch_root.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /switch_root.*-([0-9Vv]([-]{1,30}))-/ 
@@ -67997,7 +67997,7 @@ rule procps_ng_20 {
         app_name = "procps-ng"
         type = "2"
         target = "sysctl"
-        pattern = "sysctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "sysctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /sysctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68087,7 +68087,7 @@ rule rpm_27 {
         app_name = "rpm"
         type = "1"
         target = "syslog"
-        pattern = "syslog.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "syslog.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /syslog.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68159,7 +68159,7 @@ rule systemd_31 {
         app_name = "systemd"
         type = "2"
         target = "systemctl"
-        pattern = "systemctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68195,7 +68195,7 @@ rule systemd_33 {
         app_name = "systemd"
         type = "2"
         target = "systemd"
-        pattern = "systemd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68231,7 +68231,7 @@ rule systemd_35 {
         app_name = "systemd"
         type = "2"
         target = "systemd-ac-power"
-        pattern = "systemd-ac-power.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-ac-power.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-ac-power.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68267,7 +68267,7 @@ rule systemd_37 {
         app_name = "systemd"
         type = "2"
         target = "systemd-analyze"
-        pattern = "systemd-analyze.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-analyze.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-analyze.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68303,7 +68303,7 @@ rule systemd_39 {
         app_name = "systemd"
         type = "2"
         target = "systemd-ask-password"
-        pattern = "systemd-ask-password.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-ask-password.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-ask-password.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68339,7 +68339,7 @@ rule systemd_41 {
         app_name = "systemd"
         type = "2"
         target = "systemd-backlight"
-        pattern = "systemd-backlight.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-backlight.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-backlight.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68375,7 +68375,7 @@ rule systemd_43 {
         app_name = "systemd"
         type = "2"
         target = "systemd-binfmt"
-        pattern = "systemd-binfmt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-binfmt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-binfmt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68429,7 +68429,7 @@ rule systemd_46 {
         app_name = "systemd"
         type = "2"
         target = "systemd-cat"
-        pattern = "systemd-cat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-cat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-cat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68465,7 +68465,7 @@ rule systemd_48 {
         app_name = "systemd"
         type = "2"
         target = "systemd-cgls"
-        pattern = "systemd-cgls.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-cgls.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-cgls.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68501,7 +68501,7 @@ rule systemd_50 {
         app_name = "systemd"
         type = "2"
         target = "systemd-cgroups-agent"
-        pattern = "systemd-cgroups-agent.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-cgroups-agent.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-cgroups-agent.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68537,7 +68537,7 @@ rule systemd_52 {
         app_name = "systemd"
         type = "2"
         target = "systemd-cgtop"
-        pattern = "systemd-cgtop.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-cgtop.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-cgtop.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68573,7 +68573,7 @@ rule systemd_54 {
         app_name = "systemd"
         type = "2"
         target = "systemd-cryptsetup"
-        pattern = "systemd-cryptsetup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-cryptsetup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-cryptsetup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68609,7 +68609,7 @@ rule systemd_56 {
         app_name = "systemd"
         type = "2"
         target = "systemd-cryptsetup-generator"
-        pattern = "systemd-cryptsetup-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-cryptsetup-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-cryptsetup-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68645,7 +68645,7 @@ rule systemd_58 {
         app_name = "systemd"
         type = "2"
         target = "systemd-debug-generator"
-        pattern = "systemd-debug-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-debug-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-debug-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68681,7 +68681,7 @@ rule systemd_60 {
         app_name = "systemd"
         type = "2"
         target = "systemd-delta"
-        pattern = "systemd-delta.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-delta.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-delta.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68717,7 +68717,7 @@ rule systemd_62 {
         app_name = "systemd"
         type = "2"
         target = "systemd-detect-virt"
-        pattern = "systemd-detect-virt.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-detect-virt.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-detect-virt.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68753,7 +68753,7 @@ rule systemd_64 {
         app_name = "systemd"
         type = "2"
         target = "systemd-dissect"
-        pattern = "systemd-dissect.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-dissect.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-dissect.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68789,7 +68789,7 @@ rule systemd_66 {
         app_name = "systemd"
         type = "2"
         target = "systemd-escape"
-        pattern = "systemd-escape.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-escape.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-escape.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68825,7 +68825,7 @@ rule systemd_68 {
         app_name = "systemd"
         type = "2"
         target = "systemd-export"
-        pattern = "systemd-export.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-export.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-export.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68861,7 +68861,7 @@ rule systemd_70 {
         app_name = "systemd"
         type = "2"
         target = "systemd-firstboot"
-        pattern = "systemd-firstboot.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-firstboot.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-firstboot.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68897,7 +68897,7 @@ rule systemd_72 {
         app_name = "systemd"
         type = "2"
         target = "systemd-fsck"
-        pattern = "systemd-fsck.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-fsck.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-fsck.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68933,7 +68933,7 @@ rule systemd_74 {
         app_name = "systemd"
         type = "2"
         target = "systemd-fstab-generator"
-        pattern = "systemd-fstab-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-fstab-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-fstab-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -68969,7 +68969,7 @@ rule systemd_76 {
         app_name = "systemd"
         type = "2"
         target = "systemd-getty-generator"
-        pattern = "systemd-getty-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-getty-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-getty-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69005,7 +69005,7 @@ rule systemd_78 {
         app_name = "systemd"
         type = "2"
         target = "systemd-gpt-auto-generator"
-        pattern = "systemd-gpt-auto-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-gpt-auto-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-gpt-auto-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69059,7 +69059,7 @@ rule systemd_81 {
         app_name = "systemd"
         type = "2"
         target = "systemd-hibernate-resume"
-        pattern = "systemd-hibernate-resume.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-hibernate-resume.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-hibernate-resume.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69095,7 +69095,7 @@ rule systemd_83 {
         app_name = "systemd"
         type = "2"
         target = "systemd-hibernate-resume-generator"
-        pattern = "systemd-hibernate-resume-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-hibernate-resume-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-hibernate-resume-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69131,7 +69131,7 @@ rule systemd_85 {
         app_name = "systemd"
         type = "2"
         target = "systemd-hostnamed"
-        pattern = "systemd-hostnamed.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-hostnamed.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-hostnamed.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69167,7 +69167,7 @@ rule systemd_87 {
         app_name = "systemd"
         type = "2"
         target = "systemd-hwdb"
-        pattern = "systemd-hwdb.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-hwdb.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-hwdb.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69239,7 +69239,7 @@ rule systemd_91 {
         app_name = "systemd"
         type = "2"
         target = "systemd-inhibit"
-        pattern = "systemd-inhibit.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-inhibit.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-inhibit.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69275,7 +69275,7 @@ rule systemd_93 {
         app_name = "systemd"
         type = "2"
         target = "systemd-initctl"
-        pattern = "systemd-initctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-initctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-initctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69311,7 +69311,7 @@ rule systemd_95 {
         app_name = "systemd"
         type = "2"
         target = "systemd-insserv-generator"
-        pattern = "systemd-insserv-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-insserv-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-insserv-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69347,7 +69347,7 @@ rule systemd_97 {
         app_name = "systemd"
         type = "2"
         target = "systemd-journald"
-        pattern = "systemd-journald.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-journald.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-journald.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69383,7 +69383,7 @@ rule systemd_99 {
         app_name = "systemd"
         type = "2"
         target = "systemd-localed"
-        pattern = "systemd-localed.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-localed.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-localed.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69419,7 +69419,7 @@ rule systemd_101 {
         app_name = "systemd"
         type = "2"
         target = "systemd-logind"
-        pattern = "systemd-logind.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-logind.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-logind.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69455,7 +69455,7 @@ rule systemd_103 {
         app_name = "systemd"
         type = "2"
         target = "systemd-machine-id-setup"
-        pattern = "systemd-machine-id-setup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-machine-id-setup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-machine-id-setup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69527,7 +69527,7 @@ rule systemd_107 {
         app_name = "systemd"
         type = "2"
         target = "systemd-modules-load"
-        pattern = "systemd-modules-load.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-modules-load.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-modules-load.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69563,7 +69563,7 @@ rule systemd_109 {
         app_name = "systemd"
         type = "2"
         target = "systemd-mount"
-        pattern = "systemd-mount.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-mount.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-mount.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69635,7 +69635,7 @@ rule systemd_113 {
         app_name = "systemd"
         type = "2"
         target = "systemd-notify"
-        pattern = "systemd-notify.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-notify.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-notify.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69689,7 +69689,7 @@ rule systemd_116 {
         app_name = "systemd"
         type = "2"
         target = "systemd-path"
-        pattern = "systemd-path.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-path.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-path.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69725,7 +69725,7 @@ rule systemd_118 {
         app_name = "systemd"
         type = "2"
         target = "systemd-quotacheck"
-        pattern = "systemd-quotacheck.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-quotacheck.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-quotacheck.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69761,7 +69761,7 @@ rule systemd_120 {
         app_name = "systemd"
         type = "2"
         target = "systemd-random-seed"
-        pattern = "systemd-random-seed.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-random-seed.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-random-seed.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69797,7 +69797,7 @@ rule systemd_122 {
         app_name = "systemd"
         type = "2"
         target = "systemd-rc-local-generator"
-        pattern = "systemd-rc-local-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-rc-local-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-rc-local-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69833,7 +69833,7 @@ rule systemd_124 {
         app_name = "systemd"
         type = "2"
         target = "systemd-remount-fs"
-        pattern = "systemd-remount-fs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-remount-fs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-remount-fs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69869,7 +69869,7 @@ rule systemd_126 {
         app_name = "systemd"
         type = "2"
         target = "systemd-reply-password"
-        pattern = "systemd-reply-password.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-reply-password.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-reply-password.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69923,7 +69923,7 @@ rule systemd_129 {
         app_name = "systemd"
         type = "2"
         target = "systemd-rfkill"
-        pattern = "systemd-rfkill.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-rfkill.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-rfkill.*-([0-9Vv]([-]{1,30}))-/ 
@@ -69959,7 +69959,7 @@ rule systemd_131 {
         app_name = "systemd"
         type = "2"
         target = "systemd-run"
-        pattern = "systemd-run.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-run.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-run.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70013,7 +70013,7 @@ rule systemd_134 {
         app_name = "systemd"
         type = "2"
         target = "systemd-shutdown"
-        pattern = "systemd-shutdown.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-shutdown.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-shutdown.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70049,7 +70049,7 @@ rule systemd_136 {
         app_name = "systemd"
         type = "2"
         target = "systemd-sleep"
-        pattern = "systemd-sleep.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-sleep.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-sleep.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70085,7 +70085,7 @@ rule systemd_138 {
         app_name = "systemd"
         type = "2"
         target = "systemd-socket-activate"
-        pattern = "systemd-socket-activate.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-socket-activate.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-socket-activate.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70121,7 +70121,7 @@ rule systemd_140 {
         app_name = "systemd"
         type = "2"
         target = "systemd-socket-proxyd"
-        pattern = "systemd-socket-proxyd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-socket-proxyd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-socket-proxyd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70157,7 +70157,7 @@ rule systemd_142 {
         app_name = "systemd"
         type = "2"
         target = "systemd-stdio-bridge"
-        pattern = "systemd-stdio-bridge.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-stdio-bridge.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-stdio-bridge.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70211,7 +70211,7 @@ rule systemd_145 {
         app_name = "systemd"
         type = "2"
         target = "systemd-sysctl"
-        pattern = "systemd-sysctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-sysctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-sysctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70247,7 +70247,7 @@ rule systemd_147 {
         app_name = "systemd"
         type = "2"
         target = "systemd-system-update-generator"
-        pattern = "systemd-system-update-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-system-update-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-system-update-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70283,7 +70283,7 @@ rule systemd_149 {
         app_name = "systemd"
         type = "2"
         target = "systemd-sysusers"
-        pattern = "systemd-sysusers.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-sysusers.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-sysusers.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70319,7 +70319,7 @@ rule systemd_151 {
         app_name = "systemd"
         type = "2"
         target = "systemd-sysv-generator"
-        pattern = "systemd-sysv-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-sysv-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-sysv-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70355,7 +70355,7 @@ rule systemd_153 {
         app_name = "systemd"
         type = "2"
         target = "systemd-timedated"
-        pattern = "systemd-timedated.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-timedated.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-timedated.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70391,7 +70391,7 @@ rule systemd_155 {
         app_name = "systemd"
         type = "2"
         target = "systemd-timesyncd"
-        pattern = "systemd-timesyncd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-timesyncd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-timesyncd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70427,7 +70427,7 @@ rule systemd_157 {
         app_name = "systemd"
         type = "2"
         target = "systemd-tmpfiles"
-        pattern = "systemd-tmpfiles.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-tmpfiles.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-tmpfiles.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70463,7 +70463,7 @@ rule systemd_159 {
         app_name = "systemd"
         type = "2"
         target = "systemd-tty-ask-password-agent"
-        pattern = "systemd-tty-ask-password-agent.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-tty-ask-password-agent.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-tty-ask-password-agent.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70499,7 +70499,7 @@ rule systemd_161 {
         app_name = "systemd"
         type = "2"
         target = "systemd-udevd"
-        pattern = "systemd-udevd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-udevd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-udevd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70535,7 +70535,7 @@ rule systemd_163 {
         app_name = "systemd"
         type = "2"
         target = "systemd-update-done"
-        pattern = "systemd-update-done.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-update-done.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-update-done.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70571,7 +70571,7 @@ rule systemd_165 {
         app_name = "systemd"
         type = "2"
         target = "systemd-update-utmp"
-        pattern = "systemd-update-utmp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-update-utmp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-update-utmp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70607,7 +70607,7 @@ rule systemd_167 {
         app_name = "systemd"
         type = "2"
         target = "systemd-user-runtime-dir"
-        pattern = "systemd-user-runtime-dir.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-user-runtime-dir.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-user-runtime-dir.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70643,7 +70643,7 @@ rule systemd_169 {
         app_name = "systemd"
         type = "2"
         target = "systemd-user-sessions"
-        pattern = "systemd-user-sessions.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-user-sessions.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-user-sessions.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70679,7 +70679,7 @@ rule systemd_171 {
         app_name = "systemd"
         type = "2"
         target = "systemd-vconsole-setup"
-        pattern = "systemd-vconsole-setup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-vconsole-setup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-vconsole-setup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70715,7 +70715,7 @@ rule systemd_173 {
         app_name = "systemd"
         type = "2"
         target = "systemd-veritysetup"
-        pattern = "systemd-veritysetup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-veritysetup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-veritysetup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70751,7 +70751,7 @@ rule systemd_175 {
         app_name = "systemd"
         type = "2"
         target = "systemd-veritysetup-generator"
-        pattern = "systemd-veritysetup-generator.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-veritysetup-generator.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-veritysetup-generator.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70787,7 +70787,7 @@ rule systemd_177 {
         app_name = "systemd"
         type = "2"
         target = "systemd-volatile-root"
-        pattern = "systemd-volatile-root.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "systemd-volatile-root.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /systemd-volatile-root.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70841,7 +70841,7 @@ rule ncurses_17 {
         app_name = "ncurses"
         type = "2"
         target = "tabs"
-        pattern = "tabs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tabs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tabs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -70877,7 +70877,7 @@ rule coreutils_141 {
         app_name = "coreutils"
         type = "2"
         target = "tac.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -70949,7 +70949,7 @@ rule tar {
         app_name = "tar"
         type = "2"
         target = "tar"
-        pattern = "tar \\(GNU tar\\) ([0-9]+\\.[0-9]+\\.?[0-9]*)"
+        pattern = "tar \\(GNU tar\\) ([0-9]+\\.[0-9]+\\.[0-9]*)"
 
     strings:
         $pattern = /tar \(GNU tar\) ([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -71003,7 +71003,7 @@ rule util_linux_238 {
         app_name = "util-linux"
         type = "2"
         target = "taskset"
-        pattern = "taskset.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "taskset.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /taskset.*-([0-9Vv]([-]{1,30}))-/ 
@@ -71057,7 +71057,7 @@ rule iproute2_12 {
         app_name = "iproute2"
         type = "2"
         target = "tc"
-        pattern = "tc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -71129,7 +71129,7 @@ rule python_29 {
         app_name = "python"
         type = "1"
         target = "termios.cpython-38-aarch64-linux-gnu"
-        pattern = "(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -75683,7 +75683,7 @@ rule strace_676 {
         app_name = "strace"
         type = "2"
         target = "tgkill"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -75701,7 +75701,7 @@ rule strace_677 {
         app_name = "strace"
         type = "2"
         target = "tgkill--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -75827,7 +75827,7 @@ rule strace_679 {
         app_name = "strace"
         type = "2"
         target = "threads-execve-q"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -75845,7 +75845,7 @@ rule strace_680 {
         app_name = "strace"
         type = "2"
         target = "threads-execve-qqq"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -75881,7 +75881,7 @@ rule openssl_176 {
         app_name = "openssl"
         type = "2"
         target = "threadstest_fips"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -75953,7 +75953,7 @@ rule systemd_179 {
         app_name = "systemd"
         type = "2"
         target = "timedatectl"
-        pattern = "timedatectl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "timedatectl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /timedatectl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76097,7 +76097,7 @@ rule strace_686 {
         app_name = "strace"
         type = "2"
         target = "times-Xraw"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -76115,7 +76115,7 @@ rule iproute2_13 {
         app_name = "iproute2"
         type = "2"
         target = "tipc"
-        pattern = "tipc.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tipc.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tipc.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76133,7 +76133,7 @@ rule procps_ng_22 {
         app_name = "procps-ng"
         type = "2"
         target = "tload"
-        pattern = "tload.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tload.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tload.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76295,7 +76295,7 @@ rule ncurses_18 {
         app_name = "ncurses"
         type = "2"
         target = "toe"
-        pattern = "toe.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "toe.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /toe.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76313,7 +76313,7 @@ rule libselinux_16 {
         app_name = "libselinux"
         type = "2"
         target = "togglesebool"
-        pattern = "togglesebool.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "togglesebool.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /togglesebool.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76349,7 +76349,7 @@ rule procps_ng_23 {
         app_name = "procps-ng"
         type = "2"
         target = "top"
-        pattern = "top.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "top.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /top.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76439,7 +76439,7 @@ rule ncurses_19 {
         app_name = "ncurses"
         type = "2"
         target = "tput"
-        pattern = "tput.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tput.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tput.*-([0-9Vv]([-]{1,30}))-/ 
@@ -76583,7 +76583,7 @@ rule ncurses_20 {
         app_name = "ncurses"
         type = "2"
         target = "tset"
-        pattern = "tset.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tset.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tset.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85619,7 +85619,7 @@ rule util_linux_253 {
         app_name = "util-linux"
         type = "2"
         target = "tunelp"
-        pattern = "tunelp.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "tunelp.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /tunelp.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85673,7 +85673,7 @@ rule nettle_101 {
         app_name = "nettle"
         type = "2"
         target = "twofish-test"
-        pattern = "nettle-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "nettle-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /nettle-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -85691,7 +85691,7 @@ rule glib_234 {
         app_name = "glib"
         type = "2"
         target = "type"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -85727,7 +85727,7 @@ rule glib_236 {
         app_name = "glib"
         type = "2"
         target = "type-test"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -85781,7 +85781,7 @@ rule mtd_utils_51 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubiattach"
-        pattern = "ubiattach.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubiattach.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubiattach.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85817,7 +85817,7 @@ rule mtd_utils_53 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubiblock"
-        pattern = "ubiblock.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubiblock.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubiblock.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85853,7 +85853,7 @@ rule mtd_utils_55 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubicrc32"
-        pattern = "ubicrc32.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubicrc32.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubicrc32.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85889,7 +85889,7 @@ rule mtd_utils_57 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubidetach"
-        pattern = "ubidetach.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubidetach.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubidetach.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85925,7 +85925,7 @@ rule mtd_utils_59 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubiformat"
-        pattern = "ubiformat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubiformat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubiformat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85961,7 +85961,7 @@ rule mtd_utils_61 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubimkvol"
-        pattern = "ubimkvol.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubimkvol.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubimkvol.*-([0-9Vv]([-]{1,30}))-/ 
@@ -85997,7 +85997,7 @@ rule mtd_utils_63 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubinfo"
-        pattern = "ubinfo.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubinfo.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubinfo.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86033,7 +86033,7 @@ rule mtd_utils_65 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubinize"
-        pattern = "ubinize.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubinize.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubinize.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86069,7 +86069,7 @@ rule mtd_utils_67 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubirename"
-        pattern = "ubirename.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubirename.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubirename.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86087,7 +86087,7 @@ rule mtd_utils_68 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubirmvol"
-        pattern = "ubirmvol.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubirmvol.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubirmvol.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86123,7 +86123,7 @@ rule mtd_utils_70 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubirsvol"
-        pattern = "ubirsvol.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubirsvol.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubirsvol.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86159,7 +86159,7 @@ rule mtd_utils_72 {
         app_name = "mtd-utils"
         type = "2"
         target = "ubiupdatevol"
-        pattern = "ubiupdatevol.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ubiupdatevol.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ubiupdatevol.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86231,7 +86231,7 @@ rule systemd_180 {
         app_name = "systemd"
         type = "2"
         target = "udevadm"
-        pattern = "udevadm.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "udevadm.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /udevadm.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86267,7 +86267,7 @@ rule udisks {
         app_name = "udisks"
         type = "2"
         target = "udisksd"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86285,7 +86285,7 @@ rule strace_689 {
         app_name = "strace"
         type = "2"
         target = "uio"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86303,7 +86303,7 @@ rule openssl_181 {
         app_name = "openssl"
         type = "2"
         target = "uitest"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86321,7 +86321,7 @@ rule util_linux_256 {
         app_name = "util-linux"
         type = "2"
         target = "ul"
-        pattern = "ul.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "ul.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /ul.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86375,7 +86375,7 @@ rule nettle_102 {
         app_name = "nettle"
         type = "2"
         target = "umac-test"
-        pattern = "nettle-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "nettle-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /nettle-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86393,7 +86393,7 @@ rule util_linux_258 {
         app_name = "util-linux"
         type = "2"
         target = "umount"
-        pattern = "umount.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "umount.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /umount.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86447,7 +86447,7 @@ rule strace_690 {
         app_name = "strace"
         type = "2"
         target = "umount2"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86483,7 +86483,7 @@ rule strace_692 {
         app_name = "strace"
         type = "2"
         target = "umovestr2"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86501,7 +86501,7 @@ rule strace_693 {
         app_name = "strace"
         type = "2"
         target = "umovestr3"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86519,7 +86519,7 @@ rule strace_694 {
         app_name = "strace"
         type = "2"
         target = "umovestr_cached"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86537,7 +86537,7 @@ rule strace_695 {
         app_name = "strace"
         type = "2"
         target = "umovestr_cached_adjacent"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86573,7 +86573,7 @@ rule strace_696 {
         app_name = "strace"
         type = "2"
         target = "unblock_reset_raise"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86627,7 +86627,7 @@ rule glib_238 {
         app_name = "glib"
         type = "2"
         target = "unicode"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86645,7 +86645,7 @@ rule perl_52 {
         app_name = "perl"
         type = "1"
         target = "Unicode"
-        pattern = "v([0-9]\\.[0-9]+(\\.[0-9]+)?)$"
+        pattern = "v([0-9]\\.[0-9]+(\\.[0-9]+))$"
 
     strings:
         $pattern = /v([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86663,7 +86663,7 @@ rule python_30 {
         app_name = "python"
         type = "1"
         target = "unicodedata.cpython-38-aarch64-linux-gnu"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86717,7 +86717,7 @@ rule glib_239 {
         app_name = "glib"
         type = "2"
         target = "unix"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86735,7 +86735,7 @@ rule glib_240 {
         app_name = "glib"
         type = "2"
         target = "unix-fd"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86753,7 +86753,7 @@ rule glib_241 {
         app_name = "glib"
         type = "2"
         target = "unix-mounts"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86771,7 +86771,7 @@ rule strace_697 {
         app_name = "strace"
         type = "2"
         target = "unix-pair-send-recv"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86807,7 +86807,7 @@ rule glib_242 {
         app_name = "glib"
         type = "2"
         target = "unix-streams"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86825,7 +86825,7 @@ rule pam_49 {
         app_name = "pam"
         type = "2"
         target = "unix2_chkpwd"
-        pattern = "unix2_chkpwd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "unix2_chkpwd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /unix2_chkpwd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86843,7 +86843,7 @@ rule pam_50 {
         app_name = "pam"
         type = "2"
         target = "unix_chkpwd"
-        pattern = "unix_chkpwd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "unix_chkpwd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /unix_chkpwd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86861,7 +86861,7 @@ rule pam_51 {
         app_name = "pam"
         type = "2"
         target = "unix_update"
-        pattern = "unix_update.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "unix_update.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /unix_update.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86879,7 +86879,7 @@ rule coreutils_160 {
         app_name = "coreutils"
         type = "2"
         target = "unlink.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -86897,7 +86897,7 @@ rule strace_699 {
         app_name = "strace"
         type = "2"
         target = "unlinkat"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -86915,7 +86915,7 @@ rule util_linux_261 {
         app_name = "util-linux"
         type = "2"
         target = "unshare"
-        pattern = "unshare.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "unshare.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /unshare.*-([0-9Vv]([-]{1,30}))-/ 
@@ -86987,7 +86987,7 @@ rule openssl_182 {
         app_name = "openssl"
         type = "2"
         target = "upcallstest"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -87005,7 +87005,7 @@ rule pam_52 {
         app_name = "pam"
         type = "2"
         target = "upperLOWER"
-        pattern = "upperLOWER.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "upperLOWER.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /upperLOWER.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87059,7 +87059,7 @@ rule procps_ng_26 {
         app_name = "procps-ng"
         type = "2"
         target = "uptime.procps"
-        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /procps-ng ([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87077,7 +87077,7 @@ rule glib_243 {
         app_name = "glib"
         type = "2"
         target = "uri"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87113,7 +87113,7 @@ rule openssl_183 {
         app_name = "openssl"
         type = "2"
         target = "user_property_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -87131,7 +87131,7 @@ rule shadow_46 {
         app_name = "shadow"
         type = "2"
         target = "useradd"
-        pattern = "useradd.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "useradd.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /useradd.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87167,7 +87167,7 @@ rule shadow_48 {
         app_name = "shadow"
         type = "2"
         target = "userdel"
-        pattern = "userdel.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "userdel.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /userdel.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87221,7 +87221,7 @@ rule shadow_50 {
         app_name = "shadow"
         type = "2"
         target = "usermod"
-        pattern = "usermod.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "usermod.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /usermod.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87257,7 +87257,7 @@ rule coreutils_163 {
         app_name = "coreutils"
         type = "2"
         target = "users"
-        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87293,7 +87293,7 @@ rule sysvinit_10 {
         app_name = "sysvinit"
         type = "2"
         target = "usleep"
-        pattern = "usleep.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "usleep.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /usleep.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87311,7 +87311,7 @@ rule utempter_1 {
         app_name = "utempter"
         type = "2"
         target = "utempter"
-        pattern = "utempter.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "utempter.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /utempter.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87329,7 +87329,7 @@ rule glib_244 {
         app_name = "glib"
         type = "2"
         target = "utf8-misc"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87347,7 +87347,7 @@ rule glib_245 {
         app_name = "glib"
         type = "2"
         target = "utf8-pointer"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87365,7 +87365,7 @@ rule glib_246 {
         app_name = "glib"
         type = "2"
         target = "utf8-validate"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87401,7 +87401,7 @@ rule glib_247 {
         app_name = "glib"
         type = "2"
         target = "utils"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87491,7 +87491,7 @@ rule util_linux_264 {
         app_name = "util-linux"
         type = "2"
         target = "utmpdump"
-        pattern = "utmpdump.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "utmpdump.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /utmpdump.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87527,7 +87527,7 @@ rule util_linux_266 {
         app_name = "util-linux"
         type = "2"
         target = "utmpdump.util-linux"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -87563,7 +87563,7 @@ rule util_linux_268 {
         app_name = "util-linux"
         type = "2"
         target = "uuidgen"
-        pattern = "uuidgen.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "uuidgen.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /uuidgen.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87617,7 +87617,7 @@ rule util_linux_271 {
         app_name = "util-linux"
         type = "2"
         target = "uuidparse"
-        pattern = "uuidparse.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "uuidparse.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /uuidparse.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87671,7 +87671,7 @@ rule openssl_184 {
         app_name = "openssl"
         type = "2"
         target = "v3ext"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87689,7 +87689,7 @@ rule openssl_185 {
         app_name = "openssl"
         type = "2"
         target = "v3nametest"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87707,7 +87707,7 @@ rule systemd_182 {
         app_name = "systemd"
         type = "2"
         target = "v4l_id"
-        pattern = "v4l_id.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "v4l_id.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /v4l_id.*-([0-9Vv]([-]{1,30}))-/ 
@@ -87725,7 +87725,7 @@ rule vala_5 {
         app_name = "vala"
         type = "2"
         target = "valac-0.46"
-        pattern = "vala-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "vala-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /vala-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87797,7 +87797,7 @@ rule glib_248 {
         app_name = "glib"
         type = "2"
         target = "value"
-        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "glib-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /glib-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87851,7 +87851,7 @@ rule elfutils_111 {
         app_name = "elfutils"
         type = "2"
         target = "varlocs"
-        pattern = "elfutils-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "elfutils-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /elfutils-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87887,7 +87887,7 @@ rule coreutils_165 {
         app_name = "coreutils"
         type = "2"
         target = "vdir"
-        pattern = "coreutils-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "coreutils-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /coreutils-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87923,7 +87923,7 @@ rule elfutils_112 {
         app_name = "elfutils"
         type = "2"
         target = "vdsosyms"
-        pattern = "elfutils-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "elfutils-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /elfutils-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -87959,7 +87959,7 @@ rule openssl_186 {
         app_name = "openssl"
         type = "2"
         target = "verify_extra_test"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88013,7 +88013,7 @@ rule strace_705 {
         app_name = "strace"
         type = "2"
         target = "vfork-f"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88049,7 +88049,7 @@ rule sysvinit_11 {
         app_name = "sysvinit"
         type = "2"
         target = "vhangup"
-        pattern = "vhangup.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "vhangup.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /vhangup.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88103,7 +88103,7 @@ rule vim {
         app_name = "vim"
         type = "2"
         target = "vim"
-        pattern = "^([0-9]+\\.[0-9]+\\.?[0-9]*)"
+        pattern = "^([0-9]+\\.[0-9]+\\.[0-9]*)"
 
     strings:
         $pattern = /([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -88139,7 +88139,7 @@ rule shadow_52 {
         app_name = "shadow"
         type = "2"
         target = "vipw"
-        pattern = "vipw.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "vipw.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /vipw.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88193,7 +88193,7 @@ rule sudo_9 {
         app_name = "sudo"
         type = "2"
         target = "visudo"
-        pattern = "sudo-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "sudo-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /sudo-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88229,7 +88229,7 @@ rule kexec_tools_2 {
         app_name = "kexec-tools"
         type = "2"
         target = "vmcore-dmesg"
-        pattern = "vmcore-dmesg.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "vmcore-dmesg.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /vmcore-dmesg.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88247,7 +88247,7 @@ rule strace_707 {
         app_name = "strace"
         type = "2"
         target = "vmsplice"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88265,7 +88265,7 @@ rule procps_ng_27 {
         app_name = "procps-ng"
         type = "2"
         target = "vmstat"
-        pattern = "vmstat.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "vmstat.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /vmstat.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88283,7 +88283,7 @@ rule procps_ng_28 {
         app_name = "procps-ng"
         type = "2"
         target = "vmstat"
-        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /procps-ng ([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88355,7 +88355,7 @@ rule procps_ng_29 {
         app_name = "procps-ng"
         type = "2"
         target = "w"
-        pattern = "w.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "w.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /w.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88373,7 +88373,7 @@ rule procps_ng_30 {
         app_name = "procps-ng"
         type = "2"
         target = "w"
-        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /procps-ng ([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88391,7 +88391,7 @@ rule procps_ng_31 {
         app_name = "procps-ng"
         type = "2"
         target = "w.procps"
-        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /procps-ng ([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88427,7 +88427,7 @@ rule strace_709 {
         app_name = "strace"
         type = "2"
         target = "wait4-v"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88445,7 +88445,7 @@ rule strace_710 {
         app_name = "strace"
         type = "2"
         target = "waitid"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88481,7 +88481,7 @@ rule util_linux_273 {
         app_name = "util-linux"
         type = "2"
         target = "wall"
-        pattern = "wall.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "wall.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /wall.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88535,7 +88535,7 @@ rule procps_ng_32 {
         app_name = "procps-ng"
         type = "2"
         target = "watch"
-        pattern = "watch.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "watch.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /watch.*-([0-9Vv]([-]{1,30}))-/ 
@@ -88553,7 +88553,7 @@ rule procps_ng_33 {
         app_name = "procps-ng"
         type = "2"
         target = "watch"
-        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /procps-ng ([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88571,7 +88571,7 @@ rule procps_ng_34 {
         app_name = "procps-ng"
         type = "2"
         target = "watch.procps"
-        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "procps-ng ([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /procps-ng ([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -88679,7 +88679,7 @@ rule util_linux_276 {
         app_name = "util-linux"
         type = "2"
         target = "wdctl"
-        pattern = "wdctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "wdctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /wdctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -89543,7 +89543,7 @@ rule wget {
         app_name = "wget"
         type = "2"
         target = "wget"
-        pattern = "^([0-9]+\\.[0-9]+\\.?[0-9]*)"
+        pattern = "^([0-9]+\\.[0-9]+\\.[0-9]*)"
 
     strings:
         $pattern = /([0-9]{1,4}\.[0-9]{1,4}\.[0-9]{0,4})/ 
@@ -89561,7 +89561,7 @@ rule util_linux_278 {
         app_name = "util-linux"
         type = "2"
         target = "whereis"
-        pattern = "whereis.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "whereis.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /whereis.*-([0-9Vv]([-]{1,30}))-/ 
@@ -89615,7 +89615,7 @@ rule coreutils_169 {
         app_name = "coreutils"
         type = "2"
         target = "who.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -89687,7 +89687,7 @@ rule util_linux_280 {
         app_name = "util-linux"
         type = "2"
         target = "wipefs"
-        pattern = "wipefs.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "wipefs.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /wipefs.*-([0-9Vv]([-]{1,30}))-/ 
@@ -89705,7 +89705,7 @@ rule util_linux_281 {
         app_name = "util-linux"
         type = "2"
         target = "wipefs"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -89741,7 +89741,7 @@ rule wpa_supplicant_1 {
         app_name = "wpa_supplicant"
         type = "2"
         target = "wpa_cli"
-        pattern = "wpa_cli v(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "wpa_cli v(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /wpa_cli v(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -89795,7 +89795,7 @@ rule openssl_187 {
         app_name = "openssl"
         type = "2"
         target = "wpackettest"
-        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "openssl-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /openssl-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -89831,7 +89831,7 @@ rule util_linux_282 {
         app_name = "util-linux"
         type = "2"
         target = "write"
-        pattern = "write.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "write.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /write.*-([0-9Vv]([-]{1,30}))-/ 
@@ -89939,7 +89939,7 @@ rule openssl_191 {
         app_name = "openssl"
         type = "2"
         target = "x509_internal_test"
-        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+)?)"
+        pattern = "[Oo]pen[Ss][Ss][Ll].(([0-9]+\\.){1,}[0-9]+[a-z]*(-[0-9]+))"
 
     strings:
         $pattern = /[Oo]pen[Ss][Ss][Ll].(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z]*(-[0-9]{1,4}))/ 
@@ -90083,7 +90083,7 @@ rule strace_715 {
         app_name = "strace"
         type = "2"
         target = "xet_robust_list--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -90119,7 +90119,7 @@ rule strace_717 {
         app_name = "strace"
         type = "2"
         target = "xetpgid--pidns-translation"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -90173,7 +90173,7 @@ rule strongswan_66 {
         app_name = "strongswan"
         type = "2"
         target = "xfrmi"
-        pattern = "xfrmi.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "xfrmi.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /xfrmi.*-([0-9Vv]([-]{1,30}))-/ 
@@ -90263,7 +90263,7 @@ rule xpc_syscore {
         app_name = "xpc_syscore"
         type = "2"
         target = "xpc_syscore.ko"
-        pattern = "xpc_syscore.ko.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "xpc_syscore.ko.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /xpc_syscore.ko.*-([0-9Vv]([-]{1,30}))-/ 
@@ -90281,7 +90281,7 @@ rule iptables_111 {
         app_name = "iptables"
         type = "2"
         target = "xtables-legacy-multi"
-        pattern = "xtables-legacy-multi.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "xtables-legacy-multi.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /xtables-legacy-multi.*-([0-9Vv]([-]{1,30}))-/ 
@@ -90335,7 +90335,7 @@ rule iptables_114 {
         app_name = "iptables"
         type = "2"
         target = "xtables-nft-multi"
-        pattern = "xtables-nft-multi.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "xtables-nft-multi.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /xtables-nft-multi.*-([0-9Vv]([-]{1,30}))-/ 
@@ -90479,7 +90479,7 @@ rule libgpg_error_3 {
         app_name = "libgpg-error"
         type = "2"
         target = "yat2m"
-        pattern = "libgpg-error-(([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "libgpg-error-(([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /libgpg-error-(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -90515,7 +90515,7 @@ rule coreutils_173 {
         app_name = "coreutils"
         type = "2"
         target = "yes.coreutils"
-        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z]?)$"
+        pattern = "^(([0-9]+\\.){1,}[0-9]+[a-z])$"
 
     strings:
         $pattern = /(([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
@@ -90533,7 +90533,7 @@ rule strace_720 {
         app_name = "strace"
         type = "2"
         target = "zeroargc"
-        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+)?)"
+        pattern = "strace-([0-9]\\.[0-9]+(\\.[0-9]+))"
 
     strings:
         $pattern = /strace-([0-9]\.[0-9]{1,4}(\.[0-9]{1,4}))/ 
@@ -90731,7 +90731,7 @@ rule util_linux_284 {
         app_name = "util-linux"
         type = "2"
         target = "zramctl"
-        pattern = "zramctl.*?-([0-9Vv]([^-]{1,30}))-"
+        pattern = "zramctl.*-([0-9Vv]([^-]{1,30}))-"
 
     strings:
         $pattern = /zramctl.*-([0-9Vv]([-]{1,30}))-/ 
@@ -90749,7 +90749,7 @@ rule util_linux_285 {
         app_name = "util-linux"
         type = "2"
         target = "zramctl"
-        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z]?)"
+        pattern = "util-linux (([0-9]+\\.){1,}[0-9]+[a-z])"
 
     strings:
         $pattern = /util-linux (([0-9]{1,4}\.){1,}[0-9]{1,4}[a-z])/ 
